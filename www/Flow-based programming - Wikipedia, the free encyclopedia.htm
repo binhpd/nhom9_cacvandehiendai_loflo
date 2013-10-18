@@ -1,0 +1,774 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" class="client-nojs">
+<head>
+<meta charset="UTF-8" /><title>Flow-based programming - Wikipedia, the free encyclopedia</title>
+<meta name="generator" content="MediaWiki 1.22wmf20" />
+<link rel="alternate" type="application/x-wiki" title="Edit this page" href="/w/index.php?title=Flow-based_programming&amp;action=edit" />
+<link rel="edit" title="Edit this page" href="/w/index.php?title=Flow-based_programming&amp;action=edit" />
+<link rel="shortcut icon" href="//bits.wikimedia.org/favicon/wikipedia.ico" />
+<link rel="search" type="application/opensearchdescription+xml" href="/w/opensearch_desc.php" title="Wikipedia (en)" />
+<link rel="EditURI" type="application/rsd+xml" href="//en.wikipedia.org/w/api.php?action=rsd" />
+<link rel="copyright" href="//creativecommons.org/licenses/by-sa/3.0/" />
+<link rel="alternate" type="application/atom+xml" title="Wikipedia Atom feed" href="/w/index.php?title=Special:RecentChanges&amp;feed=atom" />
+<link rel="canonical" href="http://en.wikipedia.org/wiki/Flow-based_programming" />
+<link rel="stylesheet" href="//bits.wikimedia.org/en.wikipedia.org/load.php?debug=false&amp;lang=en&amp;modules=ext.gadget.DRN-wizard%2CReferenceTooltips%2Ccharinsert%2Cteahouse%7Cext.rtlcite%2Cwikihiero%7Cext.uls.nojs%7Cext.visualEditor.viewPageTarget.noscript%7Cmediawiki.legacy.commonPrint%2Cshared%7Cmw.PopUpMediaTransform%7Cskins.vector&amp;only=styles&amp;skin=vector&amp;*" />
+<meta name="ResourceLoaderDynamicStyles" content="" />
+<link rel="stylesheet" href="//bits.wikimedia.org/en.wikipedia.org/load.php?debug=false&amp;lang=en&amp;modules=site&amp;only=styles&amp;skin=vector&amp;*" />
+<style>a:lang(ar),a:lang(ckb),a:lang(kk-arab),a:lang(mzn),a:lang(ps),a:lang(ur){text-decoration:none}
+/* cache key: enwiki:resourceloader:filter:minify-css:7:0de201fdea5d684523607ed88007b127 */</style>
+
+<script src="//bits.wikimedia.org/en.wikipedia.org/load.php?debug=false&amp;lang=en&amp;modules=startup&amp;only=scripts&amp;skin=vector&amp;*"></script>
+<script>if(window.mw){
+mw.config.set({"wgCanonicalNamespace":"","wgCanonicalSpecialPageName":false,"wgNamespaceNumber":0,"wgPageName":"Flow-based_programming","wgTitle":"Flow-based programming","wgCurRevisionId":571132584,"wgRevisionId":571132584,"wgArticleId":5689970,"wgIsArticle":true,"wgIsRedirect":false,"wgAction":"view","wgUserName":null,"wgUserGroups":["*"],"wgCategories":["Concurrent programming languages","Programming paradigms","Parallel computing","Visual programming languages"],"wgBreakFrames":false,"wgPageContentLanguage":"en","wgPageContentModel":"wikitext","wgSeparatorTransformTable":["",""],"wgDigitTransformTable":["",""],"wgDefaultDateFormat":"dmy","wgMonthNames":["","January","February","March","April","May","June","July","August","September","October","November","December"],"wgMonthNamesShort":["","Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"],"wgRelevantPageName":"Flow-based_programming","wgIsProbablyEditable":true,"wgRestrictionEdit":[],"wgRestrictionMove":[],"wgWikiEditorEnabledModules":{"toolbar":true,"dialogs":true,"hidesig":true,"templateEditor":false,"templates":false,"preview":false,"previewDialog":false,"publish":false,"toc":false},"wgArticleFeedbackv5Permissions":{"aft-reader":true,"aft-member":false,"aft-editor":false,"aft-monitor":false,"aft-administrator":false,"aft-oversighter":false,"aft-noone":false},"wgVisualEditor":{"isPageWatched":false,"magnifyClipIconURL":"//bits.wikimedia.org/static-1.22wmf20/skins/common/images/magnify-clip.png","pageLanguageCode":"en","pageLanguageDir":"ltr"},"wikilove-recipient":"","wikilove-anon":0,"wgGuidedTourHelpGuiderUrl":"Help:Guided tours/guider","wgULSAcceptLanguageList":["en-us"],"wgFlaggedRevsParams":{"tags":{"status":{"levels":1,"quality":2,"pristine":3}}},"wgStableRevisionId":null,"wgCategoryTreePageCategoryOptions":"{\"mode\":0,\"hideprefix\":20,\"showcount\":true,\"namespaces\":false}","Geo":{"city":"","country":""},"wgNoticeProject":"wikipedia","aftv5Article":{"id":5689970,"title":"Flow-based programming","namespace":0,"categories":["Concurrent programming languages","Parallel computing","Programming paradigms","Visual programming languages"],"permissionLevel":false},"wgWikibaseItemId":"Q5462045"});
+}</script><script>if(window.mw){
+mw.loader.implement("user.options",function(){mw.user.options.set({"ccmeonemails":0,"cols":80,"date":"default","diffonly":0,"disablemail":0,"disablesuggest":0,"editfont":"default","editondblclick":0,"editsection":1,"editsectiononrightclick":0,"enotifminoredits":0,"enotifrevealaddr":0,"enotifusertalkpages":1,"enotifwatchlistpages":0,"extendwatchlist":0,"fancysig":0,"forceeditsummary":0,"gender":"unknown","hideminor":0,"hidepatrolled":0,"imagesize":2,"justify":0,"math":0,"minordefault":0,"newpageshidepatrolled":0,"nocache":0,"noconvertlink":0,"norollbackdiff":0,"numberheadings":0,"previewonfirst":0,"previewontop":1,"rcdays":7,"rclimit":50,"rememberpassword":0,"rows":25,"searchlimit":20,"showhiddencats":false,"shownumberswatching":1,"showtoc":1,"showtoolbar":1,"skin":"vector","stubthreshold":0,"thumbsize":4,"underline":2,"uselivepreview":0,"usenewrc":0,"vector-simplesearch":1,"watchcreations":1,"watchdefault":0,"watchdeletion":0,"watchlistdays":3,"watchlisthideanons":0,"watchlisthidebots"
+:0,"watchlisthideliu":0,"watchlisthideminor":0,"watchlisthideown":0,"watchlisthidepatrolled":0,"watchmoves":0,"wllimit":250,"useeditwarning":1,"prefershttps":1,"flaggedrevssimpleui":1,"flaggedrevsstable":0,"flaggedrevseditdiffs":true,"flaggedrevsviewdiffs":false,"usebetatoolbar":1,"usebetatoolbar-cgd":1,"aftv5-last-filter":null,"visualeditor-enable":0,"visualeditor-enable-experimental":0,"visualeditor-betatempdisable":0,"wikilove-enabled":1,"echo-subscriptions-web-page-review":true,"echo-subscriptions-email-page-review":false,"ep_showtoplink":false,"ep_bulkdelorgs":false,"ep_bulkdelcourses":true,"ep_showdyk":true,"echo-notify-show-link":true,"echo-show-alert":true,"echo-email-frequency":0,"echo-email-format":"html","echo-subscriptions-email-system":true,"echo-subscriptions-web-system":true,"echo-subscriptions-email-other":false,"echo-subscriptions-web-other":true,"echo-subscriptions-email-edit-user-talk":false,"echo-subscriptions-web-edit-user-talk":true,
+"echo-subscriptions-email-reverted":false,"echo-subscriptions-web-reverted":true,"echo-subscriptions-email-article-linked":false,"echo-subscriptions-web-article-linked":false,"echo-subscriptions-email-mention":false,"echo-subscriptions-web-mention":true,"echo-subscriptions-web-edit-thank":true,"echo-subscriptions-email-edit-thank":false,"gettingstarted-task-toolbar-show-intro":true,"uls-preferences":"","language":"en","variant-gan":"gan","variant-iu":"iu","variant-kk":"kk","variant-ku":"ku","variant-shi":"shi","variant-sr":"sr","variant-tg":"tg","variant-uz":"uz","variant-zh":"zh","searchNs0":true,"searchNs1":false,"searchNs2":false,"searchNs3":false,"searchNs4":false,"searchNs5":false,"searchNs6":false,"searchNs7":false,"searchNs8":false,"searchNs9":false,"searchNs10":false,"searchNs11":false,"searchNs12":false,"searchNs13":false,"searchNs14":false,"searchNs15":false,"searchNs100":false,"searchNs101":false,"searchNs108":false,"searchNs109":false,"searchNs446":false,"searchNs447":false
+,"searchNs710":false,"searchNs711":false,"searchNs828":false,"searchNs829":false,"gadget-teahouse":1,"gadget-ReferenceTooltips":1,"gadget-DRN-wizard":1,"gadget-charinsert":1,"gadget-mySandbox":1,"variant":"en"});},{},{});mw.loader.implement("user.tokens",function(){mw.user.tokens.set({"editToken":"+\\","patrolToken":false,"watchToken":false});},{},{});
+/* cache key: enwiki:resourceloader:filter:minify-js:7:f518b864f4c01710d57ac85913b8c7f0 */
+}</script>
+<script>if(window.mw){
+mw.loader.load(["mediawiki.page.startup","mediawiki.legacy.wikibits","mediawiki.legacy.ajax","ext.centralauth.centralautologin","ext.visualEditor.viewPageTarget.init","ext.wikimediaShopLink.core","ext.uls.init","ext.uls.interface","wikibase.client.init","wikibase.client.nolanglinks","ext.centralNotice.bannerController","skins.vector.js"]);
+}</script>
+<script src="//bits.wikimedia.org/geoiplookup"></script><link rel="dns-prefetch" href="//meta.wikimedia.org" /><!--[if lt IE 7]><style type="text/css">body{behavior:url("/w/static-1.22wmf20/skins/vector/csshover.min.htc")}</style><![endif]--></head>
+<body class="mediawiki ltr sitedir-ltr ns-0 ns-subject page-Flow-based_programming skin-vector action-view vector-animateLayout">
+		<div id="mw-page-base" class="noprint"></div>
+		<div id="mw-head-base" class="noprint"></div>
+		<div id="content" class="mw-body" role="main">
+			<a id="top"></a>
+			<div id="mw-js-message" style="display:none;"></div>
+						<div id="siteNotice"><!-- CentralNotice --></div>
+						<h1 id="firstHeading" class="firstHeading" lang="en"><span dir="auto">Flow-based programming</span></h1>
+			<div id="bodyContent">
+								<div id="siteSub">From Wikipedia, the free encyclopedia</div>
+								<div id="contentSub"></div>
+												<div id="jump-to-nav" class="mw-jump">
+					Jump to:					<a href="#mw-navigation">navigation</a>, 					<a href="#p-search">search</a>
+				</div>
+				<div id="mw-content-text" lang="en" dir="ltr" class="mw-content-ltr"><table class="vertical-navbox nowraplinks" cellspacing="5" cellpadding="0" style="float:right;clear:right;width:22.0em;margin:0 0 1.0em 1.0em;background:#f9f9f9;border:1px solid #aaa;padding:0.2em;border-spacing:0.4em 0;text-align:center;line-height:1.4em;font-size:88%;">
+<tr>
+<th class="" style=";padding:0.2em 0.4em 0.2em;;font-size:145%;line-height:1.2em;"><a href="/wiki/Programming_paradigm" title="Programming paradigm">Programming paradigms</a></th>
+</tr>
+<tr>
+<td class="" style="padding:0 0.1em 0.4em;text-align: left;">
+<ul>
+<li><a href="/wiki/Action_language" title="Action language">Action</a></li>
+<li><a href="/wiki/Agent-oriented_programming" title="Agent-oriented programming">Agent-oriented</a></li>
+<li><a href="/wiki/Aspect-oriented_programming" title="Aspect-oriented programming">Aspect-oriented</a></li>
+<li><a href="/wiki/Automata-based_programming" title="Automata-based programming">Automata-based</a></li>
+<li><a href="/wiki/Concurrent_computing" title="Concurrent computing">Concurrent computing</a>
+<ul>
+<li><a href="/wiki/Relativistic_programming" title="Relativistic programming">Relativistic programming</a></li>
+</ul>
+</li>
+<li><a href="/wiki/Data-driven_programming" title="Data-driven programming">Data-driven</a></li>
+<li><a href="/wiki/Declarative_programming" title="Declarative programming">Declarative</a> (contrast: <a href="/wiki/Imperative_programming" title="Imperative programming">Imperative</a>)
+<ul>
+<li><a href="/wiki/Constraint_programming" title="Constraint programming">Constraint</a></li>
+<li><a href="/wiki/Dataflow_programming" title="Dataflow programming">Dataflow</a>
+<ul>
+<li><strong class="selflink">Flow-based</strong></li>
+<li>Cell-oriented (<a href="/wiki/Spreadsheet" title="Spreadsheet">spreadsheets</a>)</li>
+<li><a href="/wiki/Reactive_programming" title="Reactive programming">Reactive</a></li>
+</ul>
+</li>
+<li><a href="/wiki/Functional_programming" title="Functional programming">Functional</a></li>
+<li><a href="/wiki/Logic_programming" title="Logic programming">Logic</a>
+<ul>
+<li><a href="/wiki/Abductive_logic_programming" title="Abductive logic programming">Abductive logic</a></li>
+<li><a href="/wiki/Answer_set_programming" title="Answer set programming">Answer set</a></li>
+<li><a href="/wiki/Constraint_logic_programming" title="Constraint logic programming">Constraint logic</a></li>
+<li><a href="/wiki/Functional_logic_programming" title="Functional logic programming">Functional logic</a></li>
+<li><a href="/wiki/Inductive_logic_programming" title="Inductive logic programming">Inductive logic</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="/wiki/End-user_development" title="End-user development">End-user programming</a></li>
+<li><a href="/wiki/Event-driven_programming" title="Event-driven programming">Event-driven</a>
+<ul>
+<li><a href="/wiki/Service-oriented_architecture" title="Service-oriented architecture">Service-oriented</a></li>
+<li><a href="/wiki/Time-driven_programming" title="Time-driven programming">Time-driven</a></li>
+</ul>
+</li>
+<li><a href="/wiki/Expression-oriented_programming_language" title="Expression-oriented programming language">Expression-oriented</a></li>
+<li><a href="/wiki/Feature_Oriented_Programming" title="Feature Oriented Programming" class="mw-redirect">Feature-oriented</a></li>
+<li><a href="/wiki/Function-level_programming" title="Function-level programming">Function-level</a> (contrast: <a href="/wiki/Value-level_programming" title="Value-level programming">Value-level</a>)</li>
+<li><a href="/wiki/Generic_programming" title="Generic programming">Generic</a></li>
+<li><a href="/wiki/Imperative_programming" title="Imperative programming">Imperative</a> (contrast: <a href="/wiki/Declarative_programming" title="Declarative programming">Declarative</a>)
+<ul>
+<li><a href="/wiki/Procedural_programming" title="Procedural programming">Procedural</a></li>
+</ul>
+</li>
+<li><a href="/wiki/Language-oriented_programming" title="Language-oriented programming">Language-oriented</a>
+<ul>
+<li><a href="/wiki/Service-oriented_modeling#Discipline-specific_modeling" title="Service-oriented modeling">Discipline-specific</a></li>
+<li><a href="/wiki/Domain-specific_language" title="Domain-specific language">Domain-specific</a></li>
+<li><a href="/wiki/Grammar-oriented_programming" title="Grammar-oriented programming">Grammar-oriented</a>
+<ul>
+<li><a href="/wiki/Dialecting" title="Dialecting">Dialecting</a></li>
+</ul>
+</li>
+<li><a href="/wiki/Intentional_programming" title="Intentional programming">Intentional</a></li>
+</ul>
+</li>
+<li><a href="/wiki/Metaprogramming" title="Metaprogramming">Metaprogramming</a>
+<ul>
+<li><a href="/wiki/Automatic_programming" title="Automatic programming">Automatic</a></li>
+<li><a href="/wiki/Reflection_(computer_programming)" title="Reflection (computer programming)">Reflective</a>
+<ul>
+<li><a href="/wiki/Attribute-oriented_programming" title="Attribute-oriented programming">Attribute-oriented</a></li>
+</ul>
+</li>
+<li><a href="/wiki/Homoiconicity" title="Homoiconicity">Homoiconic</a></li>
+<li><a href="/wiki/Template_metaprogramming" title="Template metaprogramming">Template</a>
+<ul>
+<li><a href="/wiki/Policy-based_design" title="Policy-based design">Policy-based</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="/wiki/Non-structured_programming" title="Non-structured programming">Non-structured</a> (contrast: <a href="/wiki/Structured_programming" title="Structured programming">Structured</a>)
+<ul>
+<li><a href="/wiki/Array_programming" title="Array programming">Array</a></li>
+</ul>
+</li>
+<li><a href="/wiki/Nondeterministic_programming" title="Nondeterministic programming">Nondeterministic</a></li>
+<li><a href="/wiki/Parallel_computing" title="Parallel computing">Parallel computing</a>
+<ul>
+<li><a href="/wiki/Process-oriented_programming" title="Process-oriented programming">Process-oriented</a></li>
+</ul>
+</li>
+<li><a href="/wiki/Pointless_programming" title="Pointless programming" class="mw-redirect">Point-free style</a>
+<ul>
+<li><a href="/wiki/Concatenative_programming_language" title="Concatenative programming language">Concatenative</a></li>
+</ul>
+</li>
+<li><a href="/wiki/Programming_in_the_large_and_programming_in_the_small" title="Programming in the large and programming in the small">Programming in the large and small</a></li>
+<li><a href="/wiki/Semantic-oriented_programming" title="Semantic-oriented programming">Semantic</a></li>
+<li><a href="/wiki/Structured_programming" title="Structured programming">Structured</a> (contrast: <a href="/wiki/Non-structured_programming" title="Non-structured programming">Non-structured</a>)
+<ul>
+<li><a href="/wiki/Block_(programming)" title="Block (programming)">Block-structured</a></li>
+<li><a href="/wiki/Modular_programming" title="Modular programming">Modular</a> (contrast: <a href="/wiki/Monolithic_application" title="Monolithic application">Monolithic</a>)</li>
+<li><a href="/wiki/Object-oriented_programming" title="Object-oriented programming">Object-oriented (OOP)</a>
+<ul>
+<li>By <a href="/wiki/Separation_of_concerns" title="Separation of concerns">separation of concerns</a>:
+<ul>
+<li><a href="/wiki/Aspect-oriented_programming" title="Aspect-oriented programming">Aspect-oriented</a></li>
+<li><a href="/wiki/Role-oriented_programming" title="Role-oriented programming">Role-oriented</a></li>
+<li><a href="/wiki/Subject-oriented_programming" title="Subject-oriented programming">Subject-oriented</a></li>
+</ul>
+</li>
+<li><a href="/wiki/Class-based_programming" title="Class-based programming">Class-based</a></li>
+<li><a href="/wiki/Prototype-based_programming" title="Prototype-based programming">Prototype-based</a></li>
+</ul>
+</li>
+<li><a href="/wiki/Recursion_(computer_science)" title="Recursion (computer science)">Recursive</a></li>
+</ul>
+</li>
+<li><a href="/wiki/Value-level_programming" title="Value-level programming">Value-level</a> (contrast: <a href="/wiki/Function-level_programming" title="Function-level programming">Function-level</a>)</li>
+<li><a href="/wiki/Probabilistic_relational_programming_language" title="Probabilistic relational programming language">Probabilistic</a></li>
+</ul>
+</td>
+</tr>
+<tr>
+<td style="text-align:right;font-size:115%;">
+<div class="noprint plainlinks hlist navbar mini" style="">
+<ul>
+<li class="nv-view"><a href="/wiki/Template:Programming_paradigms" title="Template:Programming paradigms"><span title="View this template" style="">v</span></a></li>
+<li class="nv-talk"><a href="/wiki/Template_talk:Programming_paradigms" title="Template talk:Programming paradigms"><span title="Discuss this template" style="">t</span></a></li>
+<li class="nv-edit"><a class="external text" href="//en.wikipedia.org/w/index.php?title=Template:Programming_paradigms&amp;action=edit"><span title="Edit this template" style="">e</span></a></li>
+</ul>
+</div>
+</td>
+</tr>
+</table>
+<p>In <a href="/wiki/Computer_programming" title="Computer programming">computer programming</a>, <b>flow-based programming</b> (<b>FBP</b>) is a <a href="/wiki/Programming_paradigm" title="Programming paradigm">programming paradigm</a> that defines <a href="/wiki/Application_software" title="Application software">applications</a> as networks of "black box" <a href="/wiki/Process_(computer_science)" title="Process (computer science)" class="mw-redirect">processes</a>, which exchange data across predefined connections by <a href="/wiki/Message_passing" title="Message passing">message passing</a>, where the connections are specified <i>externally</i> to the processes. These black box processes can be reconnected endlessly to form different applications without having to be changed internally. FBP is thus naturally <a href="/wiki/Software_componentry" title="Software componentry" class="mw-redirect">component-oriented</a>.</p>
+<p>FBP is a particular form of <a href="/wiki/Dataflow_programming" title="Dataflow programming">dataflow programming</a> based on bounded buffers, information packets with defined lifetimes, named ports, and separate definition of connections.<sup id="cite_ref-book_1-0" class="reference"><a href="#cite_note-book-1"><span>[</span>1<span>]</span></a></sup></p>
+<div id="toc" class="toc">
+<div id="toctitle">
+<h2>Contents</h2>
+</div>
+<ul>
+<li class="toclevel-1 tocsection-1"><a href="#Introduction"><span class="tocnumber">1</span> <span class="toctext">Introduction</span></a></li>
+<li class="toclevel-1 tocsection-2"><a href="#History"><span class="tocnumber">2</span> <span class="toctext">History</span></a></li>
+<li class="toclevel-1 tocsection-3"><a href="#Concepts"><span class="tocnumber">3</span> <span class="toctext">Concepts</span></a></li>
+<li class="toclevel-1 tocsection-4"><a href="#Software_on_FBP_web_site"><span class="tocnumber">4</span> <span class="toctext">Software on FBP web site</span></a></li>
+<li class="toclevel-1 tocsection-5"><a href="#Examples"><span class="tocnumber">5</span> <span class="toctext">Examples</span></a>
+<ul>
+<li class="toclevel-2 tocsection-6"><a href="#.22Telegram_Problem.22"><span class="tocnumber">5.1</span> <span class="toctext">"Telegram Problem"</span></a></li>
+<li class="toclevel-2 tocsection-7"><a href="#Batch_update"><span class="tocnumber">5.2</span> <span class="toctext">Batch update</span></a></li>
+<li class="toclevel-2 tocsection-8"><a href="#Multiplexing_processes"><span class="tocnumber">5.3</span> <span class="toctext">Multiplexing processes</span></a></li>
+<li class="toclevel-2 tocsection-9"><a href="#Simple_interactive_network"><span class="tocnumber">5.4</span> <span class="toctext">Simple interactive network</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-10"><a href="#Comparison_with_other_paradigms_and_methodologies"><span class="tocnumber">6</span> <span class="toctext">Comparison with other paradigms and methodologies</span></a>
+<ul>
+<li class="toclevel-2 tocsection-11"><a href="#Jackson_Structured_Programming_.28JSP.29_and_Jackson_System_Development_.28JSD.29"><span class="tocnumber">6.1</span> <span class="toctext">Jackson Structured Programming (JSP) and Jackson System Development (JSD)</span></a></li>
+<li class="toclevel-2 tocsection-12"><a href="#Applicative_programming"><span class="tocnumber">6.2</span> <span class="toctext">Applicative programming</span></a></li>
+<li class="toclevel-2 tocsection-13"><a href="#Linda"><span class="tocnumber">6.3</span> <span class="toctext">Linda</span></a></li>
+<li class="toclevel-2 tocsection-14"><a href="#Object-oriented_programming"><span class="tocnumber">6.4</span> <span class="toctext">Object-oriented programming</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-15"><a href="#See_also"><span class="tocnumber">7</span> <span class="toctext">See also</span></a></li>
+<li class="toclevel-1 tocsection-16"><a href="#References"><span class="tocnumber">8</span> <span class="toctext">References</span></a></li>
+<li class="toclevel-1 tocsection-17"><a href="#External_links"><span class="tocnumber">9</span> <span class="toctext">External links</span></a></li>
+</ul>
+</div>
+<h2><span class="mw-headline" id="Introduction">Introduction</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Flow-based_programming&amp;action=edit&amp;section=1" title="Edit section: Introduction">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>The FBP development approach views an application not as a single, sequential process, which starts at a point in time, and then does one thing at a time until it is finished, but as a network of asynchronous processes communicating by means of <a href="/wiki/Stream_(computing)" title="Stream (computing)">streams</a> of structured data chunks, called "information packets" (IPs). In this view, the focus is on the application data and the transformations applied to it to produce the desired outputs. The network is defined externally to the processes, as a list of connections which is interpreted by a piece of software, usually called the "scheduler".</p>
+<p>The processes communicate by means of fixed-capacity connections. A connection is attached to a process by means of a <a href="/wiki/Computer_port_(software)" title="Computer port (software)" class="mw-redirect">port</a>, which has a name agreed upon between the process code and the network definition. More than one process can execute the same piece of code. At any point in time, a given IP can only be "owned" by a single process, or be in transit between two processes. <a href="/wiki/Computer_port_(software)" title="Computer port (software)" class="mw-redirect">Ports</a> may either be simple, or array-type, as used e.g. for the input port of the Collate component described below. It is the combination of ports with asynchronous processes that allows many long-running primitive functions of data processing, such as Sort, Merge, Summarize, etc., to be supported in the form of software <a href="/wiki/Black_box" title="Black box">black boxes</a>.</p>
+<p>Because FBP processes can continue executing as long they have data to work on and somewhere to put their output, FBP applications generally run in less elapsed time than conventional programs, and make optimal use of all the processors on a machine, with no special programming required to achieve this.</p>
+<p>The network definition is usually diagrammatic, and is converted into a connection list in some lower-level language or notation. FBP is thus a <a href="/wiki/Visual_programming_language" title="Visual programming language">visual programming language</a> at this level. More complex network definitions have a hierarchical structure, being built up from subnets with "sticky" connections.</p>
+<p>FBP has much in common with the <a href="/wiki/Linda_(coordination_language)" title="Linda (coordination language)">Linda</a><sup id="cite_ref-2" class="reference"><a href="#cite_note-2"><span>[</span>2<span>]</span></a></sup> language in that it is, in <a href="/wiki/David_Gelernter" title="David Gelernter">Gelernter</a> and <a href="/w/index.php?title=Nicolas_Carriero&amp;action=edit&amp;redlink=1" class="new" title="Nicolas Carriero (page does not exist)">Carriero</a>'s terminology, a "coordination language":<sup id="cite_ref-3" class="reference"><a href="#cite_note-3"><span>[</span>3<span>]</span></a></sup> it is essentially language-independent. Indeed, given a scheduler written in a sufficiently low-level language, components written in different languages can be linked together in a single network. FBP thus lends itself to the concept of <a href="/wiki/Domain-specific_language" title="Domain-specific language">domain-specific languages</a> or "mini-languages".</p>
+<p>FBP exhibits "data coupling", described in the article on <a href="/wiki/Coupling_(computer_science)" title="Coupling (computer science)" class="mw-redirect">coupling</a> as the loosest type of coupling between components. The concept of <a href="/wiki/Loose_coupling" title="Loose coupling">loose coupling</a> is in turn related to that of <a href="/wiki/Service-oriented_architecture" title="Service-oriented architecture">service-oriented architectures</a>, and FBP fits a number of the criteria for such an architecture, albeit at a more fine-grained level than most examples of this architecture.</p>
+<p>FBP promotes high-level, functional style of specifications that simplify reasoning about system behavior. An example of this is the <a href="/wiki/Distributed_data_flow" title="Distributed data flow">distributed data flow</a> model for constructively specifying and analyzing the semantics of distributed multi-party protocols.</p>
+<h2><span class="mw-headline" id="History">History</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Flow-based_programming&amp;action=edit&amp;section=2" title="Edit section: History">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>FBP was invented by <a href="/wiki/John_Paul_Morrison" title="John Paul Morrison">J. Paul Morrison</a> in the early 1970s, and an early implementation of this technology has been in continuous production use at a major Canadian bank since that time.</p>
+<p>FBP at its inception was strongly influenced by some IBM simulation languages of the period, in particular <a href="/wiki/GPSS" title="GPSS">GPSS</a>, but its roots go all the way back to <a href="/wiki/Melvin_Conway" title="Melvin Conway">Conway</a>'s seminal paper on what he called <a href="/wiki/Coroutines" title="Coroutines" class="mw-redirect">coroutines</a>.<sup id="cite_ref-4" class="reference"><a href="#cite_note-4"><span>[</span>4<span>]</span></a></sup></p>
+<p>FBP has undergone a number of name changes over the years: the original implementation was called AMPS (Advanced Modular Processing System). One large application using this at a major Canadian bank went live in 1975, and, as of 2013, has been in continuous production use, running daily, for almost 40 years! A number of the basic concepts were put into the public domain by IBM, by means of a <a href="/wiki/Technical_Disclosure_Bulletins" title="Technical Disclosure Bulletins" class="mw-redirect">Technical Disclosure Bulletin</a> in 1971, using a very general title.<sup id="cite_ref-5" class="reference"><a href="#cite_note-5"><span>[</span>5<span>]</span></a></sup> An article describing its concepts and experience using it was published in 1978 in the <a href="/wiki/IBM_Research" title="IBM Research">IBM Research</a> IBM Systems Journal under the name DSLM.<sup id="cite_ref-6" class="reference"><a href="#cite_note-6"><span>[</span>6<span>]</span></a></sup> A second implementation was done as a joint project of IBM Canada and IBM Japan, under the name "Data Flow Development Manager" (DFDM), and was briefly marketed in Japan in the late '80s under the name "Data Flow Programming Manager".</p>
+<p>Generally the concepts were referred to within IBM as "Data Flow", but this term was felt to be too general, and eventually the name Flow-Based Programming was adopted, and a book with that title was published in 1994.<sup id="cite_ref-7" class="reference"><a href="#cite_note-7"><span>[</span>7<span>]</span></a></sup> The 2nd edition is now available, published by CreateSpace, a <a href="/wiki/Doing_business_as" title="Doing business as">DBA</a> of On-Demand Publishing LLC, part of the <a href="/wiki/Amazon.com" title="Amazon.com">Amazon.com</a> group of companies.<sup id="cite_ref-book_1-1" class="reference"><a href="#cite_note-book-1"><span>[</span>1<span>]</span></a></sup></p>
+<p>The late IBM architect, <a href="/wiki/Wayne_Stevens" title="Wayne Stevens">Wayne Stevens</a>, wrote several articles describing and supporting the FBP concept, and included material about it in several of his books.<sup id="cite_ref-8" class="reference"><a href="#cite_note-8"><span>[</span>8<span>]</span></a></sup><sup id="cite_ref-9" class="reference"><a href="#cite_note-9"><span>[</span>9<span>]</span></a></sup><sup id="cite_ref-10" class="reference"><a href="#cite_note-10"><span>[</span>10<span>]</span></a></sup></p>
+<p>As of 2009 several companies were marketing tools based on FBP concepts, among them: InforSense,<sup id="cite_ref-11" class="reference"><a href="#cite_note-11"><span>[</span>11<span>]</span></a></sup> Accelrys,<sup id="cite_ref-12" class="reference"><a href="#cite_note-12"><span>[</span>12<span>]</span></a></sup> and open-source Kettle<sup id="cite_ref-13" class="reference"><a href="#cite_note-13"><span>[</span>13<span>]</span></a></sup> and Knime.<sup id="cite_ref-14" class="reference"><a href="#cite_note-14"><span>[</span>14<span>]</span></a></sup> IBM also sells a tool for general data transformation called <a href="/wiki/DataStage" title="DataStage" class="mw-redirect">DataStage</a> which combines FBP with parallel processing. A number of projects based on these concepts have appeared over the last several years - see under "External links" below.</p>
+<h2><span class="mw-headline" id="Concepts">Concepts</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Flow-based_programming&amp;action=edit&amp;section=3" title="Edit section: Concepts">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>The following diagram shows the major entities of an FBP diagram (apart from the Information Packets). Such a diagram can be converted directly into a list of connections, which can then be executed by an appropriate engine (software or hardware).</p>
+<div class="center">
+<div class="thumb tnone">
+<div class="thumbinner" style="width:222px;"><a href="/wiki/File:FBP_3_block_diagram.png" class="image"><img alt="" src="//upload.wikimedia.org/wikipedia/commons/thumb/4/4c/FBP_3_block_diagram.png/220px-FBP_3_block_diagram.png" width="220" height="125" class="thumbimage" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/4/4c/FBP_3_block_diagram.png/330px-FBP_3_block_diagram.png 1.5x, //upload.wikimedia.org/wikipedia/commons/4/4c/FBP_3_block_diagram.png 2x" /></a>
+<div class="thumbcaption">
+<div class="magnify"><a href="/wiki/File:FBP_3_block_diagram.png" class="internal" title="Enlarge"><img src="//bits.wikimedia.org/static-1.22wmf20/skins/common/images/magnify-clip.png" width="15" height="11" alt="" /></a></div>
+Simple FBP diagram</div>
+</div>
+</div>
+</div>
+<p>A, B and C are processes executing code components. O1, O2, and the two INs are ports connecting the connections M and N to their respective processes. It is permitted for processes B and C to be executing the same code, so each process must have its own set of working storage, control blocks, etc. Whether or not they do share code, B and C are free to use the same port names, as port names only have meaning within the components referencing them (and at the network level, of course).</p>
+<p>M and N are what are often referred to as "<a href="/wiki/Circular_buffer" title="Circular buffer">bounded buffers</a>", and have a fixed capacity in terms of the number of IPs that they can hold at any point in time.</p>
+<p>The concept of <i>ports</i> is what allows the same component to be used at more than one place in the network. In combination with a parametrization capability, called Initial Information Packets (IIPs), ports provide FBP with a component reuse capability, making FBP a <a href="/wiki/Component-based_software_engineering" title="Component-based software engineering">component-based</a> architecture. FBP thus exhibits what Raoul de Campo and <a href="/wiki/Nate_Edwards" title="Nate Edwards">Nate Edwards</a> of <a href="/wiki/IBM_Research" title="IBM Research">IBM Research</a> have termed <a href="/wiki/Configurable_modularity" title="Configurable modularity">configurable modularity</a>.</p>
+<p>Information Packets or IPs are allocated in what might be called "IP space" (just as Linda's tuples are allocated in "tuple space"), and have a well-defined lifetime until they are disposed of and their space is reclaimed - in FBP this must be an explicit action on the part of an owning process. IPs traveling across a given connection (actually it is their "handles" that travel) constitute a "stream", which is generated and consumed asynchronously - this concept thus has similarities to the <a href="/wiki/Lazy_evaluation" title="Lazy evaluation">lazy cons</a> concept described in the 1976 article by Friedman and Wise.<sup id="cite_ref-15" class="reference"><a href="#cite_note-15"><span>[</span>15<span>]</span></a></sup></p>
+<p>IPs are usually structured chunks of data - some IPs, however, may not contain any real data, but are used simply as signals. An example of this is "bracket IPs", which can be used to group data IPs into sequential patterns within a stream, called "substreams". Substreams may in turn be nested. IPs may also be chained together to form "IP trees", which travel through the network as single objects.</p>
+<p>The system of connections and processes described above can be "ramified" to any size. During the development of an application, monitoring processes may be added between pairs of processes, processes may be "exploded" to subnets, or simulations of processes may be replaced by the real process logic. FBP therefore lends itself to <a href="/wiki/Software_prototyping" title="Software prototyping">rapid prototyping</a>.</p>
+<p>This is really an <a href="/wiki/Assembly_line" title="Assembly line">assembly line</a> image of data processing: the IPs travelling through a network of processes may be thought of as widgets travelling from station to station in an assembly line. "Machines" may easily be reconnected, taken off line for repair, replaced, and so on. Oddly enough, this image is very similar to that of <a href="/wiki/Unit_record_equipment" title="Unit record equipment">unit record equipment</a> that was used to process data before the days of computers, except that decks of cards had to be hand-carried from one machine to another.</p>
+<p>Implementations of FBP may be non-preemptive or preemptive - the earlier implementations tended to be non-preemptive (mainframe and C language), whereas the latest Java implementation (see below) uses Java Thread class and is preemptive.</p>
+<h2><span class="mw-headline" id="Software_on_FBP_web_site">Software on FBP web site</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Flow-based_programming&amp;action=edit&amp;section=4" title="Edit section: Software on FBP web site">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>After <a href="/wiki/John_Paul_Morrison" title="John Paul Morrison">Paul Morrison</a> retired from IBM, these concepts were implemented first in <a href="/wiki/C%2B%2B" title="C++">C++</a>, using <a href="/wiki/Green_threads" title="Green threads">green threads</a> (this version is currently undergoing conversion to <a href="/wiki/Fiber_(computer_science)" title="Fiber (computer science)">fibers</a>), then in <a href="/wiki/Java_(programming_language)" title="Java (programming language)">Java</a>, starting from a base developed by John Cowan - this implementation is available as Open Source on <a href="/wiki/SourceForge" title="SourceForge">SourceForge</a>.<sup id="cite_ref-16" class="reference"><a href="#cite_note-16"><span>[</span>16<span>]</span></a></sup> A <a href="/wiki/C_Sharp_(programming_language)" title="C Sharp (programming language)">C#</a> implementation is also available at the same site. Both of these implementations use threads, so they make optimum use of all the processors on the machine running the application.</p>
+<p>A diagramming tool, called "DrawFBP", is also available at that site - it can also be run via <a href="/wiki/Java_Web_Start" title="Java Web Start">JWS</a> - see the Flow-Based Programming web site.<sup id="cite_ref-17" class="reference"><a href="#cite_note-17"><span>[</span>17<span>]</span></a></sup></p>
+<h2><span class="mw-headline" id="Examples">Examples</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Flow-based_programming&amp;action=edit&amp;section=5" title="Edit section: Examples">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<h3><span class="mw-headline" id=".22Telegram_Problem.22">"Telegram Problem"</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Flow-based_programming&amp;action=edit&amp;section=6" title="Edit section: &quot;Telegram Problem&quot;">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>FBP components often form complementary pairs. This example uses two such pairs. The problem described seems very simple as described in words, but in fact is surprisingly hard to do using conventional procedural logic. The task, called the "Telegram Problem", originally described by <a href="/wiki/Peter_Naur" title="Peter Naur">Peter Naur</a>, is to write a program which accepts lines of text and generates output lines of a different length, without splitting any of the words in the text (we assume no word is longer than the size of the output lines).</p>
+<p>In conventional logic, the programmer rapidly discovers that neither the input nor the output structures can be used to drive the call hierarchy of <a href="/wiki/Control_flow" title="Control flow">control flow</a>. In FBP, on the other hand, the problem description itself suggests a solution:</p>
+<ul>
+<li>"words" are mentioned explicitly in the description of the problem, so it is reasonable for the designer to treat words as information packets (IPs)</li>
+<li>in FBP there is no single call hierarchy, so the programmer is not tempted to force a subpattern of the solution to be the top level.</li>
+</ul>
+<p>Here is the most natural solution in FBP (there is no single "correct" solution in FBP, but this seems like a natural fit):</p>
+<div class="center">
+<div class="thumb tnone">
+<div class="thumbinner" style="width:222px;"><a href="/wiki/File:FBP_Telegram_Problem.png" class="image"><img alt="" src="//upload.wikimedia.org/wikipedia/commons/thumb/a/aa/FBP_Telegram_Problem.png/220px-FBP_Telegram_Problem.png" width="220" height="54" class="thumbimage" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/a/aa/FBP_Telegram_Problem.png/330px-FBP_Telegram_Problem.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/a/aa/FBP_Telegram_Problem.png/440px-FBP_Telegram_Problem.png 2x" /></a>
+<div class="thumbcaption">
+<div class="magnify"><a href="/wiki/File:FBP_Telegram_Problem.png" class="internal" title="Enlarge"><img src="//bits.wikimedia.org/static-1.22wmf20/skins/common/images/magnify-clip.png" width="15" height="11" alt="" /></a></div>
+"Telegram problem"</div>
+</div>
+</div>
+</div>
+<p>As mentioned above, Initial Information Packets (IIPs) can be used to specify parametric information such as the desired output record length (required by the rightmost two components), or file names. IIPs are data chunks associated with a port in the network definition which become "normal" IPs when a "receive" is issued for the relevant port.</p>
+<h3><span class="mw-headline" id="Batch_update">Batch update</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Flow-based_programming&amp;action=edit&amp;section=7" title="Edit section: Batch update">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>This type of program involves passing a file of "details" (changes, adds and deletes) against a "master file", and producing (at least) an updated master file, and one or more reports. Update programs are generally quite hard to code using synchronous, procedural code, as two (sometimes more) input streams have to be kept synchronized, even though there may be masters without corresponding details, or vice versa.</p>
+<div class="center">
+<div class="thumb tnone">
+<div class="thumbinner" style="width:222px;"><a href="/wiki/File:FBP-Update.png" class="image"><img alt="" src="//upload.wikimedia.org/wikipedia/commons/thumb/c/c0/FBP-Update.png/220px-FBP-Update.png" width="220" height="95" class="thumbimage" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/c/c0/FBP-Update.png/330px-FBP-Update.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/c/c0/FBP-Update.png/440px-FBP-Update.png 2x" /></a>
+<div class="thumbcaption">
+<div class="magnify"><a href="/wiki/File:FBP-Update.png" class="internal" title="Enlarge"><img src="//bits.wikimedia.org/static-1.22wmf20/skins/common/images/magnify-clip.png" width="15" height="11" alt="" /></a></div>
+Canonical "batch update" structure</div>
+</div>
+</div>
+</div>
+<p>In FBP, a reusable component (Collate), based on the <a href="/wiki/Unit_record_equipment" title="Unit record equipment">unit record</a> idea of a Collator, makes writing this type of application much easier as Collate merges the two streams and inserts bracket IPs to indicate grouping levels, significantly simplifying the downstream logic. Suppose that one stream ("masters" in this case) consists of IPs with key values of 1, 2 and 3, and the second stream IPs ("details") have key values of 11, 12, 21, 31, 32, 33 and 41, where the first digit corresponds to the master key values. Using bracket characters to represent "bracket" IPs, the collated output stream will be as follows:</p>
+<pre>
+( m1 d11 d12 ) ( m2 d21 ) ( m3 d31 d32 d33 ) (d41)
+</pre>
+<p>As there was no master with a value of 4, the last group consists of a single detail (plus brackets).</p>
+<p>The structure of the above stream can be described succinctly using a <a href="/wiki/Backus%E2%80%93Naur_form" title="Backus–Naur form" class="mw-redirect">BNF</a>-like notation such as</p>
+<pre>
+{ ( [m] d* ) }*
+</pre>
+<p>Collate is a reusable <a href="/wiki/Black_box_(systems)" title="Black box (systems)" class="mw-redirect">black box</a> which only needs to know where the control fields are in its incoming IPs (even this is not strictly necessary as transformer processes can be inserted upstream to place the control fields in standard locations), and can in fact be generalized to any number of input streams, and any depth of bracket nesting. Collate uses an array-type port for input, allowing a variable number of input streams.</p>
+<h3><span class="mw-headline" id="Multiplexing_processes">Multiplexing processes</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Flow-based_programming&amp;action=edit&amp;section=8" title="Edit section: Multiplexing processes">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>Flow-Based Programming supports process multiplexing in a very natural way. Since components are read-only, any number of instances of a given component ("processes") can run asynchronously with each other.</p>
+<div class="center">
+<div class="thumb tnone">
+<div class="thumbinner" style="width:222px;"><a href="/wiki/File:FBP_multiplexing_example.png" class="image"><img alt="" src="//upload.wikimedia.org/wikipedia/commons/thumb/6/67/FBP_multiplexing_example.png/220px-FBP_multiplexing_example.png" width="220" height="114" class="thumbimage" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/6/67/FBP_multiplexing_example.png/330px-FBP_multiplexing_example.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/6/67/FBP_multiplexing_example.png/440px-FBP_multiplexing_example.png 2x" /></a>
+<div class="thumbcaption">
+<div class="magnify"><a href="/wiki/File:FBP_multiplexing_example.png" class="internal" title="Enlarge"><img src="//bits.wikimedia.org/static-1.22wmf20/skins/common/images/magnify-clip.png" width="15" height="11" alt="" /></a></div>
+Example of multiplexing</div>
+</div>
+</div>
+</div>
+<p>When computers usually had a single processor, this was useful when a lot of I/O was going on; now that machines usually have multiple processors, this is starting to become useful when processes are CPU-intensive as well. The diagram in this section shows a single "Load Balancer"<sup id="cite_ref-18" class="reference"><a href="#cite_note-18"><span>[</span>18<span>]</span></a></sup> process distributing data between 3 processes, labeled S1, S2 and S3, respectively, which are instances of a single component, which in turn feed into a single process on a "first-come, first served" basis.</p>
+<h3><span class="mw-headline" id="Simple_interactive_network">Simple interactive network</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Flow-based_programming&amp;action=edit&amp;section=9" title="Edit section: Simple interactive network">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<div class="center">
+<div class="thumb tnone">
+<div class="thumbinner" style="width:222px;"><a href="/wiki/File:FBP_general_interactive_application.png" class="image"><img alt="" src="//upload.wikimedia.org/wikipedia/commons/thumb/a/a0/FBP_general_interactive_application.png/220px-FBP_general_interactive_application.png" width="220" height="111" class="thumbimage" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/a/a0/FBP_general_interactive_application.png/330px-FBP_general_interactive_application.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/a/a0/FBP_general_interactive_application.png/440px-FBP_general_interactive_application.png 2x" /></a>
+<div class="thumbcaption">
+<div class="magnify"><a href="/wiki/File:FBP_general_interactive_application.png" class="internal" title="Enlarge"><img src="//bits.wikimedia.org/static-1.22wmf20/skins/common/images/magnify-clip.png" width="15" height="11" alt="" /></a></div>
+Schematic of general interactive application</div>
+</div>
+</div>
+</div>
+<p>In this general schematic, requests (transactions) coming from users enter the diagram at the upper left, and responses are returned at the lower left. The "back ends" (on the right side) communicate with systems at other sites, e.g. using <a href="/wiki/Corba" title="Corba" class="mw-redirect">CORBA</a>, <a href="/wiki/MQSeries" title="MQSeries" class="mw-redirect">MQSeries</a>, etc. The cross-connections represent requests that do not need to go to the back ends, or requests that have to cycle through the network more than once before being returned to the user.</p>
+<p>As different requests may use different back-ends, and may require differing amounts of time for the back-ends (if used) to process them, provision must be made to relate returned data to the appropriate requesting transactions, e.g. hash tables or caches.</p>
+<p>The above diagram is schematic in the sense that the final application may contain many more processes: processes may be inserted between other processes to manage caches, display connection traffic, monitor throughput, etc. Also the blocks in the diagram may represent "subnets" - small networks with one or more open connections.</p>
+<h2><span class="mw-headline" id="Comparison_with_other_paradigms_and_methodologies">Comparison with other paradigms and methodologies</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Flow-based_programming&amp;action=edit&amp;section=10" title="Edit section: Comparison with other paradigms and methodologies">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<h3><span class="mw-headline" id="Jackson_Structured_Programming_.28JSP.29_and_Jackson_System_Development_.28JSD.29">Jackson Structured Programming (JSP) and Jackson System Development (JSD)</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Flow-based_programming&amp;action=edit&amp;section=11" title="Edit section: Jackson Structured Programming (JSP) and Jackson System Development (JSD)">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<div class="rellink relarticle mainarticle">Main article: <a href="/wiki/Jackson_Structured_Programming" title="Jackson Structured Programming" class="mw-redirect">Jackson Structured Programming</a></div>
+<div class="rellink relarticle mainarticle">Main article: <a href="/wiki/Jackson_System_Development" title="Jackson System Development" class="mw-redirect">Jackson System Development</a></div>
+<p>This methodology assumes that a program must be structured as a single procedural hierarchy of subroutines. Its starting point is to describe the application as a set of "main lines", based on the input and output data structures. One of these "main lines" is then chosen to drive the whole program, and the others are required to be "inverted" to turn them into subroutines (hence the name "Jackson inversion"). This sometimes results in what is called a "clash", requiring the program to be split into multiple programs or coroutines. When using FBP, this inversion process is not required, as every FBP component can be considered a separate "main line".</p>
+<p>FBP and JSP share the concept of treating a program (or some components) as a <a href="/wiki/Parser" title="Parser" class="mw-redirect">parser</a> of an input stream. The FBP book<sup id="cite_ref-book_1-2" class="reference"><a href="#cite_note-book-1"><span>[</span>1<span>]</span></a></sup> contains a discussion of how the concept of <a href="/wiki/Push-down_automaton" title="Push-down automaton" class="mw-redirect">push-down automata</a> may be used to design components (Chapter 23). It describes how a <a href="/wiki/Stack_(data_structure)" title="Stack (data structure)" class="mw-redirect">stack</a> of controlling IPs may be used to control nested substreams in an FBP data stream.</p>
+<p>In Jackson's later work, <a href="/wiki/Jackson_System_Development" title="Jackson System Development" class="mw-redirect">Jackson System Development</a> (JSD) the ideas were developed further.<sup id="cite_ref-jsd_19-0" class="reference"><a href="#cite_note-jsd-19"><span>[</span>19<span>]</span></a></sup></p>
+<p>In JSD the design is maintained as a network design until the final implementation stage. The model is then transformed into a set of sequential processes to the number of available processors. Jackson discusses the possibility of directly executing the network model that exists prior to this step, in section 1.3 of his book (italics added):</p>
+<dl>
+<dd>The specification produced at the end of the System Timing step is, in principle, capable of direct execution. The necessary environment would contain a processor for each process, a device equivalent to an unbounded buffer for each data stream, and some input and output devices where the system is connected to the real world. <i>Such an environment could, of course, be provided by suitable software running on a sufficiently powerful machine. Sometimes, such direct execution of the specification will be possible, and may even be a reasonable choice.</i><sup id="cite_ref-jsd_19-1" class="reference"><a href="#cite_note-jsd-19"><span>[</span>19<span>]</span></a></sup></dd>
+</dl>
+<p>Flow Based Programming can be considered an implementation of the environment described by Jackson, with the exception that connections in FBP are bounded, with a finite capacity, rather than unbounded.<sup id="cite_ref-20" class="reference"><a href="#cite_note-20"><span>[</span>20<span>]</span></a></sup></p>
+<h3><span class="mw-headline" id="Applicative_programming">Applicative programming</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Flow-based_programming&amp;action=edit&amp;section=12" title="Edit section: Applicative programming">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<div class="rellink relarticle mainarticle">Main article: <a href="/wiki/Applicative_programming_language" title="Applicative programming language">Applicative programming language</a></div>
+<p>W.B. Ackerman defines an applicative language as one which does all of its processing by means of operators applied to values.<sup id="cite_ref-21" class="reference"><a href="#cite_note-21"><span>[</span>21<span>]</span></a></sup> The earliest known applicative language was LISP.</p>
+<p>An FBP component can be regarded as a function transforming its input stream(s) into its output stream(s). These functions are then combined to make more complex transformations, as shown here:</p>
+<div class="center">
+<div class="thumb tnone">
+<div class="thumbinner" style="width:222px;"><a href="/wiki/File:FBP_representation_of_3_function_calls.png" class="image"><img alt="" src="//upload.wikimedia.org/wikipedia/commons/thumb/c/c2/FBP_representation_of_3_function_calls.png/220px-FBP_representation_of_3_function_calls.png" width="220" height="136" class="thumbimage" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/c/c2/FBP_representation_of_3_function_calls.png/330px-FBP_representation_of_3_function_calls.png 1.5x, //upload.wikimedia.org/wikipedia/commons/c/c2/FBP_representation_of_3_function_calls.png 2x" /></a>
+<div class="thumbcaption">
+<div class="magnify"><a href="/wiki/File:FBP_representation_of_3_function_calls.png" class="internal" title="Enlarge"><img src="//bits.wikimedia.org/static-1.22wmf20/skins/common/images/magnify-clip.png" width="15" height="11" alt="" /></a></div>
+Two functions feeding one</div>
+</div>
+</div>
+</div>
+<p>If we label streams, as shown, with lower case letters, then the above diagram can be represented succinctly as follows:</p>
+<pre>
+c = G(F(a),F(b));
+</pre>
+<p>Just as in functional notation F can be used twice because it only works with values, and therefore has no side effects, in FBP two instances of a given component may be running concurrently with each other, and therefore FBP components must not have side-effects either. Functional notation could clearly be used to represent at least a part of an FBP network.</p>
+<p>The question then arises whether FBP components can themselves be expressed using functional notation. W.H. Burge showed how stream expressions can be developed using a recursive, applicative style of programming, but this work was in terms of (streams of) atomic values.<sup id="cite_ref-22" class="reference"><a href="#cite_note-22"><span>[</span>22<span>]</span></a></sup> In FBP, it is necessary to be able to describe and process structured data chunks (FBP IPs). In the FBP book,<sup id="cite_ref-book_1-3" class="reference"><a href="#cite_note-book-1"><span>[</span>1<span>]</span></a></sup> a notation is added for accessing the fields of an IP, and an operator, called the "mini-constructor" (μ), based on a similar function in the Vienna Definition Language, for creating an IP from a set of (perhaps modified) field values and identifiers.</p>
+<p>Furthermore, most applicative systems assume that all the data is available in memory at the same time, whereas FBP applications need to be able to process long-running streams of data while still using finite resources. Friedman and Wise suggested a way to do this by adding the concept of <a href="/wiki/Lazy_evaluation" title="Lazy evaluation">"lazy cons"</a> to Burge's work. This removed the requirement that both of the arguments of "cons" be available at the same instant of time. "Lazy cons" does not actually build a stream until both of its arguments are realized - before that it simply records a "promise" to do this. This allows a stream to be dynamically realized from the front, but with an unrealized back end. The end of the stream stays unrealized until the very end of the process, while the beginning is an ever-lengthening sequence of items.</p>
+<p>In the FBP book<sup id="cite_ref-book_1-4" class="reference"><a href="#cite_note-book-1"><span>[</span>1<span>]</span></a></sup> (Chapter 24), these ideas are combined to allow the expression of some quite complex component logic using applicative notation.</p>
+<h3><span class="mw-headline" id="Linda">Linda</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Flow-based_programming&amp;action=edit&amp;section=13" title="Edit section: Linda">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<div class="rellink relarticle mainarticle">Main article: <a href="/wiki/Linda_(coordination_language)" title="Linda (coordination language)">Linda</a></div>
+<p>Many of the concepts in FBP seem to have been discovered independently in different systems over the years. Linda, mentioned above, is one such. Chapter 26 of the FBP book<sup id="cite_ref-book_1-5" class="reference"><a href="#cite_note-book-1"><span>[</span>1<span>]</span></a></sup> goes into some detail about similarities and differences, but probably the major difference is that, in Linda, data is accessed associatively, whereas in FBP, IPs arriving at a particular input port are retrieved sequentially. FBP's IPs are very similar to Linda's <a href="/wiki/Tuple" title="Tuple">tuples</a>. The difference between the two techniques is illustrated by the Linda "school of piranhas" load balancing technique - in FBP, this requires an extra "load balancer" component which routes requests to the component in a list which has the smallest number of IPs waiting to be processed. Clearly FBP and Linda are closely related, and one could easily be used to simulate the other.</p>
+<h3><span class="mw-headline" id="Object-oriented_programming">Object-oriented programming</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Flow-based_programming&amp;action=edit&amp;section=14" title="Edit section: Object-oriented programming">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<div class="rellink relarticle mainarticle">Main article: <a href="/wiki/Object-oriented_programming" title="Object-oriented programming">Object-oriented programming</a></div>
+<p>An object in <a href="/wiki/Object-oriented_programming" title="Object-oriented programming">OOP</a> can be described as a semi-autonomous unit comprising both information and behaviour. Objects communicate by means of "method calls", which are essentially subroutine calls, done indirectly via the class to which the receiving object belongs. The object's internal data can only be accessed by means of method calls, so this is a form of <a href="/wiki/Information_hiding" title="Information hiding">information hiding</a> or "encapsulation". Encapsulation, however, predates OOP - <a href="/wiki/David_Parnas" title="David Parnas">David Parnas</a> wrote one of the seminal articles on it in the early 70s <sup id="cite_ref-23" class="reference"><a href="#cite_note-23"><span>[</span>23<span>]</span></a></sup> - and is a basic concept in computing. Encapsulation is the very essence of an FBP component, which may be thought of as a <a href="/wiki/Black_box" title="Black box">black box</a>, performing some conversion of its input data into its output data. In FBP, part of the specification of a component is the data formats and stream structures that it can accept, and those it will generate. This constitutes a form of <a href="/wiki/Design_by_contract" title="Design by contract">design by contract</a>. In addition, the data in an IP can only be accessed directly by the currently owning process. Encapsulation can also be implemented at the network level, by having outer processes protect inner ones.</p>
+<p>A paper by C. Ellis and S. Gibbs distinguishes between <a href="/wiki/Active_object" title="Active object">active objects</a> and passive objects.<sup id="cite_ref-24" class="reference"><a href="#cite_note-24"><span>[</span>24<span>]</span></a></sup> Passive objects comprise information and behaviour, as stated above, but they cannot determine the <i>timing</i> of this behaviour. Active objects on the other hand can do this. In their article Ellis and Gibbs state that active objects have much more potential for the development of maintainable systems than do passive objects. An FBP application can be viewed as a combination of these two types of object, where FBP processes would correspond to active objects, while IPs would correspond to passive objects.</p>
+<p>Chapter 25 of the FBP book<sup id="cite_ref-book_1-6" class="reference"><a href="#cite_note-book-1"><span>[</span>1<span>]</span></a></sup> goes into more detail on the relationship between FBP and <a href="/wiki/Object-oriented_programming" title="Object-oriented programming">OOP</a>.</p>
+<h2><span class="mw-headline" id="See_also">See also</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Flow-based_programming&amp;action=edit&amp;section=15" title="Edit section: See also">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<ul>
+<li><a href="/wiki/Active_objects" title="Active objects" class="mw-redirect">Active objects</a></li>
+<li><a href="/wiki/Actor_model" title="Actor model">Actor model</a></li>
+<li><a href="/wiki/Communicating_Sequential_Processes" title="Communicating Sequential Processes" class="mw-redirect">Communicating Sequential Processes</a></li>
+<li><a href="/wiki/Concurrent_computing" title="Concurrent computing">Concurrent computing</a></li>
+<li><a href="/wiki/Dataflow" title="Dataflow">Dataflow</a></li>
+<li><a href="/wiki/Data_flow_diagram" title="Data flow diagram">Data flow diagram</a></li>
+<li><a href="/wiki/Dataflow_programming" title="Dataflow programming">Dataflow programming</a></li>
+<li><a href="/wiki/IEC_61131" title="IEC 61131">FBD - Function Block Diagrams (a programming language in the IEC 61131 standard)</a></li>
+<li><a href="/wiki/Functional_reactive_programming" title="Functional reactive programming">Functional reactive programming</a></li>
+<li><a href="/wiki/Linda_(coordination_language)" title="Linda (coordination language)">Linda (coordination language)</a></li>
+<li><a href="/wiki/MapReduce" title="MapReduce">MapReduce</a></li>
+<li><a href="/wiki/Programming_in_the_large_and_programming_in_the_small" title="Programming in the large and programming in the small">Programming in the large and programming in the small</a></li>
+<li><a href="/wiki/Wayne_Stevens" title="Wayne Stevens">Wayne Stevens</a></li>
+<li><a href="/wiki/Yahoo_Pipes" title="Yahoo Pipes" class="mw-redirect">Yahoo Pipes</a></li>
+</ul>
+<h2><span class="mw-headline" id="References">References</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Flow-based_programming&amp;action=edit&amp;section=16" title="Edit section: References">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<div class="reflist references-column-count references-column-count-2" style="-moz-column-count: 2; -webkit-column-count: 2; column-count: 2; list-style-type: decimal;">
+<ol class="references">
+<li id="cite_note-book-1"><span class="mw-cite-backlink">^ <a href="#cite_ref-book_1-0"><sup><i><b>a</b></i></sup></a> <a href="#cite_ref-book_1-1"><sup><i><b>b</b></i></sup></a> <a href="#cite_ref-book_1-2"><sup><i><b>c</b></i></sup></a> <a href="#cite_ref-book_1-3"><sup><i><b>d</b></i></sup></a> <a href="#cite_ref-book_1-4"><sup><i><b>e</b></i></sup></a> <a href="#cite_ref-book_1-5"><sup><i><b>f</b></i></sup></a> <a href="#cite_ref-book_1-6"><sup><i><b>g</b></i></sup></a></span> <span class="reference-text">J. Paul Morrison, <i>Flow-Based Programming, 2nd Edition: A New Approach to Application Development,</i> CreateSpace, 2010, <a href="/wiki/Special:BookSources/1451542321" class="internal mw-magiclink-isbn">ISBN 1-4515-4232-1</a></span></li>
+<li id="cite_note-2"><span class="mw-cite-backlink"><b><a href="#cite_ref-2">^</a></b></span> <span class="reference-text">N. Carriero and D. Gelernter, <i>Linda in Context</i>, Communications of the ACM, Vol. 32, No. 4, April 1989</span></li>
+<li id="cite_note-3"><span class="mw-cite-backlink"><b><a href="#cite_ref-3">^</a></b></span> <span class="reference-text">N. Carriero and D. Gelernter, <i>Coordination Languages and their Significance</i>, Communications of the ACM, Vol. 35, No. 2, February 1992</span></li>
+<li id="cite_note-4"><span class="mw-cite-backlink"><b><a href="#cite_ref-4">^</a></b></span> <span class="reference-text">M.E. Conway, <i>Design of a separable transition-diagram compiler</i>, Communications of the ACM, Vol. 6, No. 7, July 1963</span></li>
+<li id="cite_note-5"><span class="mw-cite-backlink"><b><a href="#cite_ref-5">^</a></b></span> <span class="reference-text">J. Paul Morrison, <i>Data Responsive Modular, Interleaved Task Programming System,</i> IBM Technical Disclosure Bulletin, Vol. 13, No. 8, 2425-2426, January 1971</span></li>
+<li id="cite_note-6"><span class="mw-cite-backlink"><b><a href="#cite_ref-6">^</a></b></span> <span class="reference-text">J. Paul Morrison, <a rel="nofollow" class="external text" href="http://domino.research.ibm.com/tchjr/journalindex.nsf/e90fc5d047e64ebf85256bc80066919c/2e3ae508088ef61585256bfa00685aff?OpenDocument"><i>Data Stream Linkage Mechanism,</i> IBM Systems Journal Vol. 17, No. 4, 1978</a></span></li>
+<li id="cite_note-7"><span class="mw-cite-backlink"><b><a href="#cite_ref-7">^</a></b></span> <span class="reference-text">J. Paul Morrison, <i>Flow-Based Programming: A New Approach to Application Development,</i> van Nostrand Reinhold, 1994, <a href="/wiki/Special:BookSources/0442017715" class="internal mw-magiclink-isbn">ISBN 0-442-01771-5</a></span></li>
+<li id="cite_note-8"><span class="mw-cite-backlink"><b><a href="#cite_ref-8">^</a></b></span> <span class="reference-text">W.P. Stevens, <a rel="nofollow" class="external text" href="http://domino.research.ibm.com/tchjr/journalindex.nsf/e90fc5d047e64ebf85256bc80066919c/8b4f51d29b014b3685256bfa00685b53?OpenDocument"><i>How Data Flow can Improve Application Development Productivity,</i> IBM System Journal, Vol. 21, No. 2, 1982</a></span></li>
+<li id="cite_note-9"><span class="mw-cite-backlink"><b><a href="#cite_ref-9">^</a></b></span> <span class="reference-text">W.P. Stevens, <i>Using Data Flow for Application Development</i>, Byte, June 1985</span></li>
+<li id="cite_note-10"><span class="mw-cite-backlink"><b><a href="#cite_ref-10">^</a></b></span> <span class="reference-text">W.P. Stevens, <i>Software Design - Concepts and Methods</i>, Practical Software Engineering Series, Ed. Allen Macro, Prentice Hall, 1990, <a href="/wiki/Special:BookSources/0138202427" class="internal mw-magiclink-isbn">ISBN 0-13-820242-7</a></span></li>
+<li id="cite_note-11"><span class="mw-cite-backlink"><b><a href="#cite_ref-11">^</a></b></span> <span class="reference-text"><span class="citation web">InforSense. <a rel="nofollow" class="external text" href="http://www.inforsense.com/">"Knowledge Discovery Environment"</a><span class="reference-accessdate">. Retrieved 2009-01-29</span>.</span><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AFlow-based+programming&amp;rft.au=InforSense&amp;rft.aulast=InforSense&amp;rft.btitle=Knowledge+Discovery+Environment&amp;rft.genre=book&amp;rft_id=http%3A%2F%2Fwww.inforsense.com%2F&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook" class="Z3988"><span style="display:none;">&#160;</span></span></span></li>
+<li id="cite_note-12"><span class="mw-cite-backlink"><b><a href="#cite_ref-12">^</a></b></span> <span class="reference-text"><span class="citation web">Accelrys, Inc. <a rel="nofollow" class="external text" href="http://www.accelrys.com/">"Accelrys"</a><span class="reference-accessdate">. Retrieved 2010-10-07</span>.</span><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AFlow-based+programming&amp;rft.au=Accelrys%2C+Inc.&amp;rft.aulast=Accelrys%2C+Inc.&amp;rft.btitle=Accelrys&amp;rft.genre=book&amp;rft_id=http%3A%2F%2Fwww.accelrys.com%2F&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook" class="Z3988"><span style="display:none;">&#160;</span></span></span></li>
+<li id="cite_note-13"><span class="mw-cite-backlink"><b><a href="#cite_ref-13">^</a></b></span> <span class="reference-text"><span class="citation web">Pentaho. <a rel="nofollow" class="external text" href="http://kettle.pentaho.org/">"Kettle - Pentaho Data Integration"</a><span class="reference-accessdate">. Retrieved 2009-11-22</span>.</span><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AFlow-based+programming&amp;rft.aulast=Pentaho&amp;rft.au=Pentaho&amp;rft.btitle=Kettle+-+Pentaho+Data+Integration&amp;rft.genre=book&amp;rft_id=http%3A%2F%2Fkettle.pentaho.org%2F&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook" class="Z3988"><span style="display:none;">&#160;</span></span></span></li>
+<li id="cite_note-14"><span class="mw-cite-backlink"><b><a href="#cite_ref-14">^</a></b></span> <span class="reference-text"><span class="citation web">Knime. <a rel="nofollow" class="external text" href="http://www.knime.org/">"Konstanz Information Miner"</a><span class="reference-accessdate">. Retrieved 2009-01-29</span>.</span><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AFlow-based+programming&amp;rft.au=Knime&amp;rft.aulast=Knime&amp;rft.btitle=Konstanz+Information+Miner&amp;rft.genre=book&amp;rft_id=http%3A%2F%2Fwww.knime.org%2F&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook" class="Z3988"><span style="display:none;">&#160;</span></span></span></li>
+<li id="cite_note-15"><span class="mw-cite-backlink"><b><a href="#cite_ref-15">^</a></b></span> <span class="reference-text">D.P. Friedman and D.S. Wise, <i>CONS should not evaluate its arguments,</i> Automata, Languages and Programming, Edinburgh University Press, Edinburgh, 1976</span></li>
+<li id="cite_note-16"><span class="mw-cite-backlink"><b><a href="#cite_ref-16">^</a></b></span> <span class="reference-text"><a rel="nofollow" class="external free" href="http://flow-based-pgmg.svn.sourceforge.net/">http://flow-based-pgmg.svn.sourceforge.net/</a></span></li>
+<li id="cite_note-17"><span class="mw-cite-backlink"><b><a href="#cite_ref-17">^</a></b></span> <span class="reference-text"><a rel="nofollow" class="external free" href="http://www.jpaulmorrison.com/fbp/index.shtml#DrawFBP">http://www.jpaulmorrison.com/fbp/index.shtml#DrawFBP</a></span></li>
+<li id="cite_note-18"><span class="mw-cite-backlink"><b><a href="#cite_ref-18">^</a></b></span> <span class="reference-text"><a rel="nofollow" class="external text" href="http://www.jpaulmorrison.com/fbp/perform.shtml">Performance Considerations</a> (for "Load Balancer", see Diagram 22.2)</span></li>
+<li id="cite_note-jsd-19"><span class="mw-cite-backlink">^ <a href="#cite_ref-jsd_19-0"><sup><i><b>a</b></i></sup></a> <a href="#cite_ref-jsd_19-1"><sup><i><b>b</b></i></sup></a></span> <span class="reference-text">"<a rel="nofollow" class="external text" href="http://www.ferg.org/papers/jackson--a_system_development_method.pdf">A System development method</a>" by M. A. Jackson, published in <i>Tools and notions for program construction: An advanced course</i>, Cambridge University Press, 1982</span></li>
+<li id="cite_note-20"><span class="mw-cite-backlink"><b><a href="#cite_ref-20">^</a></b></span> <span class="reference-text"><a rel="nofollow" class="external free" href="http://www.jpaulmorrison.com/fbp/gloss.htm">http://www.jpaulmorrison.com/fbp/gloss.htm</a></span></li>
+<li id="cite_note-21"><span class="mw-cite-backlink"><b><a href="#cite_ref-21">^</a></b></span> <span class="reference-text">W.B. Ackerman, <i>Data Flow Languages</i>, Proceedings National Computer Conference, pp. 1087-1095, 1979</span></li>
+<li id="cite_note-22"><span class="mw-cite-backlink"><b><a href="#cite_ref-22">^</a></b></span> <span class="reference-text">W.H. Burge, <i>Recursive Programming Techniques</i>, Addison-Wesley, Reading, MA, 1975</span></li>
+<li id="cite_note-23"><span class="mw-cite-backlink"><b><a href="#cite_ref-23">^</a></b></span> <span class="reference-text">D. Parnas, <i>On the criteria to be used in decomposing systems into modules</i>, Communications of the ACM, Vol. 5, No. 12, Dec. 1972, pp. 1053-8</span></li>
+<li id="cite_note-24"><span class="mw-cite-backlink"><b><a href="#cite_ref-24">^</a></b></span> <span class="reference-text">C. Ellis and S. Gibbs, <i>Active Objects: Realities and Possibilities</i>, in <i>Object-Oriented Concepts, Databases, and Applications</i>, eds. W. Kim and F.H. Lochovsky, ACM Press, Addison-Wesley, 1989</span></li>
+</ol>
+</div>
+<h2><span class="mw-headline" id="External_links">External links</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Flow-based_programming&amp;action=edit&amp;section=17" title="Edit section: External links">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<ul>
+<li><a rel="nofollow" class="external text" href="http://www.jpaulmorrison.com/fbp/index.shtml">Flow-Based Programming</a></li>
+<li><a rel="nofollow" class="external text" href="http://sourceforge.net/projects/flow-based-pgmg">FBP on SourceForge</a>&#160;: Open source framework for Java and C#</li>
+<li><a rel="nofollow" class="external text" href="http://groups.google.com/group/flow-based-programming">Google group on Flow-Based Programming</a></li>
+<li><a rel="nofollow" class="external text" href="http://lambda-the-ultimate.org/node/1210">"The new old or The 'Return' to Concurrency"</a> - (discussion on <i>Lambda the Ultimate</i> about FBP, <a href="/wiki/Unix" title="Unix">Unix</a>, <a href="/wiki/Erlang_(programming_language)" title="Erlang (programming language)">Erlang</a>, <a href="/wiki/OmniMark" title="OmniMark">OmniMark</a>, <a href="/wiki/Monad_shell" title="Monad shell" class="mw-redirect">Monad shell</a>, <a href="/wiki/Kamaelia" title="Kamaelia">Kamaelia</a>, etc.)</li>
+<li><a rel="nofollow" class="external text" href="http://lambda-the-ultimate.org/node/193">"The right default: concurrent components with message passing"</a> - (discussion on <i>Lambda the Ultimate</i> about approaches to structuring programs)</li>
+<li><a rel="nofollow" class="external text" href="http://www.expecco.de/">expecco</a>&#160;: Flow-Based Programming IDE</li>
+<li><a rel="nofollow" class="external text" href="http://www.lilyapp.org/">Lily</a>&#160;: Firefox add-on that allows users to mashup the web or the desktop, visualize and animate data, modify webpages, play music, or connect to world outside the computer</li>
+<li><a rel="nofollow" class="external text" href="http://gaumer.blogspot.com/2009/08/flow-based-programming-with-pypes.html">Pypes</a>&#160;: Python implementation of FBP based on <a href="/wiki/Stackless_Python" title="Stackless Python">Stackless Python</a>, by Eric Gaumer</li>
+<li><a rel="nofollow" class="external text" href="http://constructibl.es/">Constructibl.es</a>&#160;: JavaScript and HTML implementation of FBP by Seung Chan Lim</li>
+<li><a rel="nofollow" class="external text" href="http://noflojs.org/">NoFlo</a>&#160;: JavaScript implementation of FBP for <a href="/wiki/Node.js" title="Node.js">Node.js</a> by Henri Bergius</li>
+<li><a rel="nofollow" class="external text" href="http://github.com/bergie/phpflo">PhpFlo</a>&#160;: PHP implementation of FBP by Henri Bergius</li>
+<li><a rel="nofollow" class="external text" href="http://sourceforge.net/projects/dspatch">DSPatch</a>&#160;: C++ object-oriented implementation of FBP by Marcus Tomlinson</li>
+<li><a rel="nofollow" class="external text" href="http://pyfproject.org/">PyF</a>&#160;: open source Python framework and platform</li>
+<li><a rel="nofollow" class="external text" href="http://storm-project.net/">Storm</a>&#160;: Distributed and fault-tolerant realtime computation</li>
+<li><a rel="nofollow" class="external text" href="http://www.malhar.net/sriram/sriram-diss-final-jan28.pdf">Dissertation on Kilim</a>&#160;: A server framework with lightweight actors, isolation types, and zero-copy messaging</li>
+</ul>
+<p><b>Articles</b></p>
+<ul>
+<li><span class="citation journal">Razdow, Allen (December 1997). <a rel="nofollow" class="external text" href="http://www.dmreview.com/article_sub.cfm?articleId=689">"<b>Building Enterprise Data Refineries</b>"</a>. <i>DMReview</i><span class="reference-accessdate">. Retrieved 2006-07-15</span>.</span><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AFlow-based+programming&amp;rft.atitle=%27%27%27Building+Enterprise+Data+Refineries%27%27%27&amp;rft.aufirst=Allen&amp;rft.aulast=Razdow&amp;rft.au=Razdow%2C+Allen&amp;rft.date=1997&amp;rft.genre=article&amp;rft_id=http%3A%2F%2Fwww.dmreview.com%2Farticle_sub.cfm%3FarticleId%3D689&amp;rft.jtitle=DMReview&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal" class="Z3988"><span style="display:none;">&#160;</span></span></li>
+</ul>
+<ul>
+<li><span class="citation web">Mayer, Anthony; S. McGough, M. Gulamali, L. Young, J. Stanton, S. Newhouse, J. Darlington (2002). <a rel="nofollow" class="external text" href="http://www.lesc.ic.ac.uk/iceni/pdf/Grid2002.pdf">"<b>Meaning and Behaviour in Grid Oriented Components</b>"</a> (PDF). London e-Science Centre, Imperial College of Science, Technology and Medicine<span class="reference-accessdate">. Retrieved 2006-07-15</span>.</span><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AFlow-based+programming&amp;rft.aufirst=Anthony&amp;rft.aulast=Mayer&amp;rft.au=Mayer%2C+Anthony&amp;rft.btitle=%27%27%27Meaning+and+Behaviour+in+Grid+Oriented+Components%27%27%27&amp;rft.date=2002&amp;rft.genre=book&amp;rft_id=http%3A%2F%2Fwww.lesc.ic.ac.uk%2Ficeni%2Fpdf%2FGrid2002.pdf&amp;rft.pub=London+e-Science+Centre%2C+Imperial+College+of+Science%2C+Technology+and+Medicine&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook" class="Z3988"><span style="display:none;">&#160;</span></span></li>
+</ul>
+<ul>
+<li><span class="citation web">Black, Andrew; J. Huang, R. Koster, J. Walpole, C. Pu (2002). <a rel="nofollow" class="external text" href="http://web.cecs.pdx.edu/~black/publications/Mms062%203rd%20try.pdf">"<b>Infopipes: An abstraction for multimedia streaming</b>"</a> (PDF). Springer-Verlag, Multimedia Systems. <a href="/wiki/Digital_object_identifier" title="Digital object identifier">doi</a>:<a rel="nofollow" class="external text" href="http://dx.doi.org/10.1007%2Fs00530-002-0062-3">10.1007/s00530-002-0062-3</a><span class="reference-accessdate">. Retrieved 2006-08-10</span>.</span><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AFlow-based+programming&amp;rft.au=Black%2C+Andrew&amp;rft.aufirst=Andrew&amp;rft.aulast=Black&amp;rft.btitle=%27%27%27Infopipes%3A+An+abstraction+for+multimedia+streaming%27%27%27&amp;rft.date=2002&amp;rft.genre=book&amp;rft_id=http%3A%2F%2Fweb.cecs.pdx.edu%2F~black%2Fpublications%2FMms062%25203rd%2520try.pdf&amp;rft_id=info%3Adoi%2F10.1007%2Fs00530-002-0062-3&amp;rft.pub=Springer-Verlag%2C+Multimedia+Systems&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook" class="Z3988"><span style="display:none;">&#160;</span></span></li>
+</ul>
+<ul>
+<li><span class="citation web"><a rel="nofollow" class="external text" href="http://www.infopipe.com">"<b>Infopipe is registered as a Trademark or Service Mark with the US Patent and Trademark Office</b>"</a>. 1999<span class="reference-accessdate">. Retrieved 2007-01-15</span>.</span><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AFlow-based+programming&amp;rft.btitle=%27%27%27Infopipe+is+registered+as+a+Trademark+or+Service+Mark+with+the+US+Patent+and+Trademark+Office%27%27%27&amp;rft.date=1999&amp;rft.genre=book&amp;rft_id=http%3A%2F%2Fwww.infopipe.com&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook" class="Z3988"><span style="display:none;">&#160;</span></span></li>
+</ul>
+<ul>
+<li><span class="citation journal">Kra, David (October 2004). <a rel="nofollow" class="external text" href="http://www-128.ibm.com/developerworks/grid/library/gr-ziseries/">"<b>zSeries and iSeries servers in the grid domain</b>"</a>. <i>IBM developerWorks (gridComputing)</i><span class="reference-accessdate">. Retrieved 2006-07-13</span>.</span><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AFlow-based+programming&amp;rft.atitle=%27%27%27zSeries+and+iSeries+servers+in+the+grid+domain%27%27%27&amp;rft.aufirst=David&amp;rft.au=Kra%2C+David&amp;rft.aulast=Kra&amp;rft.date=2004&amp;rft.genre=article&amp;rft_id=http%3A%2F%2Fwww-128.ibm.com%2Fdeveloperworks%2Fgrid%2Flibrary%2Fgr-ziseries%2F&amp;rft.jtitle=IBM+developerWorks+%28gridComputing%29&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal" class="Z3988"><span style="display:none;">&#160;</span></span></li>
+</ul>
+<ul>
+<li><span class="citation web">Ludäscher, Bertram; I. Altintas, C. Berkley, D. Higgins, E. Jaeger, M. Jones, E.A. Lee, J. Tao, Y. Zhao (September 2004; revised March 2005). <a rel="nofollow" class="external text" href="http://users.sdsc.edu/~ludaesch//Paper/kepler-swf.pdf">"<b>Scientific Workflow Management and the Kepler System</b>"</a> (PDF). San Diego Supercomputer Center<span class="reference-accessdate">. Retrieved 2006-07-14</span>.</span><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AFlow-based+programming&amp;rft.aufirst=Bertram&amp;rft.aulast=Lud%C3%A4scher&amp;rft.au=Lud%C3%A4scher%2C+Bertram&amp;rft.btitle=%27%27%27Scientific+Workflow+Management+and+the+Kepler+System%27%27%27&amp;rft.date=September+2004%3B+revised+March+2005&amp;rft.genre=book&amp;rft_id=http%3A%2F%2Fusers.sdsc.edu%2F~ludaesch%2F%2FPaper%2Fkepler-swf.pdf&amp;rft.pub=San+Diego+Supercomputer+Center&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook" class="Z3988"><span style="display:none;">&#160;</span></span></li>
+</ul>
+<ul>
+<li><span class="citation web">Bickle, Jerry; K. Richardson, J. Smith (2005). <a rel="nofollow" class="external text" href="http://web.archive.org/web/20060714093003/http://www.omg.org/docs/robotics/05-01-06.pdf">"<b>OMG Software Radio Specification Overview for Robotics</b>"</a> (PDF). Object Management Group - Software-Based Communications. Archived from <a rel="nofollow" class="external text" href="http://www.omg.org/docs/robotics/05-01-06.pdf">the original</a> on 2006-07-14<span class="reference-accessdate">. Retrieved 2006-07-15</span>.</span><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AFlow-based+programming&amp;rft.au=Bickle%2C+Jerry&amp;rft.aufirst=Jerry&amp;rft.aulast=Bickle&amp;rft.btitle=%27%27%27OMG+Software+Radio+Specification+Overview+for+Robotics%27%27%27&amp;rft.date=2005&amp;rft.genre=book&amp;rft_id=http%3A%2F%2Fwww.omg.org%2Fdocs%2Frobotics%2F05-01-06.pdf&amp;rft.pub=Object+Management+Group+-+Software-Based+Communications&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook" class="Z3988"><span style="display:none;">&#160;</span></span></li>
+</ul>
+<ul>
+<li><span class="citation web">Sanford, Leslie (February 2004). <a rel="nofollow" class="external text" href="http://www.codeproject.com/cs/media/MIDIToolkit.asp">"<b>C# MIDI Toolkit</b>"</a><span class="reference-accessdate">. Retrieved 2006-10-14</span>.</span><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AFlow-based+programming&amp;rft.aufirst=Leslie&amp;rft.aulast=Sanford&amp;rft.au=Sanford%2C+Leslie&amp;rft.btitle=%27%27%27C%23+MIDI+Toolkit%27%27%27&amp;rft.date=2004&amp;rft.genre=book&amp;rft_id=http%3A%2F%2Fwww.codeproject.com%2Fcs%2Fmedia%2FMIDIToolkit.asp&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook" class="Z3988"><span style="display:none;">&#160;</span></span></li>
+</ul>
+<ul>
+<li><span class="citation journal">Blažević, Mario (2006). <a rel="nofollow" class="external text" href="http://www.idealliance.org/papers/extreme/Proceedings/html/2006/Blazevic01/EML2006Blazevic01.html">"<b>Streaming Component Combinators</b>"</a>. <i>Proceedings of Extreme Markup Languages</i><span class="reference-accessdate">. Retrieved 2006-11-09</span>.</span><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AFlow-based+programming&amp;rft.atitle=%27%27%27Streaming+Component+Combinators%27%27%27&amp;rft.au=Bla%C5%BEevi%C4%87%2C+Mario&amp;rft.aufirst=Mario&amp;rft.aulast=Bla%C5%BEevi%C4%87&amp;rft.date=2006&amp;rft.genre=article&amp;rft_id=http%3A%2F%2Fwww.idealliance.org%2Fpapers%2Fextreme%2FProceedings%2Fhtml%2F2006%2FBlazevic01%2FEML2006Blazevic01.html&amp;rft.jtitle=Proceedings+of+Extreme+Markup+Languages&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal" class="Z3988"><span style="display:none;">&#160;</span></span></li>
+</ul>
+<ul>
+<li><span class="citation book">Kauler, Barry (1999). <i><b>Flow Design for Embedded Systems</b>, 2nd Edition</i>. R&amp;D Books/Miller Freeman. <a href="/wiki/International_Standard_Book_Number" title="International Standard Book Number">ISBN</a>&#160;<a href="/wiki/Special:BookSources/0-87930-555-X" title="Special:BookSources/0-87930-555-X">0-87930-555-X</a>.</span><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AFlow-based+programming&amp;rft.aufirst=Barry&amp;rft.au=Kauler%2C+Barry&amp;rft.aulast=Kauler&amp;rft.btitle=%27%27%27Flow+Design+for+Embedded+Systems%27%27%27%2C+2nd+Edition&amp;rft.date=1999&amp;rft.genre=book&amp;rft.isbn=0-87930-555-X&amp;rft.pub=R%26D+Books%2FMiller+Freeman&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook" class="Z3988"><span style="display:none;">&#160;</span></span></li>
+<li><a rel="nofollow" class="external text" href="http://patft.uspto.gov/netacgi/nph-Parser?patentnumber=5,204,965">U.S. Patent #5,204,965</a> (1993-04-20) S.B. Guthery, P.S. Barth, D.R. Barstow, "Data processing system using stream stores".</li>
+<li><a rel="nofollow" class="external text" href="http://ersaconf.org/ersa-adn/Paul-Morrison.php">"Flow-Based Programming" in “Application Developers’ News”</a> Journal for Developers of Heterogeneous Computing Systems</li>
+</ul>
+<ul>
+<li><span class="citation web">B. Visscher (2001). <a rel="nofollow" class="external text" href="http://www.kbs.twi.tudelft.nl/docs/MSc/2001/Visscher_Bart-Floris/thesis.pdf">"<b>Bart's Operating System Structure (BOSS)</b>"</a> (PDF). Delft University of Technology, Faculty of Information Technology and Systems, Section Knowledge Based Systems<span class="reference-accessdate">. Retrieved 2006-12-05</span>.</span><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AFlow-based+programming&amp;rft.au=B.+Visscher&amp;rft.aulast=B.+Visscher&amp;rft.btitle=%27%27%27Bart%27s+Operating+System+Structure+%28BOSS%29%27%27%27&amp;rft.date=2001&amp;rft.genre=book&amp;rft_id=http%3A%2F%2Fwww.kbs.twi.tudelft.nl%2Fdocs%2FMSc%2F2001%2FVisscher_Bart-Floris%2Fthesis.pdf&amp;rft.pub=Delft+University+of+Technology%2C+Faculty+of+Information+Technology+and+Systems%2C+Section+Knowledge+Based+Systems&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook" class="Z3988"><span style="display:none;">&#160;</span></span></li>
+</ul>
+<ul>
+<li><span class="citation web">G. P. Staplin (2006). <a rel="nofollow" class="external text" href="http://www.tcl.tk/community/tcl2006/abstracts/wed-pm1-4.html">"<b>Tcl Flow-Based Programming - TFP</b>"</a><span class="reference-accessdate">. Retrieved 2010-10-07</span>.</span><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AFlow-based+programming&amp;rft.au=G.+P.+Staplin&amp;rft.aulast=G.+P.+Staplin&amp;rft.btitle=%27%27%27Tcl+Flow-Based+Programming+-+TFP%27%27%27&amp;rft.date=2006&amp;rft.genre=book&amp;rft_id=http%3A%2F%2Fwww.tcl.tk%2Fcommunity%2Ftcl2006%2Fabstracts%2Fwed-pm1-4.html&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook" class="Z3988"><span style="display:none;">&#160;</span></span></li>
+</ul>
+<ul>
+<li><span class="citation web">J. Lowery. <a rel="nofollow" class="external text" href="http://cheeseshop.python.org/pypi/zflow/0.01">"<b>Flow-based Programming Library for Python (zflow)</b>"</a><span class="reference-accessdate">. Retrieved 2006-12-05</span>.</span><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AFlow-based+programming&amp;rft.au=J.+Lowery&amp;rft.aulast=J.+Lowery&amp;rft.btitle=%27%27%27Flow-based+Programming+Library+for+Python+%28zflow%29%27%27%27&amp;rft.genre=book&amp;rft_id=http%3A%2F%2Fcheeseshop.python.org%2Fpypi%2Fzflow%2F0.01&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook" class="Z3988"><span style="display:none;">&#160;</span></span></li>
+</ul>
+<ul>
+<li><span class="citation journal">W.M. Johnston, J.R.P. Hanna, R.J. Millar (March 2004). <a rel="nofollow" class="external text" href="http://portal.acm.org/citation.cfm?id=1013208.1013209"><i><b>Advances in dataflow programming languages</b></i></a> <b>36</b> (1). ACM Computing Surveys (CSUR)<span class="reference-accessdate">. Retrieved 2006-12-05</span>.</span><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AFlow-based+programming&amp;rft.aulast=W.M.+Johnston%2C+J.R.P.+Hanna%2C+R.J.+Millar&amp;rft.au=W.M.+Johnston%2C+J.R.P.+Hanna%2C+R.J.+Millar&amp;rft.btitle=%27%27%27Advances+in+dataflow+programming+languages%27%27%27&amp;rft.date=2004&amp;rft.genre=book&amp;rft_id=http%3A%2F%2Fportal.acm.org%2Fcitation.cfm%3Fid%3D1013208.1013209&amp;rft.issue=1&amp;rft.pub=ACM+Computing+Surveys+%28CSUR%29&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.volume=36" class="Z3988"><span style="display:none;">&#160;</span></span></li>
+</ul>
+<ul>
+<li><span class="citation journal">Koster, Rainer; A.P. Black, J. Huang, J. Walpole, C. Pu (April 2003). <a rel="nofollow" class="external text" href="http://portal.acm.org/citation.cfm?id=777886&amp;dl=acm&amp;coll=&amp;CFID=15151515&amp;CFTOKEN=6184618"><i><b>Thread transparency in information flow middleware</b></i></a> <b>33</b> (4). ACM Digital Library: Software--Practice &amp; Experience<span class="reference-accessdate">. Retrieved 2006-12-05</span>.</span><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AFlow-based+programming&amp;rft.aufirst=Rainer&amp;rft.au=Koster%2C+Rainer&amp;rft.aulast=Koster&amp;rft.btitle=%27%27%27Thread+transparency+in+information+flow+middleware%27%27%27&amp;rft.date=2003&amp;rft.genre=book&amp;rft_id=http%3A%2F%2Fportal.acm.org%2Fcitation.cfm%3Fid%3D777886%26dl%3Dacm%26coll%3D%26CFID%3D15151515%26CFTOKEN%3D6184618&amp;rft.issue=4&amp;rft.pub=ACM+Digital+Library%3A+Software--Practice+%26+Experience&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.volume=33" class="Z3988"><span style="display:none;">&#160;</span></span></li>
+</ul>
+<ul>
+<li><span class="citation web">Stevenson, Tony (February 1995). <a rel="nofollow" class="external text" href="http://www.melbpc.org.au/pcupdate/9502/9502article7.htm">"<b>Review of "Flow-Based Programming"</b>"</a>. PC Update, the magazine of Melbourne PC User Group, Australia<span class="reference-accessdate">. Retrieved 2006-12-06</span>.</span><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AFlow-based+programming&amp;rft.aufirst=Tony&amp;rft.aulast=Stevenson&amp;rft.au=Stevenson%2C+Tony&amp;rft.btitle=%27%27%27Review+of+%22Flow-Based+Programming%22%27%27%27&amp;rft.date=1995&amp;rft.genre=book&amp;rft_id=http%3A%2F%2Fwww.melbpc.org.au%2Fpcupdate%2F9502%2F9502article7.htm&amp;rft.pub=PC+Update%2C+the+magazine+of+Melbourne+PC+User+Group%2C+Australia&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook" class="Z3988"><span style="display:none;">&#160;</span></span></li>
+</ul>
+<ul>
+<li><span class="citation web"><a rel="nofollow" class="external text" href="http://www.trelliswerk.com/Background.htm">"<b>About Flow-Based Programming</b>"</a>. Trelliswerk - Company Background<span class="reference-accessdate">. Retrieved 2006-12-06</span>.</span><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AFlow-based+programming&amp;rft.btitle=%27%27%27About+Flow-Based+Programming%27%27%27&amp;rft.genre=book&amp;rft_id=http%3A%2F%2Fwww.trelliswerk.com%2FBackground.htm&amp;rft.pub=Trelliswerk+-+Company+Background&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook" class="Z3988"><span style="display:none;">&#160;</span></span></li>
+</ul>
+<ul>
+<li><span class="citation web"><a rel="nofollow" class="external text" href="http://www.codito.com/prodtech_framework.html">"<b>Programmability Framework</b>"</a>. Codito - Programmability Framework<span class="reference-accessdate">. Retrieved 2006-12-06</span>.</span><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AFlow-based+programming&amp;rft.btitle=%27%27%27Programmability+Framework%27%27%27&amp;rft.genre=book&amp;rft_id=http%3A%2F%2Fwww.codito.com%2Fprodtech_framework.html&amp;rft.pub=Codito+-+Programmability+Framework&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook" class="Z3988"><span style="display:none;">&#160;</span></span></li>
+</ul>
+<ul>
+<li><span class="citation web"><a rel="nofollow" class="external text" href="http://www.protosw.com/">"<b>PROTO - Data Analysis for Everyone</b>"</a>. Proto Software Inc<span class="reference-accessdate">. Retrieved 2010-10-07</span>.</span><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AFlow-based+programming&amp;rft.btitle=%27%27%27PROTO+-+Data+Analysis+for+Everyone%27%27%27&amp;rft.genre=book&amp;rft_id=http%3A%2F%2Fwww.protosw.com%2F&amp;rft.pub=Proto+Software+Inc.&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook" class="Z3988"><span style="display:none;">&#160;</span></span></li>
+</ul>
+<ul>
+<li><span class="citation web"><a rel="nofollow" class="external text" href="http://www.talend.com">"<b>Talend</b>"</a>. Talend.com<span class="reference-accessdate">. Retrieved 2008-07-21</span>.</span><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AFlow-based+programming&amp;rft.btitle=%27%27%27Talend%27%27%27&amp;rft.genre=book&amp;rft_id=http%3A%2F%2Fwww.talend.com&amp;rft.pub=Talend.com&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook" class="Z3988"><span style="display:none;">&#160;</span></span></li>
+</ul>
+<ul>
+<li><span class="citation web"><a rel="nofollow" class="external text" href="http://www.thensys.com/">"<b>Dataflow Programming in Python</b>"</a>. TheNSys. 2006<span class="reference-accessdate">. Retrieved 2006-12-06</span>.</span><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AFlow-based+programming&amp;rft.btitle=%27%27%27Dataflow+Programming+in+Python%27%27%27&amp;rft.date=2006&amp;rft.genre=book&amp;rft_id=http%3A%2F%2Fwww.thensys.com%2F&amp;rft.pub=TheNSys&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook" class="Z3988"><span style="display:none;">&#160;</span></span></li>
+</ul>
+<ul>
+<li><span class="citation web">Lea, Doug (May 2001). <a rel="nofollow" class="external text" href="http://g.oswego.edu/dl/cpj/s4.2.html">"<b>Composing Oneway Messages</b>"</a><span class="reference-accessdate">. Retrieved 2006-12-06</span>.</span><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AFlow-based+programming&amp;rft.aufirst=Doug&amp;rft.aulast=Lea&amp;rft.au=Lea%2C+Doug&amp;rft.btitle=%27%27%27Composing+Oneway+Messages%27%27%27&amp;rft.date=2001&amp;rft.genre=book&amp;rft_id=http%3A%2F%2Fg.oswego.edu%2Fdl%2Fcpj%2Fs4.2.html&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook" class="Z3988"><span style="display:none;">&#160;</span></span></li>
+</ul>
+<ul>
+<li><span class="citation web">Bowers, Shawn; B. Ludäscher, A.H.H. Ngu, T. Critchlow. <a rel="nofollow" class="external text" href="http://daks.ucdavis.edu/~ludaesch/289F-SQ06/handouts/7-templates-frames-sciflow.pdf">"<b>Enabling Scientific Workflow Reuse through Structured Composition of Dataflow and Control-Flow</b>"</a> (PDF). SciFlow '06<span class="reference-accessdate">. Retrieved 2006-12-06</span>.</span><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AFlow-based+programming&amp;rft.au=Bowers%2C+Shawn&amp;rft.aufirst=Shawn&amp;rft.aulast=Bowers&amp;rft.btitle=%27%27%27Enabling+Scientific+Workflow+Reuse+through+Structured+Composition+of+Dataflow+and+Control-Flow%27%27%27&amp;rft.genre=book&amp;rft_id=http%3A%2F%2Fdaks.ucdavis.edu%2F~ludaesch%2F289F-SQ06%2Fhandouts%2F7-templates-frames-sciflow.pdf&amp;rft.pub=SciFlow+%2706&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook" class="Z3988"><span style="display:none;">&#160;</span></span></li>
+</ul>
+<ul>
+<li><span class="citation web">Sorber, Jacob; A. Kostadinov, M. Garber, M. Brennan, M. D. Corner, E. D. Berger (2007). <a rel="nofollow" class="external text" href="http://portal.acm.org/citation.cfm?id=1322279">"<b>Eon: a language and runtime system for perpetual systems</b>"</a>. Proceedings of the 5th international conference on Embedded networked sensor systems - Session: Power management<span class="reference-accessdate">. Retrieved 2009-01-28</span>.</span><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AFlow-based+programming&amp;rft.aufirst=Jacob&amp;rft.aulast=Sorber&amp;rft.au=Sorber%2C+Jacob&amp;rft.btitle=%27%27%27Eon%3A+a+language+and+runtime+system+for+perpetual+systems%27%27%27&amp;rft.date=2007&amp;rft.genre=book&amp;rft_id=http%3A%2F%2Fportal.acm.org%2Fcitation.cfm%3Fid%3D1322279&amp;rft.pub=Proceedings+of+the+5th+international+conference+on+Embedded+networked+sensor+systems+-+Session%3A+Power+management&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook" class="Z3988"><span style="display:none;">&#160;</span></span></li>
+</ul>
+<table cellspacing="0" class="navbox" style="border-spacing:0;">
+<tr>
+<td style="padding:2px;">
+<table cellspacing="0" class="nowraplinks collapsible autocollapse navbox-inner" style="border-spacing:0;background:transparent;color:inherit;">
+<tr>
+<th scope="col" class="navbox-title" colspan="2">
+<div class="noprint plainlinks hlist navbar mini">
+<ul>
+<li class="nv-view"><a href="/wiki/Template:Types_of_programming_languages" title="Template:Types of programming languages"><span title="View this template" style=";;background:none transparent;border:none;;">v</span></a></li>
+<li class="nv-talk"><a href="/wiki/Template_talk:Types_of_programming_languages" title="Template talk:Types of programming languages"><span title="Discuss this template" style=";;background:none transparent;border:none;;">t</span></a></li>
+<li class="nv-edit"><a class="external text" href="//en.wikipedia.org/w/index.php?title=Template:Types_of_programming_languages&amp;action=edit"><span title="Edit this template" style=";;background:none transparent;border:none;;">e</span></a></li>
+</ul>
+</div>
+<div style="font-size:110%;"><a href="/wiki/Programming_paradigm" title="Programming paradigm">Types of programming languages</a></div>
+</th>
+</tr>
+<tr style="height:2px;">
+<td></td>
+</tr>
+<tr>
+<td colspan="2" class="navbox-list navbox-odd hlist" style="width:100%;padding:0px;">
+<div style="padding:0em 0.25em;">
+<ul>
+<li><a href="/wiki/Array_programming" title="Array programming">Array</a></li>
+<li><a href="/wiki/Aspect-oriented_programming" title="Aspect-oriented programming">Aspect-oriented</a></li>
+<li><a href="/wiki/Class-based_programming" title="Class-based programming">Class-based</a></li>
+<li><a href="/wiki/Concatenative_programming_language" title="Concatenative programming language">Concatenative</a></li>
+<li><a href="/wiki/Concurrent_computing" title="Concurrent computing">Concurrent</a></li>
+<li><a href="/wiki/Data-structured_language" title="Data-structured language">Data-structured</a></li>
+<li><a href="/wiki/Dataflow_programming" title="Dataflow programming">Dataflow</a></li>
+<li><a href="/wiki/Declarative_programming" title="Declarative programming">Declarative</a></li>
+<li><a href="/wiki/Domain-specific_language" title="Domain-specific language">Domain-specific</a></li>
+<li><a href="/wiki/Dynamic_programming_language" title="Dynamic programming language">Dynamic</a></li>
+<li><a href="/wiki/Esoteric_programming_language" title="Esoteric programming language">Esoteric</a></li>
+<li><a href="/wiki/Event-driven_programming" title="Event-driven programming">Event-driven</a></li>
+<li><a href="/wiki/Extensible_programming" title="Extensible programming">Extensible</a></li>
+<li><a href="/wiki/Functional_programming" title="Functional programming">Functional</a></li>
+<li><a href="/wiki/Imperative_programming" title="Imperative programming">Imperative</a></li>
+<li><a href="/wiki/Logic_programming" title="Logic programming">Logic</a></li>
+<li><a href="/wiki/Macro_(computer_science)" title="Macro (computer science)">Macro</a></li>
+<li><a href="/wiki/Metaprogramming" title="Metaprogramming">Metaprogramming</a></li>
+<li><a href="/wiki/Multi-paradigm_programming_language" title="Multi-paradigm programming language" class="mw-redirect">Multi-paradigm</a></li>
+<li><a href="/wiki/Object-based_language" title="Object-based language">Object-based</a></li>
+<li><a href="/wiki/Object-oriented_programming" title="Object-oriented programming">Object-oriented</a></li>
+<li><a href="/wiki/Pipeline_programming" title="Pipeline programming">Pipeline</a></li>
+<li><a href="/wiki/Procedural_programming" title="Procedural programming">Procedural</a></li>
+<li><a href="/wiki/Prototype-based_programming" title="Prototype-based programming">Prototype-based</a></li>
+<li><a href="/wiki/Reflection_(computer_programming)" title="Reflection (computer programming)">Reflective</a></li>
+<li><a href="/wiki/Rule-based_system" title="Rule-based system">Rule-based</a></li>
+<li><a href="/wiki/Scripting_language" title="Scripting language">Scripting</a></li>
+<li><a href="/wiki/Synchronous_programming_language" title="Synchronous programming language">Synchronous</a></li>
+<li><a href="/wiki/Templating_language" title="Templating language" class="mw-redirect">Templating</a></li>
+</ul>
+</div>
+</td>
+</tr>
+<tr style="height:2px;">
+<td></td>
+</tr>
+<tr>
+<td colspan="2" class="navbox-list navbox-even hlist" style="width:100%;padding:0px;">
+<div style="padding:0em 0.25em;">
+<ul>
+<li><a href="/wiki/Assembly_language" title="Assembly language">Assembly</a></li>
+<li><a href="/wiki/Compiled_language" title="Compiled language">Compiled</a></li>
+<li><a href="/wiki/Interpreted_language" title="Interpreted language">Interpreted</a></li>
+<li><a href="/wiki/Machine_code" title="Machine code">Machine</a></li>
+</ul>
+</div>
+</td>
+</tr>
+<tr style="height:2px;">
+<td></td>
+</tr>
+<tr>
+<td colspan="2" class="navbox-list navbox-odd hlist" style="width:100%;padding:0px;">
+<div style="padding:0em 0.25em;">
+<ul>
+<li><a href="/wiki/Low-level_programming_language" title="Low-level programming language">Low-level</a></li>
+<li><a href="/wiki/High-level_programming_language" title="High-level programming language">High-level</a></li>
+<li><a href="/wiki/Very_high-level_programming_language" title="Very high-level programming language">Very high-level</a></li>
+</ul>
+</div>
+</td>
+</tr>
+<tr style="height:2px;">
+<td></td>
+</tr>
+<tr>
+<td colspan="2" class="navbox-list navbox-even hlist" style="width:100%;padding:0px;">
+<div style="padding:0em 0.25em;">
+<ul>
+<li><a href="/wiki/Non-English-based_programming_languages" title="Non-English-based programming languages">Non-English-based</a></li>
+<li><a href="/wiki/Off-side_rule" title="Off-side rule">Off-side rule</a></li>
+<li><a href="/wiki/Visual_programming_language" title="Visual programming language">Visual</a></li>
+</ul>
+</div>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+
+
+<!-- 
+NewPP limit report
+CPU time usage: 1.328 seconds
+Real time usage: 1.473 seconds
+Preprocessor visited node count: 2030/1000000
+Preprocessor generated node count: 11718/1500000
+Post‐expand include size: 67702/2048000 bytes
+Template argument size: 8065/2048000 bytes
+Highest expansion depth: 12/40
+Expensive parser function count: 2/500
+Lua time usage: 0.145s
+Lua memory usage: 1.95 MB
+-->
+
+<!-- Saved in parser cache with key enwiki:pcache:idhash:5689970-0!*!0!!en!4!* and timestamp 20131015151156
+ -->
+<noscript><img src="//en.wikipedia.org/w/index.php?title=Special:CentralAutoLogin/start&amp;type=1x1" alt="" title="" width="1" height="1" style="border: none; position: absolute;" /></noscript></div>								<div class="printfooter">
+				Retrieved from "<a href="http://en.wikipedia.org/w/index.php?title=Flow-based_programming&amp;oldid=571132584">http://en.wikipedia.org/w/index.php?title=Flow-based_programming&amp;oldid=571132584</a>"				</div>
+												<div id='catlinks' class='catlinks'><div id="mw-normal-catlinks" class="mw-normal-catlinks"><a href="/wiki/Help:Category" title="Help:Category">Categories</a>: <ul><li><a href="/wiki/Category:Concurrent_programming_languages" title="Category:Concurrent programming languages">Concurrent programming languages</a></li><li><a href="/wiki/Category:Programming_paradigms" title="Category:Programming paradigms">Programming paradigms</a></li><li><a href="/wiki/Category:Parallel_computing" title="Category:Parallel computing">Parallel computing</a></li><li><a href="/wiki/Category:Visual_programming_languages" title="Category:Visual programming languages">Visual programming languages</a></li></ul></div></div>												<div class="visualClear"></div>
+							</div>
+		</div>
+		<div id="mw-navigation">
+			<h2>Navigation menu</h2>
+			<div id="mw-head">
+				<div id="p-personal" role="navigation" class="" aria-labelledby="p-personal-label">
+	<h3 id="p-personal-label">Personal tools</h3>
+	<ul>
+<li id="pt-createaccount"><a href="/w/index.php?title=Special:UserLogin&amp;returnto=Flow-based+programming&amp;type=signup">Create account</a></li><li id="pt-login"><a href="/w/index.php?title=Special:UserLogin&amp;returnto=Flow-based+programming" title="You're encouraged to log in; however, it's not mandatory. [o]" accesskey="o">Log in</a></li>	</ul>
+</div>
+				<div id="left-navigation">
+					<div id="p-namespaces" role="navigation" class="vectorTabs" aria-labelledby="p-namespaces-label">
+	<h3 id="p-namespaces-label">Namespaces</h3>
+	<ul>
+					<li  id="ca-nstab-main" class="selected"><span><a href="/wiki/Flow-based_programming"  title="View the content page [c]" accesskey="c">Article</a></span></li>
+					<li  id="ca-talk"><span><a href="/wiki/Talk:Flow-based_programming"  title="Discussion about the content page [t]" accesskey="t">Talk</a></span></li>
+			</ul>
+</div>
+<div id="p-variants" role="navigation" class="vectorMenu emptyPortlet" aria-labelledby="p-variants-label">
+	<h3 id="mw-vector-current-variant">
+		</h3>
+	<h3 id="p-variants-label"><span>Variants</span><a href="#"></a></h3>
+	<div class="menu">
+		<ul>
+					</ul>
+	</div>
+</div>
+				</div>
+				<div id="right-navigation">
+					<div id="p-views" role="navigation" class="vectorTabs" aria-labelledby="p-views-label">
+	<h3 id="p-views-label">Views</h3>
+	<ul>
+					<li id="ca-view" class="selected"><span><a href="/wiki/Flow-based_programming" >Read</a></span></li>
+					<li id="ca-edit"><span><a href="/w/index.php?title=Flow-based_programming&amp;action=edit"  title="You can edit this page. &#10;Please review your changes before saving. [e]" accesskey="e">Edit</a></span></li>
+					<li id="ca-history" class="collapsible"><span><a href="/w/index.php?title=Flow-based_programming&amp;action=history"  title="Past versions of this page [h]" accesskey="h">View history</a></span></li>
+			</ul>
+</div>
+<div id="p-cactions" role="navigation" class="vectorMenu emptyPortlet" aria-labelledby="p-cactions-label">
+	<h3 id="p-cactions-label"><span>Actions</span><a href="#"></a></h3>
+	<div class="menu">
+		<ul>
+					</ul>
+	</div>
+</div>
+<div id="p-search" role="search">
+	<h3><label for="searchInput">Search</label></h3>
+	<form action="/w/index.php" id="searchform">
+				<div id="simpleSearch">
+						<input name="search" placeholder="Search" title="Search Wikipedia [f]" accesskey="f" id="searchInput" />						<button type="submit" name="button" title="Search Wikipedia for this text" id="searchButton"><img src="//bits.wikimedia.org/static-1.22wmf20/skins/vector/images/search-ltr.png?303-4" alt="Search" width="12" height="13" /></button>								<input type='hidden' name="title" value="Special:Search"/>
+		</div>
+	</form>
+</div>
+				</div>
+			</div>
+			<div id="mw-panel">
+					<div id="p-logo" role="banner"><a style="background-image: url(//upload.wikimedia.org/wikipedia/en/b/bc/Wiki.png);" href="/wiki/Main_Page"  title="Visit the main page"></a></div>
+				<div class="portal" role="navigation" id='p-navigation' aria-labelledby='p-navigation-label'>
+	<h3 id='p-navigation-label'>Navigation</h3>
+	<div class="body">
+		<ul>
+			<li id="n-mainpage-description"><a href="/wiki/Main_Page" title="Visit the main page [z]" accesskey="z">Main page</a></li>
+			<li id="n-contents"><a href="/wiki/Portal:Contents" title="Guides to browsing Wikipedia">Contents</a></li>
+			<li id="n-featuredcontent"><a href="/wiki/Portal:Featured_content" title="Featured content – the best of Wikipedia">Featured content</a></li>
+			<li id="n-currentevents"><a href="/wiki/Portal:Current_events" title="Find background information on current events">Current events</a></li>
+			<li id="n-randompage"><a href="/wiki/Special:Random" title="Load a random article [x]" accesskey="x">Random article</a></li>
+			<li id="n-sitesupport"><a href="https://donate.wikimedia.org/wiki/Special:FundraiserRedirector?utm_source=donate&amp;utm_medium=sidebar&amp;utm_campaign=C13_en.wikipedia.org&amp;uselang=en" title="Support us">Donate to Wikipedia</a></li>
+		</ul>
+	</div>
+</div>
+<div class="portal" role="navigation" id='p-interaction' aria-labelledby='p-interaction-label'>
+	<h3 id='p-interaction-label'>Interaction</h3>
+	<div class="body">
+		<ul>
+			<li id="n-help"><a href="/wiki/Help:Contents" title="Guidance on how to use and edit Wikipedia">Help</a></li>
+			<li id="n-aboutsite"><a href="/wiki/Wikipedia:About" title="Find out about Wikipedia">About Wikipedia</a></li>
+			<li id="n-portal"><a href="/wiki/Wikipedia:Community_portal" title="About the project, what you can do, where to find things">Community portal</a></li>
+			<li id="n-recentchanges"><a href="/wiki/Special:RecentChanges" title="A list of recent changes in the wiki [r]" accesskey="r">Recent changes</a></li>
+			<li id="n-contactpage"><a href="//en.wikipedia.org/wiki/Wikipedia:Contact_us">Contact page</a></li>
+		</ul>
+	</div>
+</div>
+<div class="portal" role="navigation" id='p-tb' aria-labelledby='p-tb-label'>
+	<h3 id='p-tb-label'>Toolbox</h3>
+	<div class="body">
+		<ul>
+			<li id="t-whatlinkshere"><a href="/wiki/Special:WhatLinksHere/Flow-based_programming" title="List of all English Wikipedia pages containing links to this page [j]" accesskey="j">What links here</a></li>
+			<li id="t-recentchangeslinked"><a href="/wiki/Special:RecentChangesLinked/Flow-based_programming" title="Recent changes in pages linked from this page [k]" accesskey="k">Related changes</a></li>
+			<li id="t-upload"><a href="/wiki/Wikipedia:File_Upload_Wizard" title="Upload files [u]" accesskey="u">Upload file</a></li>
+			<li id="t-specialpages"><a href="/wiki/Special:SpecialPages" title="A list of all special pages [q]" accesskey="q">Special pages</a></li>
+			<li id="t-permalink"><a href="/w/index.php?title=Flow-based_programming&amp;oldid=571132584" title="Permanent link to this revision of the page">Permanent link</a></li>
+			<li id="t-info"><a href="/w/index.php?title=Flow-based_programming&amp;action=info">Page information</a></li>
+			<li id="t-wikibase"><a href="//www.wikidata.org/wiki/Q5462045" title="Link to connected data repository item">Data item</a></li>
+<li id="t-cite"><a href="/w/index.php?title=Special:Cite&amp;page=Flow-based_programming&amp;id=571132584" title="Information on how to cite this page">Cite this page</a></li>		</ul>
+	</div>
+</div>
+<div class="portal" role="navigation" id='p-coll-print_export' aria-labelledby='p-coll-print_export-label'>
+	<h3 id='p-coll-print_export-label'>Print/export</h3>
+	<div class="body">
+		<ul>
+			<li id="coll-create_a_book"><a href="/w/index.php?title=Special:Book&amp;bookcmd=book_creator&amp;referer=Flow-based+programming">Create a book</a></li>
+			<li id="coll-download-as-rl"><a href="/w/index.php?title=Special:Book&amp;bookcmd=render_article&amp;arttitle=Flow-based+programming&amp;oldid=571132584&amp;writer=rl">Download as PDF</a></li>
+			<li id="t-print"><a href="/w/index.php?title=Flow-based_programming&amp;printable=yes" title="Printable version of this page [p]" accesskey="p">Printable version</a></li>
+		</ul>
+	</div>
+</div>
+<div class="portal" role="navigation" id='p-lang' aria-labelledby='p-lang-label'>
+	<h3 id='p-lang-label'>Languages</h3>
+	<div class="body">
+		<ul>
+			<li class="uls-p-lang-dummy"><a href="#"></a></li>
+			<li class="wbc-editpage"><a href="//www.wikidata.org/wiki/Q5462045#sitelinks-wikipedia" title="Edit interlanguage links">Edit links</a></li>
+		</ul>
+	</div>
+</div>
+			</div>
+		</div>
+		<div id="footer" role="contentinfo">
+							<ul id="footer-info">
+											<li id="footer-info-lastmod"> This page was last modified on 1 September 2013 at 21:11.<br /></li>
+											<li id="footer-info-copyright">Text is available under the <a rel="license" href="//en.wikipedia.org/wiki/Wikipedia:Text_of_Creative_Commons_Attribution-ShareAlike_3.0_Unported_License">Creative Commons Attribution-ShareAlike License</a><a rel="license" href="//creativecommons.org/licenses/by-sa/3.0/" style="display:none;"></a>;
+additional terms may apply.  By using this site, you agree to the <a href="//wikimediafoundation.org/wiki/Terms_of_Use">Terms of Use</a> and <a href="//wikimediafoundation.org/wiki/Privacy_policy">Privacy Policy.</a> <br/>
+Wikipedia® is a registered trademark of the <a href="//www.wikimediafoundation.org/">Wikimedia Foundation, Inc.</a>, a non-profit organization.</li>
+									</ul>
+							<ul id="footer-places">
+											<li id="footer-places-privacy"><a href="//wikimediafoundation.org/wiki/Privacy_policy" title="wikimedia:Privacy policy">Privacy policy</a></li>
+											<li id="footer-places-about"><a href="/wiki/Wikipedia:About" title="Wikipedia:About">About Wikipedia</a></li>
+											<li id="footer-places-disclaimer"><a href="/wiki/Wikipedia:General_disclaimer" title="Wikipedia:General disclaimer">Disclaimers</a></li>
+											<li id="footer-places-contact"><a href="//en.wikipedia.org/wiki/Wikipedia:Contact_us">Contact Wikipedia</a></li>
+											<li id="footer-places-developers"><a class="external" href="https://www.mediawiki.org/wiki/Special:MyLanguage/How_to_contribute">Developers</a></li>
+											<li id="footer-places-mobileview"><a href="//en.m.wikipedia.org/wiki/Flow-based_programming" class="noprint stopMobileRedirectToggle">Mobile view</a></li>
+									</ul>
+										<ul id="footer-icons" class="noprint">
+					<li id="footer-copyrightico">
+						<a href="//wikimediafoundation.org/"><img src="//bits.wikimedia.org/images/wikimedia-button.png" width="88" height="31" alt="Wikimedia Foundation"/></a>
+					</li>
+					<li id="footer-poweredbyico">
+						<a href="//www.mediawiki.org/"><img src="//bits.wikimedia.org/static-1.22wmf20/skins/common/images/poweredby_mediawiki_88x31.png" alt="Powered by MediaWiki" width="88" height="31" /></a>
+					</li>
+				</ul>
+						<div style="clear:both"></div>
+		</div>
+		<script>/*<![CDATA[*/window.jQuery && jQuery.ready();/*]]>*/</script><script>if(window.mw){
+mw.loader.state({"site":"loading","user":"ready","user.groups":"ready"});
+}</script>
+<script>if(window.mw){
+mw.loader.load(["mobile.desktop","mediawiki.action.view.postEdit","mediawiki.user","mediawiki.hidpi","mediawiki.page.ready","mediawiki.searchSuggest","ext.cite","ext.gadget.teahouse","ext.gadget.ReferenceTooltips","ext.gadget.DRN-wizard","ext.gadget.charinsert","mw.MwEmbedSupport.style","ext.articleFeedbackv5.startup","ext.navigationTiming","schema.UniversalLanguageSelector","ext.uls.eventlogger","mw.PopUpMediaTransform","skins.vector.collapsibleNav"],null,true);
+}</script>
+<script src="//bits.wikimedia.org/en.wikipedia.org/load.php?debug=false&amp;lang=en&amp;modules=site&amp;only=scripts&amp;skin=vector&amp;*"></script>
+<!-- Served by mw1051 in 0.218 secs. -->
+	</body>
+</html>

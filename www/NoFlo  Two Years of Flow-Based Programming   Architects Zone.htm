@@ -1,0 +1,838 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+            <link rel="canonical" href="http://architects.dzone.com/articles/noflo-two-years-flow-based">
+    
+    <!-- Start of DART Code -->
+    <script type='text/javascript'>
+	// This is a bad little hack for things that execute reliance on Drupals JS before its been fully loaded
+	var Drupal = Drupal || { 'settings': {}, 'behaviors': {}, 'themes': {}, 'locale': {} };
+	Drupal.behaviors = Drupal.behaviors || {};
+        (function() {
+            var useSSL = 'https:' == document.location.protocol;
+            var src = (useSSL ? 'https:' : 'http:') +
+                '//www.googletagservices.com/tag/js/gpt.js';
+            document.write('<scr' + 'ipt src="' + src + '"></scr' + 'ipt>');
+        })();
+        </script>
+
+<script type="text/javascript">
+  (function() {
+    window._pa = window._pa || {};
+    var pa = document.createElement('script'); pa.type = 'text/javascript'; pa.async = true;
+    pa.src = ('https:' == document.location.protocol ? 'https:' : 'http:') + "//tag.perfectaudience.com/serve/514a05817a82440002000406.js";
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(pa, s);
+  })();
+</script>
+
+    <script type='text/javascript'>
+        googletag.defineSlot('/2916070/zones_bottomblurb_650x122', [650, 122], 'div-gpt-ad-1350569504085-0').addService(googletag.pubads());
+        googletag.defineSlot('/2916070/zones_masthead_728x90_default', [728, 90], 'div-gpt-ad-1350569504085-1').addService(googletag.pubads());
+        googletag.defineSlot('/2916070/zones_sidebar_336x280_default', [300, 250], 'div-gpt-ad-1350569504085-2').addService(googletag.pubads());
+        googletag.defineSlot('/2916070/zones_superboard_980x200', [980, 280], 'div-gpt-ad-1350569504085-3').addService(googletag.pubads());
+        googletag.defineSlot('/2916070/zones_textad_239x90', [239, 90], 'div-gpt-ad-1350569504085-40').addService(googletag.pubads());
+        googletag.defineSlot('/2916070/zones_textad_239x90', [239, 90], 'div-gpt-ad-1350569504085-41').addService(googletag.pubads());
+        googletag.defineSlot('/2916070/zones_textad_239x90', [239, 90], 'div-gpt-ad-1350569504085-42').addService(googletag.pubads());
+        googletag.defineSlot('/2916070/zones_textad_800x20', [800, 20], 'div-gpt-ad-1350569504085-5').addService(googletag.pubads());
+        googletag.defineSlot('/2916070/zones_topblurb_650x61', [650, 61], 'div-gpt-ad-1350569504085-6').addService(googletag.pubads());
+        googletag.pubads().enableSyncRendering();
+        googletag.pubads().enableSingleRequest();
+        googletag.enableServices();
+        googletag.pubads().setTargeting("tag", "62823-enterprise-integration");
+    </script>
+    <!-- End of DART Code -->
+
+
+    <!-- Start of Woopra Code -->
+    <script type="text/javascript">
+        function woopraReady(tracker) {
+            tracker.setDomain('dzone.com');
+            tracker.setIdleTimeout(300000);
+
+            
+            tracker.trackPageview({
+                url: window.location.pathname + window.location.search,
+                title: document.title,
+                                    author: 'bergie',
+                                zone:'Architects Zone',
+                microzone:'1'
+            });
+
+            return false;
+        }
+        (function() {
+            var wsc = document.createElement('script');
+            wsc.src = document.location.protocol+'//static.woopra.com/js/woopra.js';
+            wsc.type = 'text/javascript';
+            wsc.async = true;
+            var ssc = document.getElementsByTagName('script')[0];
+            ssc.parentNode.insertBefore(wsc, ssc);
+        })();
+    </script>
+    <!-- End of Woopra Code -->
+
+    <!-- Use this code block to activate a prestitial if there's one to load -->
+    <!-- BEGIN ADVERTPRO ADVANCED CODE BLOCK -->
+
+    <SCRIPT language="JavaScript" type="text/javascript">
+        <!--
+        document.write('<SCR'+'IPT src="http://avpa.dzone.com/servlet/view/dynamic/javascript/zone?zid=159&pid=0&random='+Math.floor(89999999*Math.random()+10000000)+'&millis='+new Date().getTime()+'" language="JavaScript" type="text/javascript"></SCR'+'IPT>');
+        //-->
+    </SCRIPT>
+
+    <!-- END ADVERTPRO ADVANCED CODE BLOCK -->
+
+            <title>NoFlo: Two Years of Flow-Based Programming | Architects Zone</title>
+    
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link rel="alternate" type="application/rss+xml" title="Comments for &quot;NoFlo: Two Years of Flow-Based Programming&quot;" href="/crss/node/143347" />
+
+<link rel="shortcut icon" href="/misc/favicon.ico" type="image/x-icon" />
+<script type="text/javascript" src="//cdn.optimizely.com/js/16518638.js"></script>
+            <link rel="alternate" type="application/rss+xml" title="Architects Zone RSS" href="http://feeds.dzone.com/zones/architects" />
+                <link type="text/css" rel="stylesheet" media="all" href="http://cdn.dzone.com/sites/all/files/css/css_f0e92dd4f4c2caa739ba8a7407040b0c.css" />
+<link type="text/css" rel="stylesheet" media="print" href="http://cdn.dzone.com/sites/all/files/css/css_65d637aa7eddfbf57e33f4da826e30ad.css" />
+                <META NAME="Description" CONTENT="
+NoFlo — the flow-based programming system I started — is now two years old. I pushed the first commits to GitHub on June 5th 2011 from Hacker Dojo in...">
+            
+        <meta name="google-site-verification" content="" />
+    
+    <!-- RSS link -->
+    
+        <script type="text/javascript">
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-410289-1']);
+  _gaq.push(['_trackPageview']);
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+</script>                        <script type="text/javascript">
+                _gaq.push(['_trackEvent', 'mitchp\'s Pageviews', 'Reprint', 'NoFlo: Two Years of Flow-Based Programming']);
+                <!--                pageTracker._trackEvent('--><!--\'s Pageviews', '--><!--', "--><!--");-->
+            </script>
+                        
+
+</head>
+<body class="sidebar-right">
+
+<div id="page_wrapper">
+
+
+<div class="global_menu">
+    <div class = "menu_wrapper">
+        <div id = 'menu_login'>
+                        <a href = "/user">LOG IN</a> or <a href = "/user/register?clean=true">JOIN</a>
+                    </div>
+                <ul class="nice-menu nice-menu-down" id="nice-menu-1"><li id="menu-211" class="menu-path-www.dzone.com"><a href="http://www.dzone.com" title="">Home</a></li>
+<li id="menu-167" class="menu-path-refcardz.dzone.com-"><a href="http://refcardz.dzone.com/">Refcardz</a></li>
+<li id="menu-4979" class="menuparent menu-path-www.dzone.com-mz"><a href="http://www.dzone.com/mz" title="">Microzones</a><ul><li id="menu-5713" class="menu-path-dzone.com-mz-agile"><a href="http://dzone.com/mz/agile" title="">Agile Zone</a></li>
+<li id="menu-5029" class="menu-path-domain-cloud.dzone.com"><a href="/domain/cloud.dzone.com" title="Go to cloud.dzone.com">Cloud Zone</a></li>
+<li id="menu-5613" class="menu-path-dzone.com-mz-big-data"><a href="http://dzone.com/mz/big-data" title="">Big Data/BI Zone</a></li>
+<li id="menu-5081" class="menu-path-dzone.com-mz-devops"><a href="http://dzone.com/mz/devops" title="">DevOps Zone</a></li>
+<li id="menu-5451" class="menu-path-dzone.com-mz-enterprise-integration"><a href="http://dzone.com/mz/enterprise-integration" title="">Enterprise Integration</a></li>
+<li id="menu-5187" class="menu-path-dzone.com-mz-html5"><a href="http://dzone.com/mz/html5" title="">HTML5 Zone</a></li>
+<li id="menu-4987" class="menu-path-dzone.com-mz-mobile"><a href="http://dzone.com/mz/mobile" title="">Mobile Zone</a></li>
+<li id="menu-5293" class="menu-path-dzone.com-mz-dotnet"><a href="http://dzone.com/mz/dotnet" title="">.NET Zone</a></li>
+<li id="menu-5221" class="menu-path-dzone.com-mz-nosql"><a href="http://dzone.com/mz/nosql" title="">NoSQL Zone</a></li>
+<li id="menu-5607" class="menu-path-dzone.com-mz-performance"><a href="http://dzone.com/mz/performance" title="">Performance Zone</a></li>
+<li id="menu-5721" class="menu-path-dzone.com-mz-social-business"><a href="http://dzone.com/mz/social-business" title="">Social Business</a></li>
+<li id="menu-5723" class="menu-path-dzone.com-mz-tech-marketing"><a href="http://dzone.com/mz/tech-marketing" title="">Tech Marketing</a></li>
+<li id="menu-5725" class="menu-path-www.dzone.com-mz-sdn"><a href="http://www.dzone.com/mz/sdn" title="">SDN Focus</a></li>
+</ul>
+</li>
+<li id="menu-125" class="menuparent menu-path-domain"><a href="/domain">Zones</a><ul><li id="menu-426" class="menu-path-domain-java.dzone.com"><a href="/domain/java.dzone.com" title="Go to java.dzone.com">Javalobby</a></li>
+<li id="menu-454" class="menu-path-domain-css.dzone.com"><a href="/domain/css.dzone.com" title="Go to css.dzone.com">Web Builder Zone</a></li>
+<li id="menu-4991" class="menuparent menu-path-front"><a href="/" title="">IDEs and Tools</a><ul><li id="menu-413" class="menu-path-domain-eclipse.dzone.com"><a href="/domain/eclipse.dzone.com" title="Go to eclipse.dzone.com">Eclipse Zone</a></li>
+<li id="menu-317" class="menu-path-domain-jetbrains.dzone.com"><a href="/domain/jetbrains.dzone.com" title="Go to jetbrains.dzone.com">JetBrains Zone</a></li>
+<li id="menu-431" class="menu-path-domain-netbeans.dzone.com"><a href="/domain/netbeans.dzone.com" title="Go to netbeans.dzone.com">NetBeans Zone</a></li>
+</ul>
+</li>
+<li id="menu-4999" class="menuparent menu-path-front"><a href="/" title="">Languages</a><ul><li id="menu-5295" class="menu-path-php.dzone.com"><a href="http://php.dzone.com" title="Go to php.dzone.com">PHP Zone</a></li>
+<li id="menu-5001" class="menu-path-groovy.dzone.com"><a href="http://groovy.dzone.com" title="">Groovy Zone</a></li>
+<li id="menu-5003" class="menu-path-python.dzone.com"><a href="http://python.dzone.com" title="">Python Zone</a></li>
+<li id="menu-5457" class="menu-path-ruby.dzone.com"><a href="http://ruby.dzone.com" title="">Ruby Zone</a></li>
+</ul>
+</li>
+<li id="menu-189" class="menu-path-domain-architects.dzone.com"><a href="/domain/architects.dzone.com" title="Go to architects.dzone.com">Architects Zone</a></li>
+<li id="menu-400" class="menu-path-domain-books.dzone.com"><a href="/domain/books.dzone.com" title="Go to books.dzone.com">Book Zone</a></li>
+<li id="menu-287" class="menu-path-domain-server.dzone.com"><a href="/domain/server.dzone.com">Server Zone</a></li>
+</ul>
+</li>
+<li id="menu-367" class="menu-path-library.dzone.com"><a href="http://library.dzone.com">Library</a></li>
+<li id="menu-1349" class="menu-path-dzone.com-snippets-"><a href="http://dzone.com/snippets/" title="">Snippets</a></li>
+<li id="menu-5617" class="menu-path-www.dzone.com-tutorials-"><a href="http://www.dzone.com/tutorials/" title="">Tutorials</a></li>
+</ul>
+        <div id="search_bar">
+            <form action="/search/google"  accept-charset="UTF-8" method="get" id="google-cse-searchbox-form">
+<div><input type="hidden" name="cx" id="edit-cx" value="010821965829155306098:ogyaz_5nsc8"  />
+<input type="hidden" name="cof" id="edit-cof" value="FORID:11"  />
+<div class="form-item" id="edit-query-wrapper">
+ <input type="text" maxlength="128" name="query" id="edit-query" size="15" value="" title="Enter the terms you wish to search for." class="form-text" />
+</div>
+<input type="submit" name="op" id="edit-sa" value="Search"  class="form-submit" />
+<input type="hidden" name="form_build_id" id="form-247de47a0ca454bbd3880900a9e5f9be" value="form-247de47a0ca454bbd3880900a9e5f9be"  />
+<input type="hidden" name="form_id" id="edit-google-cse-searchbox-form" value="google_cse_searchbox_form"  />
+
+</div></form>
+        </div>
+    </div>
+</div>
+
+    
+
+
+<div class = "siteHeader">
+</div>
+
+
+<div id="header-region" class="clear-block">
+</div>
+
+<div id="wrapper" class="fewerAds">
+<div id="container" class="clear-block">
+<div id="header">
+    <div id="masthead">
+
+        <div id="site_id">
+                        <a href="http://www.dzone.com/mz/enterprise-integration" title="DZone: Your Personal Tech Universe"><img class="dz_logo"
+                                                                                                   src="/sites/all/themes/dzone2012/images/mh_dzone_logo.png"
+                                                                                                   alt="DZone: Your Personal Tech Universe" title="DZone: Your Personal Tech Universe" /></a>
+                            <!--                    <div class="site_name" style="margin-top:16px;"><a  href="--><!--" title="--><!--">--><!--</a></div>-->
+                <!--                    <a href="--><!--" title="--><!--"><img class="site_logo" src="http://cdn.dzone.com/--><!--"-->
+                <!--                         alt="--><!--" title="--><!--" /></a>-->
+                            <!--                <span class="site_slogan">--><!--</span>-->
+                    </div>
+
+        
+                <div class="mh_leader">
+            <div class="leaderboard">
+                <!-- BEGIN DART CODE BLOCK -->
+                        <!-- zones_textad_239x90 -->
+                    <!--<div id='div-gpt-ad-1350569504085-4' class="top-textad">
+                        <script type='text/javascript'>
+                            googletag.display('div-gpt-ad-1350569504085-40');
+                        </script>
+                    </div>
+                    <div id='div-gpt-ad-1333726564216-41' class="top-textad">
+                        <script type='text/javascript'>
+                            googletag.display('div-gpt-ad-1350569504085-41');
+                        </script>
+                    </div>
+                    <div id='div-gpt-ad-1333726564216-42' class="top-textad">
+                        <script type='text/javascript'>
+                            googletag.display('div-gpt-ad-1350569504085-42');
+                        </script>
+                    </div>-->
+                <div id='div-gpt-ad-1350569504085-1'>
+                    <script type='text/javascript'>
+                        googletag.display('div-gpt-ad-1350569504085-1');
+                    </script>
+                </div>
+                <!-- END DART CODE BLOCK -->
+            </div>
+        </div>
+        
+    </div>
+</div>
+
+
+<div id="siteBar">
+            <div class="site_name"><a  href="http://www.dzone.com/mz/enterprise-integration" style='font-size:13px;' title="Enterprise Integration Zone">Enterprise Integration</a></div>
+    <div class = "textads">
+        <!-- zones_textad_800x20 -->
+        <div id='div-gpt-ad-1350569504085-5' style='width:800px; height:20px;'>
+            <script type='text/javascript'>
+                googletag.display('div-gpt-ad-1350569504085-5');
+            </script>
+        </div>
+    </div>
+    </div>
+
+<!--    <div class="topics-trending fancyfont">-->
+<!--    --><!--    </div>-->
+
+    
+<div id="superboard">
+    <span class="superboard_sponsor_info">Enterprise Integration Zone is brought to you in partnership with:</span>    <!-- zones_superboard_980x200 -->
+    <div id='div-gpt-ad-1350569504085-3' style='width:980px;'>
+        <script type='text/javascript'>
+            googletag.display('div-gpt-ad-1350569504085-3');
+        </script>
+    </div>
+    <!-- End DART Code-->
+</div>
+    
+
+
+<!-- end of header -->
+<div id="center" class=""><div id="squeeze">
+    <div id="article">         <!-- Snippets Message Header -->
+                <div style="clear:both;"></div>
+                                                                        
+            <!--Author Block-->
+                            <div class="meta">
+
+                    
+                                        <div class="submitted">
+                        <div id="author">
+                            <a href="/users/bergie"><img src="/sites/all/files/avatars/picture-948767.jpg" style="width:43px; float:left; margin-right: 10px;"></a>
+                                                        <a href = "http://www.dzone.com/page/mvbs" onClick= "_gaq.push(['_trackEvent', 'MVB Badge', 'bergie']);"><img src = "/sites/all/themes/dzone2012/images/mvb_badge.png" style="vertical-align:bottom;"></a>
+                                                        <a href="/users/bergie"><b id="authorname">Henri Bergius</b> </a>
+                            <ul class="authorMetaData">
+                                                                <li><span>Bio</span></li>
+                                                                                                <li><a href="http://bergie.iki.fi/">Website</a></li>
+                                                                                                <li><a href="https://twitter.com/bergie" class="author-twitter-button">@bergie</a></li>
+                                                                                                <li class="author-facebook">
+                                    <a href = "http://www.facebook.com/bergius" onClick= "_gaq.push(['_trackEvent', 'Social Button Click', 'Author Facebook', 'bergie']);"><img src = "/sites/all/themes/dzone2012/images/facebook_icon.png" width="20"></a>
+                                </li>
+                                                                                                <li class="author-googleplus">
+                                    <a href = "http://plus.google.com/100751105859582805241/" onClick= "_gaq.push(['_trackEvent', 'Social Button Click', 'Author Google+', 'bergie']);"><img src = "/sites/all/themes/dzone2012/images/googleplus_icon.png" width="20"></a>
+                                </li>
+                                                                                                <li class="author-linkedin">
+                                    <a href = "http://www.linkedin.com/in/bergie" onClick= "_gaq.push(['_trackEvent', 'Social Button Click', 'Author LinkedIn', 'bergie']);"><img src = "/sites/all/themes/dzone2012/images/linkedin_icon.png" width="20"></a>
+                                </li>
+                                                                                                <li class="author-github">
+                                    <a href = "http://www.github.com/bergie" onClick= "_gaq.push(['_trackEvent', 'Social Button Click', 'Author GitHub', 'bergie']);"><img src = "/sites/all/themes/dzone2012/images/github_icon.png" width="20"></a>
+                                </li>
+                                                            </ul>
+
+                        </div>
+
+                    </div><div style="clear:both;"></div>
+                    
+                                        <div  id="author_block" style=" padding: 5px; padding-right: 10px; margin-top: 7px; margin-bottom:10px;">
+                        <!--                                 -->                        <p style="padding-left: 80px; padding-top: 0; margin-top: 0;">
+                            Henri Bergius, a.k.a. Bergie, is a former Viking based in the Nordic country of Finland. When he is not exploring Georgia’s cave cities or running with the bulls in Pamplona, Bergie works on web services built on top of the Midgard toolkit. His company, Nemein, provides web and mobile solutions for several major companies in Finland and abroad. He has been actively working on integrating standards like RDFa into the system and traveling the world advocating interoperation between open-source CMS’s.  Much of his latest work involves building web services in CoffeeScript and doing data integration with the NoFlo flow-based programming toolkit. Henri is a DZone MVB and is not an employee of DZone and has posted 31 posts at DZone. You can read more from them at <a href="http://bergie.iki.fi/">their website.</a><a href='/users/bergie'> View Full User Profile</a></p></div>
+                                    </div>
+                            <!--End Author Block-->
+
+                        <div id="articleHead">
+                <!-- Print Breadcrumb for Tutorials -->
+                                <h1>NoFlo: Two Years of Flow-Based Programming</h1>            </div>
+                            <div class="under_the_title">
+                    <div id="date">06.18.2013                    </div>
+                    <span style="margin:0 8px;color:#ddd;">|</span>
+                    <span style="padding: 5px; vertical-align: middle; font-size:14px;">
+                        8273 views                    </span>
+                    <span style="margin:0 8px;color:#ddd;">|</span>
+
+                    <!-- AddThis Button BEGIN -->
+<!--                    <a href="/forward?path=node/--><!--" style="vertical-align: middle;"><img style="margin: 8px 5px 0 5px; vertical-align: top;" width="20" height="20" src="http://cdn.dzone.com/links/themes/reader/images/actions/email-32x32.png" border="0"> Email</a>-->
+                    <div class="addthis_toolbox addthis_default_style " style="display:inline-block; vertical-align:middle;margin-top:8px;">
+                        <a class="addthis_button_facebook_like" fb:like:layout="button_count"></a>
+                        <a class="addthis_button_tweet"></a>
+                        <a class="addthis_button_google_plusone" g:plusone:size="medium"></a>
+                        <script src="//platform.linkedin.com/in.js" type="text/javascript"></script>
+                        <script type="IN/Share" data-counter="right"></script>
+                    </div>
+                    <script type="text/javascript" src="http://s7.addthis.com/js/250/addthis_widget.js#pubid=xa-4f34528f655fc4f0"></script>
+                </div>
+
+                <!-- AddThis Button END -->
+                                                    <div id="articleText" class="articleReset">
+                        
+            <ul id="sharebar" style="background:#FFFFFF;border-color:#CCCCCC;margin-top:0px;width: 78px; float: left; margin-right:10px;"><li><script type="text/javascript">var dzone_url = 'http://architects.dzone.com/articles/noflo-two-years-flow-based';</script>
+<script type="text/javascript">var dzone_title = 'NoFlo: Two Years of Flow-Based Programming';</script>
+<script language="javascript" src="http://widgets.dzone.com/links/widgets/zoneit.js"></script></li><li><a href="http://twitter.com/share" class="twitter-share-button" data-count="vertical" data-url="http://architects.dzone.com/articles/noflo-two-years-flow-based" data-text="NoFlo: Two Years of Flow-Based Programming" data-via="dzone">Tweet</a><script type="text/javascript" src="http://platform.twitter.com/widgets.js"></script></li><li><!-- Place this tag where you want the +1 button to render -->
+<g:plusone size="tall" href="http://architects.dzone.com/articles/noflo-two-years-flow-based"></g:plusone>
+
+<!-- Place this render call where appropriate -->
+<script type="text/javascript">
+  (function() {
+    var po = document.createElement('script'); po.type = 'text/javascript'; po.async = true;
+    po.src = 'https://apis.google.com/js/plusone.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po, s);
+  })();
+</script></li><li><iframe src="http://www.facebook.com/plugins/like.php?href=http://architects.dzone.com/articles/noflo-two-years-flow-based&amp;send=false&amp;layout=box_count&amp;width=100&amp;show_faces=false&amp;action=like&amp;colorscheme=light&amp;font&amp;height=60"scrolling="no" frameborder="0" style="border:none; width:58px; height:62px;" allowTransparency="true"></iframe></li><li><script src="http://platform.linkedin.com/in.js" type="text/javascript"></script>
+<script type="IN/Share" data-counter="top"></script></li><li><script src="http://www.stumbleupon.com/hostedbadge.php?s=5"></script></li><li><a href="http://www.reddit.com/r/programming/submit" onclick="window.location = 'http://www.reddit.com/r/programming/submit?url=' + encodeURIComponent(window.location); return false"> <img src="http://www.reddit.com/static/spreddit7.gif" alt="submit to reddit" border="0" / width="64"> </a></li></ul>
+
+<div id="node-143347" class="node node-page node-article" >
+
+
+
+            <div class="microzoneShortDescription">
+            <!-- zones_topblurb_650x61 -->
+            <div id='div-gpt-ad-1350569504085-6' style='width:650px;'>
+                <script type='text/javascript'>
+                    googletag.display('div-gpt-ad-1350569504085-6');
+                </script>
+            </div>
+        </div>
+    
+  <div class="content" style="margin-bottom: 5px;">      		<div class="related_library_content" style="float: right;"><h3>Related MicroZone Resources</h3><h4 style="background: url(/sites/all/modules/dzone/dzone_library/icons/page_external.png) no-repeat 0 0;" class=""><a href="http://txt.couchware.com/medias/jump?hid=2861&cid=471&mid=971">SOA Best Practices</a></h4><h4 style="background: url(/sites/all/modules/dzone/dzone_library/icons/page_external.png) no-repeat 0 0;" class=""><a href="http://txt.couchware.com/medias/jump?hid=2989&cid=471&mid=1097">Prepare for the New World of Integration!</a></h4><h4 style="background: url(/sites/all/modules/dzone/dzone_library/icons/page_external.png) no-repeat 0 0;" class=""><a href="http://txt.couchware.com/medias/jump?hid=2863&cid=471&mid=973">Easy Legacy System Integration</a></h4><h4 style="background: url(/sites/all/modules/dzone/dzone_library/icons/page_external.png) no-repeat 0 0;" class=""><a href="http://txt.couchware.com/medias/jump?hid=2865&cid=471&mid=975">Use Your Java Toolchain with SAP</a></h4><h4 style="background: url(/sites/all/modules/dzone/dzone_library/icons/page_external.png) no-repeat 0 0;" class=""><a href="http://txt.couchware.com/medias/jump?hid=2873&cid=471&mid=983">MuleESB: SOA with Eclipse, Maven, Spring and Ant</a></h4>    <p style="font-size: 10px; color: #999; margin-bottom: 0; padding-bottom: 0;">Like this piece?  Share it with your friends:</p>
+    <!-- AddThis Button BEGIN -->
+    <div class="addthis_toolbox addthis_default_style">
+    <a class="addthis_button_facebook"></a>
+    <a class="addthis_button_twitter"></a>
+    <a class="addthis_button_linkedin"></a>
+    <a class="addthis_button_google"></a>
+    <a class="addthis_button_stumbleupon"></a>
+    <a class="addthis_button_email"></a>
+    <span class="addthis_separator">|</span>
+    <a href="http://addthis.com/bookmark.php?v=250&amp;username=dzone1" class="addthis_button_expanded">More</a>
+    </div>
+    <script type="text/javascript" src="http://s7.addthis.com/js/250/addthis_widget.js#username=dzone1"></script>
+    <!-- AddThis Button END --></div>		<span class='print-link'></span><p><a href="http://noflojs.org">NoFlo</a> — the flow-based programming system I started — is now two years old. I <a href="https://github.com/bergie/noflo/commit/04698a77272d9cd552ac57ca511ec8f05696ea40">pushed the first commits</a> to GitHub on June 5th 2011 from <a href="http://www.hackerdojo.com/">Hacker Dojo</a> in Mountain View. To get us started with the story, I'll let <a href="http://en.wikipedia.org/wiki/Flow-based_programming">Wikipedia summarize</a>:</p>
+
+<blockquote>
+<p>Flow-based programming (FBP) is a programming paradigm that defines applications as networks of "black box" processes, which exchange data across predefined connections by message passing, where the connections are specified externally to the processes. These black box processes can be reconnected endlessly to form different applications without having to be changed internally.</p>
+</blockquote>
+
+<p>While flow-based programming is still far from mainstream, it has been great to watch to the community grow around NoFlo.</p>
+
+<p>There are several start-ups using it as their base infrastructure, with several of their engineers contributing to the open source effort. I've personally used the system for quite a wide range of tasks from <a href="http://bergie.iki.fi/blog/8998693776/">web services</a> and <a href="http://bergie.iki.fi/blog/business_analytics_with_couchdb_and_noflo/">document transformations</a> to handling payments and user on-boarding processes.</p>
+<h2>Why I started NoFlo</h2>
+
+<p>Two years ago I was undergoing a transition from PHP and Python to the JavaScript world, largely lured by the benefits of a <a href="http://bergie.iki.fi/blog/the_universal_runtime/">universal runtime</a> and the event-based multi-protocol paradigm <a href="http://nodejs.org/">Node.js</a> offers.</p>
+
+<p>While new programming languages and environments are easy to get into, this transition provided yet another point where I would have to sit down and port over all the little libraries and utilities I've grown to rely on over the years.</p>
+
+<p>I wondered if there could be a better way.</p>
+
+<p>To figure that out, I spent the time I had when traveling between conferences and hackathons of the <a href="http://www.iks-project.eu/">IKS Project</a> reading various computer science papers on different programming paradigms. Eventually I stumbled upon some mentions of flow-based programming. I dug deeper, and finally read the canonical book on the subject — Paul Morrison's <a href="http://amzn.com/1451542321">Flow-based programming, 2nd edition</a>.</p>
+
+<p>Having worked with component architectures and Unix pipes before, the idea resonated with me. To think things through, I took the excuse of having some meetings in Portland to <a href="http://www.flickr.com/photos/bergie/sets/72157626665916769/">drive up there</a> following the beautiful <a href="http://en.wikipedia.org/wiki/California_State_Route_1">California 1</a> coastal road. Couple of days alone in a car is a great way to let your mind flow!</p>
+
+<p><img src="http://bergie.iki.fi/files/oregon-coast.jpg" alt="The coastal road in Oregon" /></p>
+
+<p>Implementing your own is usually the best method for learning a new concept, and so when I got back to the Bay Area, I decided to write an <a href="https://github.com/bergie/noflo">FBP system of my own</a> on Node.js.</p>
+
+<p>I also kept a <a href="http://en.wikipedia.org/wiki/Qaiku">Qaiku</a> thread on the things I discovered, parts of which I later <a href="http://bergie.iki.fi/blog/flow-based-programming-is-interesting/">republished on this site</a>.</p>
+<h2>Beyond OOP</h2>
+
+<p>Object-oriented programming and Model-View-Controller have been the dominant programming paradigms since the desktop computing era of the 90s, even while the world has become more connected and multi-device. While these concepts did improve some things, the big promises of programmer productivity and component reuse have mostly been <a href="http://blog.dmbcllc.com/object-oriented-programming-has-failed-us/">left unrealised</a>.</p>
+
+<p>Software has <a href="http://online.wsj.com/article/SB10001424053111903480904576512250915629460.html">become one of the most important aspects</a> of business and the society. As an effect, the demand for programmers <a href="http://blog.nwjobs.com/careercenter/talking_code_demand_for_programmers_software_engineers_outstrips_supply.html">vastly outstrips</a> the amount of computer science graduates we're able to produce.</p>
+
+<p>The tools side of things isn't looking much better, either. While IDEs are admittedly improving all the time, most of the talented programmers have ditched them and moved back to the console-based editors of the 80s like vim and Emacs, many following the <a href="http://blog.sanctum.geek.nz/unix-as-ide-introduction/">Unix as your IDE</a> idea. Clearly the productivity boost given by IDEs doesn't yet match the overhead of using them.</p>
+
+<p>These areas are where flow-based programming can help.</p>
+<h2>The logic is in the graph</h2>
+
+<p>When we design software, we usually start by drawing boxes and arrows on a whiteboard. Later on these are then translated to actual software through various text files containing classes, methods, and configuration information.</p>
+
+<p>As the software evolves, people rarely go back to the original drawing and update it, effectively making the source code only place documenting how different pieces of a system fit together.</p>
+
+<p>With FBP, the logic of the software is designed as <a href="http://en.wikipedia.org/wiki/Directed_graph">a graph</a> — much like a flowchart — and stays as a graph.</p>
+
+<p>The boxes of the graph depict various instances of reusable components, and the arrows the wiring connecting their ports together.</p>
+
+<p>The graph is what FBP systems like NoFlo execute, and it is also something that can be easily drawn on the screen, or even edited visually.</p>
+
+<p><img src="http://bergie.iki.fi/files/fbp-ui/drawfbp-small.png" alt="NoFlo graph in DrawFBP" /></p>
+
+<p>We humans <a href="http://books.google.de/books?id=ffw6aBE-9ykC&amp;lpg=PA1108&amp;ots=baZIBoNyYI&amp;dq=humans%20are%20visual%20creatures&amp;pg=PA1108#v=onepage&amp;q=humans%20are%20visual%20creatures&amp;f=false">are visual creatures</a>. We are much better at recognizing shapes and visual connections than at finding them from a jumble of text files.</p>
+
+<p>Each node (or <em>process</em> in FBP terminology) of a graph is an instance of a component. Just like objects in OOP can receive and react to messages (<em>method calls</em>), NoFlo components react to packets they receive through their input ports, process them, and eventually send something to their output ports.</p>
+
+<p>The graph decides where the output is sent, meaning that the overall behavior of a program can be modified by just rewiring some of these connections. In traditional OOP the connections between various objects are usually hardcoded, or managed by a complicated <a href="http://en.wikipedia.org/wiki/Dependency_injection">dependency injection</a> systems.</p>
+<h2>Component reuse</h2>
+
+<p>Because FBP components are just black boxes performing some well-defined task on incoming packets, they can be connected with each other in multitude of different ways to produce a different behaviour. This gives FBP systems a much better scale of code reuse than traditional OOP or procedural environments.</p>
+
+<p>As an example, my typical NoFlo applications only contain some 5-15% of components written specifically for that project. The rest are all coming from the <a href="https://npmjs.org/browse/depended/noflo">growing ecosystem</a> of ready-made NoFlo components.</p>
+
+<p>Writing and <a href="http://bergie.iki.fi/blog/distributing-noflo-components/">publishing components</a> is already quite easy, and is becoming even faster and more reliable through tools like the <a href="https://github.com/bergie/grunt-init-noflo">Grunt component scaffolder</a> and <a href="https://github.com/bergie/noflo-test">noflo-test</a>.</p>
+
+<p><em>The more components are out there the less time we need to spend writing code, and the more we can focus on designing the software logic itself.</em></p>
+<h2>NoFlo on the browser</h2>
+
+<p>Apart of better tooling and more components, the other big improvement in NoFlo has been support for running FBP programs on the client. Originally NoFlo was designed for server-side flows, but thanks to the improving <a href="http://bergie.iki.fi/blog/sharing-javascript-libraries-node-browser/">client-side Component ecosystem</a>, it became feasible to expose the environment also to web browsers.</p>
+
+<p>This is keeping true with the promises of the universal runtime. With the next release of NoFlo, flow-based programs can be run on pretty much any computing device, whether a Node.js equipped web server, or a smartphone with a browser.</p>
+
+<p>The ability to run client-side flow-based programs presents new opportunities. There is a tradition of using tools like <a href="http://www.filterforge.com/features/editor.html">FilterForge</a> for visual effects, or <a href="http://en.wikipedia.org/wiki/Quartz_Composer">Quartz Composer</a> for user interaction design. As a matter of fact, <a href="https://medium.com/the-year-of-the-looking-glass/af182add5a2f">Facebook Home was designed using flow-based tools</a>:</p>
+
+<blockquote>
+<p>...something like Facebook Home is completely beyond the abilities of Photoshop as a design tool. How can we talk about physics-based UIs and panels and bubbles that can be flung across the screen if we’re sitting around looking at static mocks? (Hint: we can’t.) It's no secret that many of us on the Facebook Design team are avid users of Quartz Composer, a visual prototyping tool that lets you create hi-fidelity demos that look and feel like exactly what you want the end product to be.</p>
+</blockquote>
+
+<p>Since NoFlo graphs run on any device including the tablets and smartphones that the application being designed is likely to target, it can provide an even better environment for such prototyping. There are lots of opportunities for a new tool here, especially given that <a href="http://www.fcp.co/final-cut-pro/news/932-will-the-end-of-apple-s-quartz-composer-finally-kill-off-final-cut-pro-7-and-its-plugins">Quartz Composer's future is quite uncertain</a>.</p>
+
+<p>We are already doing some work on <a href="https://github.com/bergie/noflo/issues/66">visual interaction components for NoFlo</a>. This could be huge for NoFlo and FBP in general!</p>
+<h2>UI is the missing part</h2>
+
+<p>What we have with NoFlo is already a quite solid programming environment:</p>
+
+<ul>
+	<li><a href="https://github.com/bergie/noflo">Flow-based engine</a> that works well in both browser and Node.js</li>
+	<li>Growing ecosystem of <a href="https://npmjs.org/browse/depended/noflo">reusable open source components</a></li>
+	<li>Framework for quickly <a href="https://github.com/bergie/grunt-init-noflo">scaffolding</a> and <a href="https://github.com/bergie/noflo-test">testing</a> new components</li>
+	<li>Domain-specific language for <a href="https://github.com/noflo/fbp#language-for-flow-based-programming">defining NoFlo graphs</a></li>
+</ul>
+<p>However, the missing part is a tool that would allow viewing and editing NoFlo graphs visually. Sure, <a href="http://www.jpaulmorrison.com/cgi-bin/wiki.pl?DrawFBP">DrawFBP</a> is there, and can be used with NoFlo. But something fitting modern touchscreen interactions and more connected to the live graphs would be better.</p>
+
+<p>I did some prototypes on this with <a href="https://github.com/bergie/noflo-ui">noflo-ui</a>, and wrote down <a href="http://bergie.iki.fi/blog/inspiration-for-fbp-ui/">bunch of thoughts</a> on how the graphs would be best shown. There has also been some collaboration with Forrest Oliphant of <a href="http://meemoo.org/">Meemoo</a> fame.</p>
+
+<p>Last week I sat down with <a href="http://www.behance.net/leightaylor">Leigh Taylor</a>, the original designer behind the <a href="https://medium.com/">Medium</a> blogging platform, to go through the various ideas and concepts we had. Based on this we're starting to have a quite solid design to continue working with.</p>
+
+<p>There will be more on that in the near future, but here is a sneak preview:</p>
+
+<p><img src="http://bergie.iki.fi/files/fbp-ui/leigh-concept-small.jpg" alt="Leigh&#039;s NoFlo UI concept" /></p>
+<h2>Telling the story of NoFlo</h2>
+
+<p>Apart from the user interface, the other important task ahead of us is to grow the community around NoFlo and FBP in general.</p>
+
+<p>This means producing better documentation, and explaining the concept in conferences and meetups. I gave <a href="http://youtu.be/pgP4v9b5DvE">a talk on NoFlo in JS.Everywhere 2011</a>, but the project has moved quite far ahead since then.</p>
+
+<p><img src="http://bergie.iki.fi/files/bergie-noflo-interview.jpg" alt="Being interviewed on NoFlo" /></p>
+
+<p>To tell the story of NoFlo and FBP we're currently filming a set of interviews with the people involved from the different sides. We're talking with NoFlo contributors, designers, and with people who have years (or even decades!) of experience with flow-based programming. This will hopefully come out next month.</p>
+
+<p>Expect also more posts and tutorials here <a href="http://bergie.iki.fi/">on my blog</a>.</p>	
+	<div style="clear: both;"></div>
+
+    </div>
+
+<span class='acknowledgement'>Published at DZone with permission of <a href = '/users/bergie'>Henri Bergius</a>, author and DZone MVB. (<a href=http://bergie.iki.fi/blog/noflo-two-years/ target='_blank'>source</a>)</span></span><br><p style="font-size: 11px; padding-left: 0px; color: #666;" class="disclaimer"><em>(Note: Opinions expressed in this article and its replies are the opinions of their respective authors and not those of DZone, Inc.)</em></p><div id="terms" class="tags-on-articles fancyfont">Tags: <ul class="links inline"><li class="taxonomy_term_67463 first"><a href="/category/tags/noflo" rel="tag" title="">noflo</a></li>
+<li class="taxonomy_term_58299"><a href="/category/content-form/theory" rel="tag" title="">Theory</a></li>
+<li class="taxonomy_term_4365 last"><a href="/category/dzone-taxonomy/tools-methods" rel="tag" title="">Tools &amp; Methods</a></li>
+</ul></div>
+            <!-- zones_bottomblurb_650x122 -->
+            <div id='div-gpt-ad-1350569504085-0' style='width:650px;'>
+            <script type='text/javascript'>
+            googletag.display('div-gpt-ad-1350569504085-0');
+            </script>
+            </div></div></div>
+    </div>
+</div></div>
+<!-- end of squeeze, center (main content) -->
+        <div id="sidebar-right" class="sidebar">
+        
+        <style>
+
+
+        </style>
+
+    <div id="social-box">
+        <div class="social-box-header">
+            Connect with DZone
+        </div>
+
+        <div class="content-buttons-wrapper">
+            <div class='content-buttons'>
+                <div class="article-button">
+                    <a href="/node/add"><i class="icon-file"></i>  Publish an Article</a>
+                </div>
+
+                <div class="tip-button">
+                    <a href="mailto:newsdesk@dzone.com" ><i class="icon-envelope"></i> Share a Tip</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="social-box-wrapper">
+            <ul>
+                <g:plus href="https://plus.google.com/+dzone" height="69" width="282"></g:plus>
+                <li class="facebookbtn"><div class="fb-like" data-href="http://www.facebook.com/pages/DZone/259639764711" data-send="false" data-layout="button_count" data-width="285" data-show-faces="false" data-font="lucida grande"></div></li>
+                <li class="twitterbtn"><a href="https://twitter.com/DZone" class="twitter-follow-button" data-show-count="true" data-show-screen-name="false">Follow @DZone</a></li>
+                <li class="rssbtn">
+                                            <a href="http://dzone.com/mz/enterprise-integration/rss" onClick= "_gaq.push(['_trackEvent','Social Button Click', 'DZone RSS']);"><i class="icon-rss"></i></a>
+                                    </li>
+            </ul>
+
+            <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+            <script type="text/javascript" src="https://apis.google.com/js/plusone.js"></script>
+        </div>
+    </div>
+
+    <div style="clear:both"></div>
+
+    <ul class="dzone-social-buttons" style="display:none;">
+            <li><a href="mailto:newsdesk@dzone.com" class="got_a_tip" onClick= "_gaq.push(['_trackEvent','Social Button Click', 'Tip Button']);">Got a story? Tell us!</a></li>
+            <li>
+                                 <a href="http://dzone.com/mz/enterprise-integration/rss" class="dzone-social-rss" onClick= "_gaq.push(['_trackEvent','Social Button Click', 'DZone RSS']);"></a>
+                            </li>
+            <li><a href="https://plus.google.com/+dzone/posts" class="dzone-social-google"  onClick= "_gaq.push(['_trackEvent','Social Button Click', 'DZone Google+']);""></a></li>
+            <li><a href="http://www.facebook.com/pages/DZone/259639764711" class="dzone-social-facebook"  onClick= "_gaq.push(['_trackEvent','Social Button Click', 'DZone Facebook']);""></a></li>
+            <li><a href="https://twitter.com/#!/Dzone" class="dzone-social-twitter" onClick= "_gaq.push(['_trackEvent','Social Button Click', 'DZone Twitter']);""></a></li>
+            <li><a href="http://www.linkedin.com/groups/DZone-696877" class="dzone-social-linkedin" onClick= "_gaq.push(['_trackEvent','Social Button Click', 'DZone LinkedIn']);""></a></li>
+            <!--                  <li><a href="#" class="careers-button" onClick= "pageTracker._trackEvent('Social Button Click', 'Careers Button');">Careers</a></li>-->
+
+        </ul>
+
+
+        <!--        Popular Snippets Sidebar Box-->
+        
+
+        <div class="related_library_content2"><h3>Related MicroZone Resources</h3><h4 style="background: url(/sites/all/modules/dzone/dzone_library/icons/page_external.png) no-repeat 0 0;" class=""><a href="http://txt.couchware.com/medias/jump?hid=2865&cid=471&mid=975">Use Your Java Toolchain with SAP</a></h4><h4 style="background: url(/sites/all/modules/dzone/dzone_library/icons/page_external.png) no-repeat 0 0;" class=""><a href="http://txt.couchware.com/medias/jump?hid=2873&cid=471&mid=983">MuleESB: SOA with Eclipse, Maven, Spring and Ant</a></h4><h4 style="background: url(/sites/all/modules/dzone/dzone_library/icons/page_external.png) no-repeat 0 0;" class=""><a href="http://txt.couchware.com/medias/jump?hid=2977&cid=471&mid=1085">Feature Chart: Mule ESB v. Enterprise</a></h4><h4 style="background: url(/sites/all/modules/dzone/dzone_library/icons/page_external.png) no-repeat 0 0;" class=""><a href="http://txt.couchware.com/medias/jump?hid=2989&cid=471&mid=1097">Prepare for the New World of Integration!</a></h4><h4 style="background: url(/sites/all/modules/dzone/dzone_library/icons/page_external.png) no-repeat 0 0;" class=""><a href="http://txt.couchware.com/medias/jump?hid=2869&cid=471&mid=979">6 SaaS Metrics that Matter</a></h4></div>
+                    <div id="mh_rectangle">
+
+                <!-- zones_sidebar_336x280_default -->
+                <div id='div-gpt-ad-1350569504085-2' style='width:300px; height:250px;'>
+                    <script type='text/javascript'>
+                        googletag.display('div-gpt-ad-1350569504085-2');
+                    </script>
+                </div>
+                <!-- End DART Ad -->
+
+            </div>
+            
+
+        
+        
+                        <div id="block-block-5" class="block block-block">
+
+  <div class="content">
+    <div id="sidebar_features"><h2 class="header">Spotlight Features</h2>				      	  	<div >
+	  		<a href="/click/145759/1" class="sidebar_image_link"><img src='/sites/all/files/preview-images/July/dolladollabillsyall.jpg'></a>
+	  		<h2><a href="/click/145759/1">Startups Can Now Publicly Say They Are Fundraising.  What Do You Think About The Change?</a></h2>
+	  	</div>
+                    	  	<div >
+	  		<a href="/click/144389/1" class="sidebar_image_link"><img src='/sites/all/files/preview-images/June/INSANEprogrammer_0.jpg'></a>
+	  		<h2><a href="/click/144389/1">A Programmer's Fear</a></h2>
+	  	</div>
+                    	  	<div >
+	  		<a href="/click/142675/1" class="sidebar_image_link"><img src='/sites/all/files/preview-images/June/Screen%20Shot%202013-06-10%20at%2012.02.47%20PM.png'></a>
+	  		<h2><a href="/click/142675/1">Get DZone's Definitive Guide to Cloud Providers</a></h2>
+	  	</div>
+                    	  	<div >
+	  		<a href="/click/144201/1" class="sidebar_image_link"><img src='/sites/all/files/preview-images/June/Design_Pattern_small_02_0.jpg'></a>
+	  		<h2><a href="/click/144201/1">Patterns of Effective Delivery (Dan North)</a></h2>
+	  	</div>
+              </div>  </div>
+</div>
+<div id="block-block-3" class="block block-block">
+
+  <div class="content">
+    <div id="popularlinks"><ul class="popularlist"><h2>Popular at DZone</h2><li><a href="http://www.dzone.com/links/how_to_implement_dynamic_type_on_ios_7.html"><span class ="popularlist-number popularlist-1">1:</span>How to Implement Dynamic Type on iOS 7</a></li>
+                <li><a href="http://www.dzone.com/links/making_real_sht_chris_hughes_at_phonegap_day_2013.html"><span class ="popularlist-number popularlist-2">2:</span>Making Real Sh_t: Chris Hughes at PhoneGap Day 2013</a></li>
+                <li><a href="http://www.dzone.com/links/sorting_networks_using_higherorder_functions_of_j.html"><span class ="popularlist-number popularlist-3">3:</span>Sorting Networks using Higher-Order Functions of JavaScript Array</a></li>
+                <li><a href="http://www.dzone.com/links/hadoop_20_with_yarn_the_game_changes.html"><span class ="popularlist-number popularlist-4">4:</span>Hadoop 2.0: With YARN, the Game Changes</a></li>
+                <li><a href="http://www.dzone.com/links/programming_thinking_or_typing_thinking_and_typing.html"><span class ="popularlist-number popularlist-5">5:</span>Programming: Thinking or Typing, Thinking and Typing</a></li>
+                <li><a href="http://www.dzone.com/links/safety_of_websockets_and_other_advanced_parts_of.html"><span class ="popularlist-number popularlist-6">6:</span>Safety of WebSockets and other advanced parts of HTML5</a></li>
+                <li><a href="http://www.dzone.com/links/using_amazons_elastic_mapreduce_to_compute_recomm.html"><span class ="popularlist-number popularlist-7">7:</span>Using Amazon’s Elastic MapReduce to Compute Recommendations with Apache Mahout 0.8</a></li>
+                <a class="moredz" href="http://www.dzone.com">See more popular at DZone</a><br><a class="rss" href="http://feeds.dzone.com/dzone/frontpage">Subscribe to the RSS feed</a></ul></div>  </div>
+</div>
+            </div>
+    <!-- end of right sidebar -->
+            
+<!-- Cache the footer block -->
+<div id="footer"><span class="footer-header">Around the DZone Network</span><div class="large-topics-articles"><div class='featured-articles'><a href='http://architects.dzone.com' class='featured-domains' onClick= "_gaq.push(['_trackEvent','Zone Footer', 'Thumbnail Zone Link Header Click','Architects Zone']);">ARCHITECTS </span><a href ='http://architects.dzone.com/articles/big-data-beyond-mapreduce' onClick= "_gaq.push(['_trackEvent', 'Zone Footer', 'Thumbnail Click', '131457-Big Data Beyond MapReduce: Google's Big Data Papers']);"><div class='featured-image' style ='background-image:url(/sites/all/files/preview-images/February/photo_1.jpg);'></div><br>Big Data Beyond MapReduce: Google's Big Data Paper...</a></div><div class='featured-articles'><a href='http://java.dzone.com' class='featured-domains' onClick= "_gaq.push(['_trackEvent','Zone Footer', 'Thumbnail Zone Link Header Click','Javalobby']);">JAVALOBBY</span><a href ='http://java.dzone.com/articles/principles-java-application' onClick= "_gaq.push(['_trackEvent', 'Zone Footer', 'Thumbnail Click', '130051-The Principles of Java Application Performance Tuning']);"><div class='featured-image' style ='background-image:url(/sites/all/files/preview-images/February/java-logo-large.png);'></div><br>The Principles of Java Application Performance Tun...</a></div><div class='featured-articles'><a href='http://architects.dzone.com' class='featured-domains' onClick= "_gaq.push(['_trackEvent','Zone Footer', 'Thumbnail Zone Link Header Click','Architects Zone']);">ARCHITECTS </span><a href ='http://architects.dzone.com/articles/5-things-java-developer-should' onClick= "_gaq.push(['_trackEvent', 'Zone Footer', 'Thumbnail Click', '131541-5 Things a Java Developer Should Consider This Year']);"><div class='featured-image' style ='background-image:url(/sites/all/files/preview-images/February/Screen%20Shot%202013-02-18%20at%2011.41.12%20AM_4.png);'></div><br>5 Things a Java Developer Should Consider This Yea...</a></div><div class='featured-articles'><a href='http://java.dzone.com' class='featured-domains' onClick= "_gaq.push(['_trackEvent','Zone Footer', 'Thumbnail Zone Link Header Click','Javalobby']);">JAVALOBBY</span><a href ='http://java.dzone.com/articles/there-are-only-2-roles-code' onClick= "_gaq.push(['_trackEvent', 'Zone Footer', 'Thumbnail Click', '134077-There Are Only 2 Roles of Code']);"><div class='featured-image' style ='background-image:url(/sites/all/files/preview-images/March/Code_0.png);'></div><br>There Are Only 2 Roles of Code</a></div><div class='featured-articles'><a href='http://java.dzone.com' class='featured-domains' onClick= "_gaq.push(['_trackEvent','Zone Footer', 'Thumbnail Zone Link Header Click','Javalobby']);">JAVALOBBY</span><a href ='http://java.dzone.com/articles/singleton-design-pattern-–' onClick= "_gaq.push(['_trackEvent', 'Zone Footer', 'Thumbnail Click', '130325-Singleton Design Pattern – An Introspection w/ Best Practices']);"><div class='featured-image' style ='background-image:url(/sites/all/files/preview-images/February/Design_Pattern_small_02.jpg);'></div><br>Singleton Design Pattern – An Introspection w/ B...</a></div><div class='featured-articles last-item'><a href='http://server.dzone.com' class='featured-domains' onClick= "_gaq.push(['_trackEvent','Zone Footer', 'Thumbnail Zone Link Header Click','Server Zone']);">SERVER </span><a href ='http://server.dzone.com/articles/best-best-practices-ever' onClick= "_gaq.push(['_trackEvent', 'Zone Footer', 'Thumbnail Click', '130499-Best Best Practices Ever']);"><div class='featured-image' style ='background-image:url(/sites/all/files/preview-images/February/source%20code_3_2.jpg);'></div><br>Best Best Practices Ever</a></div></div><div class="hail_mary"><span class="block-title">You Might Also Like</span><ul class="footer-links"><li class='footer-links-item'><a href='http://server.dzone.com/articles/10-reasons-web-developers' onClick= "_gaq.push(['_trackEvent', 'Zone Footer', 'Hail Mary', '154501-10 Reasons Web Developers Should Learn AngularJS']);">10 Reasons Web Developers Should Learn AngularJS</a></li><li class='footer-links-item'><a href='http://server.dzone.com/articles/askdz-whats-worst-bug-you-ever' onClick= "_gaq.push(['_trackEvent', 'Zone Footer', 'Hail Mary', '154057-AskDZ: What's the Worst Bug You Ever Found and Solved?']);">AskDZ: What's the Worst Bug You Ever Found and Solved?</a></li><li class='footer-links-item'><a href='http://server.dzone.com/articles/perfect-developer-laptop' onClick= "_gaq.push(['_trackEvent', 'Zone Footer', 'Hail Mary', '154305-The Perfect Developer Laptop']);">The Perfect Developer Laptop</a></li><li class='footer-links-item'><a href='http://server.dzone.com/articles/coder-reactions-part-1' onClick= "_gaq.push(['_trackEvent', 'Zone Footer', 'Hail Mary', '154415-Coder Reactions Part 1']);">Coder Reactions Part 1</a></li><li class='footer-links-item'><a href='http://server.dzone.com/articles/whats-best-programming' onClick= "_gaq.push(['_trackEvent', 'Zone Footer', 'Hail Mary', '154745-What's the Best Development Resource You've Ever Found?']);">What's the Best Development Resource You've Ever Found?</a></li><li class='footer-links-item'><a href='http://server.dzone.com/articles/reflections-javaone-2013-part2' onClick= "_gaq.push(['_trackEvent', 'Zone Footer', 'Hail Mary', '122419-Reflections on JavaOne 2013 by the NetBeans Community (Part 2)']);">Reflections on JavaOne 2013 by the NetBeans Community (Part 2)</a></li><li class='footer-links-item'><a href='http://server.dzone.com/articles/dev-week-johanna-rothman' onClick= "_gaq.push(['_trackEvent', 'Zone Footer', 'Hail Mary', '154079-Dev of the Week: Johanna Rothman']);">Dev of the Week: Johanna Rothman</a></li><li class='footer-links-item'><a href='http://server.dzone.com/articles/beer-office-dangerous' onClick= "_gaq.push(['_trackEvent', 'Zone Footer', 'Hail Mary', '154849-Is Beer in the Office Dangerous? ']);">Is Beer in the Office Dangerous? </a></li><li class='footer-links-item'><a href='http://server.dzone.com/articles/dev-week-antonin-januska' onClick= "_gaq.push(['_trackEvent', 'Zone Footer', 'Hail Mary', '154741-Dev of the Week: Antonin Januska']);">Dev of the Week: Antonin Januska</a></li><li class='footer-links-item'><a href='http://server.dzone.com/articles/java-auto-unboxing-gotcha' onClick= "_gaq.push(['_trackEvent', 'Zone Footer', 'Hail Mary', '154185-Java Auto-Unboxing Gotcha: Beware!']);">Java Auto-Unboxing Gotcha: Beware!</a></li><li class='footer-links-item'><a href='http://server.dzone.com/articles/blogging-programmers-style-0' onClick= "_gaq.push(['_trackEvent', 'Zone Footer', 'Hail Mary', '154541-The Blogging Programmer's Style Guide: Quirky Software Names']);">The Blogging Programmer's Style Guide: Quirky Software Names</a></li><li class='footer-links-item'><a href='http://server.dzone.com/articles/tutorial-how-create-responsive' onClick= "_gaq.push(['_trackEvent', 'Zone Footer', 'Hail Mary', '154267-Tutorial: How to Create a Responsive Website with AngularJS']);">Tutorial: How to Create a Responsive Website with AngularJS</a></li><li class='footer-links-item'><a href='http://server.dzone.com/articles/having-fun-git' onClick= "_gaq.push(['_trackEvent', 'Zone Footer', 'Hail Mary', '154289-Having Fun with Git']);">Having Fun with Git</a></li><li class='footer-links-item'><a href='http://server.dzone.com/articles/javalangoutofmemory-permgen' onClick= "_gaq.push(['_trackEvent', 'Zone Footer', 'Hail Mary', '154473-Java.lang.OutOfMemory: PermGen Space - Garbage Collecting a Classloader']);">Java.lang.OutOfMemory: PermGen Space - Garbage Collecting a Classloader</a></li><li class='footer-links-item'><a href='http://server.dzone.com/articles/diy-raspberry-pi-workshop-kids' onClick= "_gaq.push(['_trackEvent', 'Zone Footer', 'Hail Mary', '154395-DIY Raspberry Pi Workshop for Kids']);">DIY Raspberry Pi Workshop for Kids</a></li></ul></div><div id="footer-articles"><div id="block-wrapper"><div id="left-block" class="footer-article-block"><span class="block-title">Popular on Architects Zone</span><ul><li><a href = '/news/top-open-source-esbs' onClick= "_gaq.push(['_trackEvent', 'Zone Footer', 'Popular Current Zone Link Click', '13703-Top Open Source ESB Projects']);">Top Open Source ESB Projects</a></li><li><a href = '/news/building-multi-core-ready-java' onClick= "_gaq.push(['_trackEvent', 'Zone Footer', 'Popular Current Zone Link Click', '2482-Building Multi-core Ready Java Applications, Part I']);">Building Multi-core Ready Java Applications, Part I</a></li><li><a href = '/news/top-10-alm-solutions' onClick= "_gaq.push(['_trackEvent', 'Zone Footer', 'Popular Current Zone Link Click', '13367-Top ALM Tools and Solutions Providers']);">Top ALM Tools and Solutions Providers</a></li><li><a href = '/news/understanding-hbase-and-bigtab' onClick= "_gaq.push(['_trackEvent', 'Zone Footer', 'Popular Current Zone Link Click', '3036-Understanding HBase and BigTable']);">Understanding HBase and BigTable</a></li><li><a href = '/news/three-forms-resteasy-client' onClick= "_gaq.push(['_trackEvent', 'Zone Footer', 'Popular Current Zone Link Click', '11487-Three Forms of RESTEasy Client']);">Three Forms of RESTEasy Client</a></li><li><a href = '/news/cassandra-adds-hadoop' onClick= "_gaq.push(['_trackEvent', 'Zone Footer', 'Popular Current Zone Link Click', '21161-Cassandra Adds Hadoop MapReduce']);">Cassandra Adds Hadoop MapReduce</a></li><li><a href = '/news/build-multi-core-ready-java-ap-0' onClick= "_gaq.push(['_trackEvent', 'Zone Footer', 'Popular Current Zone Link Click', '2483-Build Multi-core Ready Java Applications, Part 2']);">Build Multi-core Ready Java Applications, Part 2</a></li><li><a href = '/news/tech-predictions-2011-edition' onClick= "_gaq.push(['_trackEvent', 'Zone Footer', 'Popular Current Zone Link Click', '33541-Tech Predictions, 2011 Edition']);">Tech Predictions, 2011 Edition</a></li></ul></div><div id="middle-block" class="footer-article-block"><span class="block-title">Latest Articles</span><ul><li><a href ='/articles/popular-misconceptions-agile' onClick= "_gaq.push(['_trackEvent', 'Zone Footer', 'Latest Articles Link Click', '154983-Popular Misconceptions of Agile - Infographic']);">Popular Misconceptions of Agile - Infographic</a></li><li><a href ='/articles/two-approaches-open-innovation' onClick= "_gaq.push(['_trackEvent', 'Zone Footer', 'Latest Articles Link Click', '155023-Two approaches to open innovation ']);">Two approaches to open innovation </a></li><li><a href ='/articles/all-new-‘workcom-salesforce’' onClick= "_gaq.push(['_trackEvent', 'Zone Footer', 'Latest Articles Link Click', '155021-All New ‘Work.com on Salesforce’ Update']);">All New ‘Work.com on Salesforce’ Update</a></li><li><a href ='/articles/organising-open-innovation' onClick= "_gaq.push(['_trackEvent', 'Zone Footer', 'Latest Articles Link Click', '155019-Organising for open innovation ']);">Organising for open innovation </a></li><li><a href ='/articles/valuing-information-tip-4' onClick= "_gaq.push(['_trackEvent', 'Zone Footer', 'Latest Articles Link Click', '155017-Valuing information tip 4: finding it more easily']);">Valuing information tip 4: finding it more easily</a></li><li><a href ='/articles/5-ways-assess-crowdsourced' onClick= "_gaq.push(['_trackEvent', 'Zone Footer', 'Latest Articles Link Click', '155015-5 ways to to assess crowdsourced ideas ']);">5 ways to to assess crowdsourced ideas </a></li><li><a href ='/articles/application-delivery-network' onClick= "_gaq.push(['_trackEvent', 'Zone Footer', 'Latest Articles Link Click', '155013-Application Delivery Network vs. Content Delivery Network']);">Application Delivery Network vs. Content Delivery Network</a></li><li><a href ='/articles/using-maven-build-embedded' onClick= "_gaq.push(['_trackEvent', 'Zone Footer', 'Latest Articles Link Click', '154593-Using Maven to Build with Embedded Jetty']);">Using Maven to Build with Embedded Jetty</a></li></ul></div></div></div><div id="right-block" class="footer-article-spotlight-block"><h2 class="block-title">Spotlight Resources</h2><div class="spotlight" style="margin-top: 5px; clear: both;"><div class='callout'><a href='http://refcardz.dzone.com/refcardz/essential-camel-components' onClick= "_gaq.push(['_trackEvent', 'Zone Footer', 'Spotlight Features Thumbnail Click', '170-Camel Essential Components']);"><img border='0' style='float: left;' src='/sites/all/modules/dzone/assets/refcardz/170/images/thumb.png'></a></div><h3 style='margin-left: 120px;'><a href='http://refcardz.dzone.com/refcardz/essential-camel-components'  onClick= "_gaq.push(['_trackEvent', 'Zone Footer', 'Spotlight Features Title Click', '170-Camel Essential Components']);">Camel Essential Components</a></h3><div class="blurb" style="margin-left: 120px;"><p>DZone's 170th Refcard is an essential reference to Camel, an open-source, lightweight, integration library.&nbsp; This Refcard is authored by...</div></div><div class="spotlight" style="margin-top: 5px; clear: both;"><div class='callout'><a href='http://refcardz.dzone.com/refcardz/couchbase-apis' onClick= "_gaq.push(['_trackEvent', 'Zone Footer', 'Spotlight Features Thumbnail Click', '176-Essential Couchbase APIs: Open Source NoSQL Data Access from Java, Ruby, and .NET']);"><img border='0' style='float: left;' src='/sites/all/modules/dzone/assets/refcardz/176/images/thumb.png'></a></div><h3 style='margin-left: 120px;'><a href='http://refcardz.dzone.com/refcardz/couchbase-apis'  onClick= "_gaq.push(['_trackEvent', 'Zone Footer', 'Spotlight Features Title Click', '176-Essential Couchbase APIs: Open Source NoSQL Data Access from Java, Ruby, and .NET']);">Essential Couchbase APIs: Open Source NoSQL Data Access from Java, Ruby, and .NET</a></h3><div class="blurb" style="margin-left: 120px;"></div></div><div class="spotlight" style="margin-top: 5px; clear: both;"><div class='callout'><a href='http://refcardz.dzone.com/refcardz/dns' onClick= "_gaq.push(['_trackEvent', 'Zone Footer', 'Spotlight Features Thumbnail Click', '182-Practical DNS: Managing Domains for Safety, Reliability, and Speed']);"><img border='0' style='float: left;' src='/sites/all/modules/dzone/assets/refcardz/182/images/thumb.png'></a></div><h3 style='margin-left: 120px;'><a href='http://refcardz.dzone.com/refcardz/dns'  onClick= "_gaq.push(['_trackEvent', 'Zone Footer', 'Spotlight Features Title Click', '182-Practical DNS: Managing Domains for Safety, Reliability, and Speed']);">Practical DNS: Managing Domains for Safety, Reliability, and Speed</a></h3><div class="blurb" style="margin-left: 120px;"></div></div></div></div>
+<!-- end of footer -->
+</div>
+<!-- end of container -->
+</div>
+<!-- end of wrapper -->
+
+<div class="subfooter fancyfont">
+    <div class="subfooter_center">
+        <div class="subfooter_top">
+            <div class="subfooter_logo">
+            </div>
+            <div class="subfooter_search">
+                <form action="/search/google"  accept-charset="UTF-8" method="get" id="google-cse-searchbox-form-1">
+<div><input type="hidden" name="cx" id="edit-cx-1" value="010821965829155306098:ogyaz_5nsc8"  />
+<input type="hidden" name="cof" id="edit-cof-1" value="FORID:11"  />
+<div class="form-item" id="edit-query-1-wrapper">
+ <input type="text" maxlength="128" name="query" id="edit-query-1" size="15" value="" title="Enter the terms you wish to search for." class="form-text" />
+</div>
+<input type="submit" name="op" id="edit-sa-1" value="Search"  class="form-submit" />
+<input type="hidden" name="form_build_id" id="form-d56a621a599498235267920228d16cd6" value="form-d56a621a599498235267920228d16cd6"  />
+<input type="hidden" name="form_id" id="edit-google-cse-searchbox-form-1" value="google_cse_searchbox_form"  />
+
+</div></form>
+            </div>
+        </div>
+        <div>
+        </div>
+        <div class="subfooter_box">
+            <ul class="menu"><li class="expanded first"><a href="http://dzone.com" title="">DZone</a><ul class="menu"><li class="leaf first"><a href="http://refcardz.dzone.com/" title="">Refcardz</a></li>
+<li class="leaf"><a href="http://books.dzone.com/" title="">Book Reviews</a></li>
+<li class="leaf"><a href="http://library.dzone.com/" title="">Tech Library</a></li>
+<li class="leaf"><a href="http://itquestions.com/index.html" title="">IT Questions</a></li>
+<li class="leaf"><a href="http://snippets.dzone.com/" title="">Snippets</a></li>
+<li class="leaf"><a href="http://dzone.com/user" title="">My Profile</a></li>
+<li class="leaf"><a href="http://www.dzone.com/links/about.jsp" title="">About DZone</a></li>
+<li class="leaf"><a href="http://www.dzone.com/corporate/advertise" title="">Advertise</a></li>
+<li class="leaf"><a href="http://www.dzone.com/links/buttons.jsp" title="">Tools &amp; Buttons</a></li>
+<li class="leaf last"><a href="http://ask.dzone.com/index.html" title="">Send Feedback</a></li>
+</ul></li>
+<li class="expanded last"><a href="http://dzone.com/mz/html5" title="">Topics</a><ul class="menu"><li class="leaf first"><a href="http://dzone.com/mz/html5" title="">HTML5</a></li>
+<li class="leaf"><a href="http://dzone.com/mz/windowsphone7" title="">Windows Phone</a></li>
+<li class="leaf"><a href="http://cloud.dzone.com/" title="">Cloud</a></li>
+<li class="leaf"><a href="http://mobile.dzone.com/" title="">Mobile</a></li>
+<li class="leaf"><a href="http://dzone.com/mz/dotnet" title="">.NET</a></li>
+<li class="leaf"><a href="http://java.dzone.com/" title="">Java</a></li>
+<li class="leaf"><a href="http://php.dzone.com/" title="">PHP</a></li>
+<li class="leaf"><a href="http://eclipse.dzone.com/" title="">Eclipse</a></li>
+<li class="leaf"><a href="http://dzone.com/mz/performance" title="">Performance</a></li>
+<li class="leaf"><a href="http://www.dzone.com/mz/big-data" title="">Big Data</a></li>
+<li class="leaf"><a href="http://agile.dzone.com/" title="">Agile</a></li>
+<li class="leaf last"><a href="http://dzone.com/mz/devops" title="">DevOps</a></li>
+</ul></li>
+</ul>
+            <ul class="menu">
+                <li class="expanded follow-buttons">
+                    <a href="#">Follow Us</a>
+                    <ul class="menu">
+                        <li>
+                                                    </li>
+                        <li>
+                            <a href="https://plus.google.com/+dzone/posts" class="subfooter-social subfooter-social-google">Google +</a>
+                        </li>
+                        <li>
+                            <a href="http://www.facebook.com/pages/DZone/259639764711" class="subfooter-social subfooter-social-facebook">Facebook</a>
+                        </li>
+                        <li>
+                            <a href="http://www.linkedin.com/groups/DZone-696877" class="subfooter-social subfooter-social-linkedin">LinkedIn</a>
+                        </li>
+                        <li>
+                            <a href="https://twitter.com/#!/Dzone" class="subfooter-social subfooter-social-twitter">Twitter</a>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+
+            <div class="subfooter-right">
+
+                "Starting from scratch" is seductive but disease ridden <br><span>-Pithy Advice for Programmers</span>
+
+            </div>
+
+
+        </div>
+        <div id="legal"><a href="/page/advertise">Advertising</a> - <a href="/page/tos">Terms of Service</a> - <a href="/page/privacy">Privacy</a> - © 1997-2012, DZone, Inc.</div>
+    </div>
+</div>
+    
+<!-- end of page wrapper -->
+</div>
+<script type="text/javascript" src="http://cdn.dzone.com/sites/all/files/js/js_1853ae2420e0b7822f0d9f171c0a5427.js"></script>
+<script type="text/javascript" src="http://cdn.dzone.com/misc/jquery.form-3.18.js?1382108032"></script>
+<script type="text/javascript" src="http://cdn.dzone.com/sites/all/modules/sharebar/js/sharebar.js?1382108032"></script>
+<script type="text/javascript">
+<!--//--><![CDATA[//><!--
+jQuery.extend(Drupal.settings, {"basePath":"\/","fivestar":{"titleUser":"Your rating: ","titleAverage":"Average: ","feedbackSavingVote":"Saving your vote...","feedbackVoteSaved":"Your vote has been saved.","feedbackDeletingVote":"Deleting your vote...","feedbackVoteDeleted":"Your vote has been deleted."},"jstools":{"cleanurls":true,"basePath":"\/"},"activemenu":{"#block-book-0":"activemenu\/book","#block-menu-devel":"activemenu\/menu","#block-menu-menu-library-navigat":"activemenu\/menu","#block-menu-primary-links":"activemenu\/menu","#block-menu-secondary-links":"activemenu\/menu","#block-menu-menu-sections":"activemenu\/menu","#block-menu-menu-sitemap":"activemenu\/menu","#block-menu-menu-zones":"activemenu\/menu","#block-user-1":"activemenu\/menu"}});
+//--><!]]>
+</script>
+
+<script type="text/javascript">
+    if(document.title.indexOf("Page not found") != 0){
+        $('.sharebar').sharebar({horizontal:'false',swidth:'75',minwidth:1100,position:'left',leftOffset:35,rightOffset:10});
+        $('#sharebar').css('display', 'none');
+        $(parent.document).scroll(function() {
+            var scroll_position =  $(window).scrollTop();
+            if(scroll_position > 350)
+                $('#sharebar').fadeIn();
+            else
+                $('#sharebar').fadeOut();
+        });}
+</script>
+
+<script type="text/javascript">
+    SyntaxHighlighter.config.bloggerMode = true;
+    SyntaxHighlighter.config.taName = "pre";
+    SyntaxHighlighter.config.clipboardSwf = '/sites/all/themes/dzone2012/scripts/syntaxHighlighter/clipboard.swf';
+    SyntaxHighlighter.all();
+    dp.SyntaxHighlighter.HighlightAll('code');
+</script>
+    
+<script type="text/javascript" src="/sites/all/files/js/js_5dc0c13b5c27146aba8b38245e272fc2.js"></script>
+<script type="text/javascript">
+<!--//--><![CDATA[//><!--
+jQuery.extend(Drupal.settings, {"googleCSE":{"language":"en"}});
+//--><!]]>
+</script>
+
+<!--Track Microzones -->
+
+        <script type="text/javascript">_gaq.push(['_trackEvent','Microzone Pageviews', 'Enterprise Integration Zone', "NoFlo: Two Years of Flow-Based Programming"]);</script>
+            
+
+<!-- Social Tracking Scripts -->
+<script type="text/javascript">
+    fancyBoxOpen = false;
+
+    try {
+        if (FB && FB.Event && FB.Event.subscribe) {
+            FB.Event.subscribe('edge.create', function(targetUrl) {
+                if(fancyBoxOpen) {
+                    _gaq.push(['_trackSocial','Facebook', 'popup like']);
+//                    pageTracker._trackEvent('Facebook', 'popup like');
+                } else {
+                    _gaq.push(['_trackSocial', 'Facebook', 'like']);
+                }
+            });
+        }
+    } catch(e) {}
+
+    try {
+        $(window).ready(function() {
+            $('.IN-widget').click(function() {
+                if(fancyBoxOpen) {
+                    _gaq.push(['_trackSocial','LinkedIn', 'popup share']);
+//                    pageTracker._trackEvent('LinkedIn', 'popup share');
+                } else {
+                    _gaq.push(['_trackSocial','LinkedIn', 'share']);
+                }
+            });
+        });
+    } catch(e) {}
+
+    function track_plusone(gpovote) {
+        try {
+            if(fancyBoxOpen) {
+                _gaq.push(['_trackSocial','Google', 'popup +1']);
+//                pageTracker._trackEvent('Google', 'popup +1');
+            } else {
+                _gaq.push(['_trackSocial','Google', '+1']);
+            }
+        } catch (e) {}
+    }
+
+    try {
+        twttr.events.bind('tweet', function(event) {
+            if (event) {
+                var targetUrl;
+                if (event.target && event.target.nodeName == 'IFRAME') {
+                    targetUrl = extractParamFromUri(event.target.src, 'url');
+                }
+                if(fancyBoxOpen) {
+                    _gaq.push(['_trackSocial','Twitter', 'popup tweet']);
+//                    pageTracker._trackEvent('Twitter', 'popup tweet');
+                } else {
+                    _gaq.push(['_trackSocial','Twitter', 'tweet']);
+                }
+            }
+        });
+    } catch(e) {}
+
+    function extractParamFromUri(uri, paramName) {
+        if (!uri) {
+            return;
+        }
+        var uri = uri.split('#')[0];  // Remove anchor.
+        var parts = uri.split('?');  // Check for query params.
+        if (parts.length == 1) {
+            return;
+        }
+        var query = decodeURI(parts[1]);
+
+        // Find url param.
+        paramName += '=';
+        var params = query.split('&');
+        for (var i = 0, param; param = params[i]; ++i) {
+            if (param.indexOf(paramName) === 0) {
+                return unescape(param.split('=')[1]);
+            }
+        }
+    }
+
+    </script>
+
+    <div id="fb-root"></div>
+    <script>(function(d, s, id) {
+        var js, fjs = d.getElementsByTagName(s)[0];
+        if (d.getElementById(id)) return;
+        js = d.createElement(s); js.id = id;
+        js.src = "//connect.facebook.net/en_US/all.js#xfbml=1";
+        fjs.parentNode.insertBefore(js, fjs);
+    }(document, 'script', 'facebook-jssdk'));</script>
+</body>
+</html>

@@ -1,0 +1,22 @@
+{
+  "name": "noflo-app",
+  "version": "0.0.1",
+  "dependencies": {
+    "noflo": "~0.4.0",
+    "noflo-core": "~0.1.2",
+    "noflo-filesystem": "~1.0.2",
+    "noflo-calc": "0.0.1",
+    "jade": "~0.35.0",
+    "express": "~3.4.0",
+    "mathjs": "~0.14.0"
+  },
+  "noflo": {
+    "components": {
+      "Calc": "./Calc.coffee",
+      "Display": "./Display.coffee"
+    },
+    "graphs": {
+      "calcgraph": "./calcgraph.json"
+    }
+  }
+}

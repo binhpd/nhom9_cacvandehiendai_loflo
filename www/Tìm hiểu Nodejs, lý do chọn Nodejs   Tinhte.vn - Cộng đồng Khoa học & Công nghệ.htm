@@ -1,0 +1,2156 @@
+<!DOCTYPE html>
+<html id="XenForo" lang="" dir="LTR" class="Public LoggedIn Sidebar" xmlns:fb="http://www.facebook.com/2008/fbml">
+<head>
+
+	<meta name="viewport" content="width=device-width" />
+
+
+
+    <meta charset="utf-8" />
+    
+		<base href="http://www.tinhte.vn/" />
+		<script>
+			var _b = document.getElementsByTagName('base')[0], _bH = "http://www.tinhte.vn/";
+			if (_b && _b.href != _bH) _b.href = _bH;
+		</script>
+	
+    
+    <title>Tìm hiểu Nodejs, lý do chọn Nodejs | Tinhte.vn - Cộng đồng Khoa học &amp; Công nghệ</title>
+    
+    <noscript><style>.JsOnly { display: none !important; }</style></noscript>
+    <link rel="stylesheet" href="css.php?css=xenforo,form,public&amp;style=11&amp;dir=LTR&amp;d=1382103594" />
+    <link rel="stylesheet" href="css.php?css=GoToTop_mini,Gritter,GritterEXTRA,TinhTe_ETW,TinhTe_ETW_news1,attachment_editor,bb_code,editor_ui,likes_summary,message,message_user_info,nat_css,quick_reply,share_page,thread_view,user_bar,wf_default&amp;style=11&amp;dir=LTR&amp;d=1382103594" />
+
+    
+
+    <script>
+
+	var _gaq = [['_setAccount', 'UA-2120640-1'], ['_trackPageview']];
+	!function(d, t)
+	{
+		var g = d.createElement(t),
+			s = d.getElementsByTagName(t)[0];	
+		g.async = true;
+		g.src = ('https:' == d.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+		s.parentNode.insertBefore(g, s);
+	}
+	(document, 'script');
+
+	</script>
+    	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.5.2/jquery.min.js"></script>	
+	
+		<script>if (!window.jQuery) { document.write('<scr'+'ipt type="text/javascript" src="https://cdn.tinhte.vn/js/jquery/jquery-1.5.2.min.js"><\/scr'+'ipt>'); }</script>
+		
+	<script src="https://cdn.tinhte.vn/js/xenforo/xenforo.js?_v=8b54f5de"></script>
+	<script src="https://cdn.tinhte.vn/js/Tinhte/galleria/galleria-1.2.9.min.js?_v=8b54f5de"></script>
+	<script src="https://cdn.tinhte.vn/js/xenforo/discussion.js?_v=8b54f5de"></script>
+	<script src="https://cdn.tinhte.vn/js/tinymce/tiny_mce.js?_v=8b54f5de"></script>
+	<script src="https://cdn.tinhte.vn/js/bdTagMe/tinymce_plugin.js?_v=8b54f5de"></script>
+	<script src="https://cdn.tinhte.vn/js/bdSocialShare/buttons.js?_v=8b54f5de"></script>
+	<script src="https://cdn.tinhte.vn/js/xenforo/attachment_editor.js?_v=8b54f5de"></script>
+	<script src="https://cdn.tinhte.vn/js/swfupload/swfupload.min.js?_v=8b54f5de"></script>
+	<script src="https://www.google.com/jsapi?_v=8b54f5de"></script>
+	<script src="https://cdn.tinhte.vn/js/gritter/jquery.gritter.js?_v=8b54f5de"></script>
+	<script src="https://cdn.tinhte.vn/js/gritter/notifications.js?_v=8b54f5de"></script>
+	<script src="https://cdn.tinhte.vn/js/as.js?_v=8b54f5de"></script>
+	<script src="https://cdn.tinhte.vn/js/bdTagMe/frontend.js?_v=8b54f5de"></script>
+	<script src="https://cdn.tinhte.vn/js/vim/mudim.js?_v=8b54f5de"></script>
+
+<script type="text/javascript">
+  var vglnk = { api_url: '//api.viglink.com/api',
+                key: '6b9d67a3aa8f2f9576af843a7e82a055' };
+
+  (function(d, t) {
+    var s = d.createElement(t); s.type = 'text/javascript'; s.async = true;
+    s.src = ('https:' == document.location.protocol ? vglnk.api_url :
+             '//cdn.viglink.com/api') + '/vglnk.js';
+    var r = d.getElementsByTagName(t)[0]; r.parentNode.insertBefore(s, r);
+  }(document, 'script'));
+</script>
+<script type="text/javascript">var addthis_config = {"data_track_clickback":true, ui_click:true,ui_language: "vi",};</script>
+<script type="text/javascript" src="https://s7.addthis.com/js/250/addthis_widget.js#pubid=dihuta"></script>
+
+<link rel="apple-touch-icon" href="styles/default/tinhte/tinhte57x57.png" />
+<link rel="apple-touch-icon" sizes="72x72" href="styles/default/tinhte/tinhte72x72.png" />
+<link rel="apple-touch-icon" sizes="114x114" href="styles/default/tinhte/tinhte114x114.png" />
+
+<script type='text/javascript'>
+var googletag = googletag || {};
+googletag.cmd = googletag.cmd || [];
+(function() {
+var gads = document.createElement('script');
+gads.async = true;
+gads.type = 'text/javascript';
+var useSSL = 'https:' == document.location.protocol;
+gads.src = (useSSL ? 'https:' : 'http:') +
+'//www.googletagservices.com/tag/js/gpt.js';
+var node = document.getElementsByTagName('script')[0];
+node.parentNode.insertBefore(gads, node);
+})();
+</script>
+
+<script type='text/javascript'>
+googletag.cmd.push(function() {
+googletag.defineSlot('/3823916/Tinhte_Desktop_Article', [336, 280], 'div-gpt-ad-1366693963763-0').addService(googletag.pubads());
+googletag.defineSlot('/3823916/Tinhte_Desktop_Forum_Right_1', [300, 250], 'div-gpt-ad-1349050946992-3').addService(googletag.pubads());
+googletag.defineSlot('/3823916/Tinhte_Desktop_Forum_Right_2', [300, 250], 'div-gpt-ad-1349050946992-4').addService(googletag.pubads());
+googletag.defineSlot('/3823916/Tinhte_Right_Banner_3', [300, 250], 'div-gpt-ad-1349050946992-9').addService(googletag.pubads());
+googletag.defineSlot('/3823916/Tinhte_Desktop_Forum_Right_4', [320, 50], 'div-gpt-ad-1378109506894-0').addService(googletag.pubads());
+googletag.defineSlot('/3823916/Tinhte_Desktop_Forum_Top', [728, 90], 'div-gpt-ad-1349050946992-5').addService(googletag.pubads());
+googletag.defineSlot('/3823916/Tinhte_Desktop_Article_1', [640, 100], 'div-gpt-ad-1350291424698-0').addService(googletag.pubads());
+googletag.defineSlot('/3823916/Tinhte_Desktop_Bottom', [728, 90], 'div-gpt-ad-1351476699981-0').addService(googletag.pubads());
+googletag.defineSlot('/3823916/Tinhte_Mobile_Article', [320, 50], 'div-gpt-ad-1355474902075-1').addService(googletag.pubads());
+googletag.defineSlot('/3823916/Tinhte_Mobile_Bottom', [300, 250], 'div-gpt-ad-1360300350243-0').addService(googletag.pubads());
+googletag.defineSlot('/3823916/Tinhte_Top_Mobile_Banner', [320, 50], 'div-gpt-ad-1364501614440-0').addService(googletag.pubads());
+googletag.enableServices();
+});
+</script>
+
+
+	<script src="https://cdn.tinhte.vn/js/responsive/responsive.js"></script>
+    
+    <link rel="alternate" type="application/rss+xml" title="RSS của Tinhte.vn - Cộng đồng Khoa học &amp; Công nghệ" href="http://www.tinhte.vn/rss/" />
+    
+    
+	<link rel="canonical" href="http://www.tinhte.vn/threads/tim-hieu-nodejs-ly-do-chon-nodejs.2095222/" />
+	<meta name="description" content="[IMG]
+Bài đầu tiên Tùng viết Ưu/Nhược điểm và tính thuyết phục của NodeJS, và điều đó có thể hữu ích với những ai quan tâm tới NodeJS để phục vụ cho việc..." />
+<meta property="og:image" content="http://nodejs.org/images/logos/nodejs.png" />
+	<meta property="og:site_name" content="Tinhte.vn - Cộng đồng Khoa học &amp; Công nghệ" />
+	<meta property="og:image" content="http://photo.tinhte.vn/data/avatars/m/1535/1535447.jpg?1367921282" />
+	
+	<meta property="og:type" content="article" />
+	<meta property="og:url" content="http://www.tinhte.vn/threads/tim-hieu-nodejs-ly-do-chon-nodejs.2095222/" />
+	<meta property="og:title" content="Tìm hiểu Nodejs, lý do chọn Nodejs" />
+	
+	<meta property="fb:app_id" content="145923738846814" />
+	
+
+
+</head>
+<body class="node10 node582">
+
+
+
+    
+
+<fieldset id="userBar">
+	<div class="pageWidth">
+		<div class="pageContent">
+			
+				<a href="http://www.nhattao.com/">
+					<span class="itemLabel"><b>Nhattao.com</b> - Mua sắm hàng công nghệ</span>
+				</a>
+			
+			
+			
+
+<ul class="visitorTabs">
+
+	
+
+	<!-- account -->
+	<li class="navTab account Popup PopupControl PopupClosed ">
+	
+		<a href="account/" class="navLink accountPopup" rel="Menu"><img src="http://cdn.tinhte.vn/styles/flexile/xenforo/avatars/avatar_s.png" class="miniMe" alt="" /><strong>ce09tik</strong></a>
+		
+		<div class="Menu JsOnly" id="AccountMenu">
+			<div class="primaryContent menuHeader">
+				<a href="members/ce09tik.1038865/" class="avatar Av1038865m NoOverlay plainImage" title="Xem hồ sơ của bạn" data-avatarHtml="true"><span class="img m" style="background-image: url('http://cdn.tinhte.vn/styles/flexile/xenforo/avatars/avatar_m.png')"></span></a>
+				
+				<h3><a href="members/ce09tik.1038865/" class="concealed" title="Xem hồ sơ của bạn">ce09tik</a></h3>
+				
+				<div class="muted">Thành viên</div>
+				
+				<ul class="links">
+					<li class="fl"><a href="members/ce09tik.1038865/">Hồ sơ của bạn</a></li>
+				</ul>
+			</div>
+			<div class="menuColumns secondaryContent">
+				<ul class="col1 blockLinksList">
+				
+					<li><a href="account/personal-details">Thông tin cá nhân</a></li>
+					<li><a href="account/signature">Chữ ký</a></li>
+					<li><a href="account/contact-details">Chi tiết liên lạc</a></li>
+					<li><a href="account/privacy">Riêng tư</a></li>
+					<li><a href="account/preferences">Tùy chọn</a></li>
+					<li><a href="account/alert-preferences">Tuỳ chọn thông báo</a></li>
+					<li><a href="account/avatar" class="OverlayTrigger" data-cacheOverlay="true">Hình đại diện</a></li>
+					<li><a href="account/facebook">Kết nối Facebook</a></li>
+					<li><a href="account/security">Mật khẩu</a></li>
+									
+				</ul>
+				<ul class="col2 blockLinksList">
+					
+					<li><a href="account/news-feed">Feed</a></li>
+					<li><a href="account/alerts">Thông báo của bạn</a></li>
+					<li><a href="watched/threads">Chủ đề theo dõi</a></li>
+					<li><a href="account/likes">Thích đã nhận</a></li>
+					<li><a href="search/member?user_id=1038865">Bài của bạn</a></li>
+					<li><a href="account/following">Thành viên theo dõi</a></li>
+					<li><a href="account/ignored">Thành viên bỏ qua</a></li>
+					
+				
+				</ul>
+			</div>
+			<div class="menuColumns secondaryContent">
+				<ul class="col1 blockLinksList">
+					<li>				
+						<form action="account/toggle-visibility" method="post" class="AutoValidator visibilityForm">
+							<label><input type="checkbox" name="visible" value="1" class="SubmitOnChange"  checked="checked" />
+								Đang trực tuyến</label>
+							<input type="hidden" name="_xfToken" value="1038865,1382108058,ed879dca212d86cc314524a901601e555a47d30f" />
+						</form>
+					</li>
+				</ul>
+				<ul class="col2 blockLinksList">
+					<li><a href="logout/?_xfToken=1038865%2C1382108058%2Ced879dca212d86cc314524a901601e555a47d30f" class="LogOut">Thoát</a></li>
+				</ul>
+			</div>
+			
+		</div>		
+	</li>
+		
+	<!-- secondary nav links went here - moved to user bar -->
+	
+	<!-- conversations popup -->
+	<li class="navTab inbox Popup PopupControl PopupClosed">
+					
+		<a href="conversations/" rel="Menu" class="navLink NoPopupGadget">Hộp thư
+			<strong class="itemCount Zero"
+				id="ConversationsMenu_Counter" data-text="Bạn có %d cuộc hội thoại mới.">
+				<span class="Total">0</span>
+				<span class="arrow"></span>
+			</strong>
+		</a>
+		
+		<div class="Menu JsOnly navPopup" id="ConversationsMenu"
+			data-contentSrc="conversations/popup"
+			data-contentDest="#ConversationsMenu .listPlaceholder">
+			
+			<div class="menuHeader primaryContent">
+				<h3>
+					<span class="Progress InProgress"></span>
+					<a href="conversations/" class="concealed">Cuộc hội thoại</a>
+				</h3>						
+			</div>
+			
+			<div class="listPlaceholder"></div>
+			
+			<div class="sectionFooter">
+				<a href="conversations/add" class="floatLink">Tạo cuộc hội thoại</a>
+				<a href="conversations/">Xem tất cả...</a>
+			</div>
+		</div>
+	</li>
+	
+	
+
+	<!-- alerts popup -->
+	<li class="navTab alerts Popup PopupControl PopupClosed">	
+					
+		<a href="account/alerts" rel="Menu" class="navLink NoPopupGadget">Thông báo
+			<strong class="itemCount Zero"
+				id="AlertsMenu_Counter" data-text="Bạn có %d thông báo mới.">
+				<span class="Total">0</span>
+				<span class="arrow"></span>
+			</strong>
+		</a>
+		
+		<div class="Menu JsOnly navPopup" id="AlertsMenu"
+			data-contentSrc="account/alerts-popup"
+			data-contentDest="#AlertsMenu .listPlaceholder"
+			data-removeCounter="#AlertsMenu_Counter">
+			
+			<div class="menuHeader primaryContent">
+				<h3>
+					<span class="Progress InProgress"></span>
+					<a href="account/alerts" class="concealed">Thông báo</a>
+				</h3>
+			</div>
+			
+			<div class="listPlaceholder"></div>
+			
+			<div class="sectionFooter">
+				<a href="account/alert-preferences" class="floatLink">Tuỳ chọn thông báo</a>
+				<a href="account/alerts">Xem tất cả...</a>
+			</div>
+		</div>
+	</li>
+	
+	
+	
+	<li class="navTab PopupClosed"><a href="logout/" class="navLink visitorTabItem OverlayTrigger">Thoát</a></li>
+</ul>
+		</div>
+	</div>
+</fieldset>
+
+
+
+<div id="headerMover">
+    <div id="headerProxy"></div>
+
+<div id="content" class="thread_view">
+    <div class="pageWidth">
+        
+
+        
+
+
+									
+		
+
+
+
+
+<div id="GritterContainer">
+	
+</div>
+
+        
+
+<div class="pageContent">
+            <!-- main content area -->
+
+            
+                <div class="mainContainer">      
+                    
+
+<div class="mainContent">
+                        
+                        
+
+                        
+                        <div class="breadBoxTop">
+                            
+                            
+
+<nav>
+	
+		
+			
+				
+			
+		
+			
+				
+			
+		
+	
+
+	<fieldset class="breadcrumb" data-limit="2">
+		<a href="misc/quick-navigation-menu?selected=node-10" class="OverlayTrigger jumpMenuTrigger" data-cacheOverlay="true" title="Mở di chuyển nhanh"><!--Chuyển đến...--></a>
+			
+		<div class="boardTitle"><strong>Tinhte.vn - Cộng đồng Khoa học &amp; Công nghệ</strong></div>
+		
+		<span class="crumbs">
+			
+				<span class="crust" itemscope="itemscope" itemtype="http://data-vocabulary.org/Breadcrumb">
+					<a href="http://www.tinhte.vn/" class="crumb" rel="up" itemprop="url"><span itemprop="title">Trang chủ</span></a>
+					<span class="arrow"><span></span></span>
+				</span>
+			
+			
+			
+				<span class="crust" itemscope="itemscope" itemtype="http://data-vocabulary.org/Breadcrumb">
+					<a href="http://www.tinhte.vn/forum/" class="crumb" rel="up" itemprop="url"><span itemprop="title">Diễn đàn</span></a>
+					<span class="arrow"><span>&gt;</span></span>
+				</span>
+			
+			
+			
+				
+					<span class="crust" itemscope="itemscope" itemtype="http://data-vocabulary.org/Breadcrumb">
+						<a href="http://www.tinhte.vn/tintuc/" class="crumb" rel="up" itemprop="url"><span itemprop="title">Tin tức - Sự kiện</span></a>
+						<span class="arrow"><span>&gt;</span></span>
+					</span>
+				
+					<span class="crust" itemscope="itemscope" itemtype="http://data-vocabulary.org/Breadcrumb">
+						<a href="http://www.tinhte.vn/forums/tin-tuc-su-kien.10/" class="crumb" rel="up" itemprop="url"><span itemprop="title">Tin tức - Sự kiện</span></a>
+						<span class="arrow"><span>&gt;</span></span>
+					</span>
+				
+			
+		</span>
+	</fieldset>
+</nav>
+                        </div>
+                        
+                        
+                        
+
+                        
+                                              
+                            <!-- h1 title, description -->
+                            <div class="titleBar">
+                            	
+                                <h1>Tìm hiểu Nodejs, lý do chọn Nodejs</h1>
+                                
+                                <p id="pageDescription" class="muted ">
+	Thảo luận trong '<a href="forums/tin-tuc-su-kien.10/">Tin tức - Sự kiện</a>' bắt đầu bởi <a href="members/tungvn92.1535447/" class="username">tungvn92</a>, <a href="threads/tim-hieu-nodejs-ly-do-chon-nodejs.2095222/"><span class="DateTime" title="9/5/13 at 03:22">9/5/13</span></a>.
+</p>
+                            </div>
+                        
+                        
+
+                        
+                        
+                        <!-- main template -->
+                        
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	
+
+
+
+
+
+
+
+
+
+
+
+
+	
+
+
+
+
+<div class="pageNavLinkGroup">
+	<div class="linkGroup SelectionCountContainer">
+		
+		
+
+			<a href="threads/tim-hieu-nodejs-ly-do-chon-nodejs.2095222/watch-confirm" class="OverlayTrigger" data-cacheOverlay="false">Theo dõi</a>
+		
+
+	</div>
+
+	
+</div>
+
+
+
+
+
+<form action="inline-mod/post/switch" method="post"
+	class="InlineModForm section"
+	data-cookieName="posts"
+	data-controls="#InlineModControls"
+	data-imodOptions="#ModerationSelect option">
+
+	<ol class="messageList" id="messageList">
+		
+			
+				
+
+
+<li id="post-37618867" class="message firstPost   " data-author="tungvn92">
+
+	
+
+<div class="messageUserInfo" itemscope="itemscope" itemtype="http://data-vocabulary.org/Person">	
+<div class="messageUserBlock">
+	
+		<div class="avatarHolder">
+			<span class="helper"></span>
+			<a href="members/tungvn92.1535447/" class="avatar Av1535447s" data-avatarHtml="true"><span class="img s" style="background-image: url('http://photo.tinhte.vn/data/avatars/s/1535/1535447.jpg?1367921282')"></span></a>
+			<!-- slot: message_user_info_avatar -->
+		</div>
+	
+
+
+	
+		<h3 class="userText">
+			<a href="members/tungvn92.1535447/" class="username" itemprop="name">tungvn92</a>
+			<em class="userTitle" itemprop="title">Thành viên</em>
+			<!-- slot: message_user_info_text -->
+		</h3>
+	
+		
+	
+		
+
+
+	<span class="arrow"><span></span></span>
+
+	
+		<span class="tt_share_page">
+				
+					<div class="addthis shareControl">
+						<div class="addthis_toolbox addthis_default_style ">
+						<a class="addthis_counter addthis_pill_style"></a>
+						</div>
+					</div>
+				
+				
+					<div class="facebookLike shareControl">
+						
+						<fb:like href="http://www.tinhte.vn/threads/tim-hieu-nodejs-ly-do-chon-nodejs.2095222/" layout="button_count" action="like" font="trebuchet ms" colorscheme="light"></fb:like>
+					</div>
+				
+				
+					<div class="plusone shareControl">
+						<div class="g-plusone" data-size="medium" data-count="true" data-url="http://www.tinhte.vn/threads/tim-hieu-nodejs-ly-do-chon-nodejs.2095222/" data-lang=""></div>
+					</div>
+				
+				
+		</span>
+	
+
+
+</div>
+</div>
+
+	<div class="messageInfo primaryContent">
+		
+		
+		
+		
+		
+		<div class="messageContent">		
+			<article>
+				<blockquote class="messageText ugc baseHtml">
+					
+					<div align="center"><img src="http://nodejs.org/images/logos/nodejs.png" class="bbCodeImage LbImage" alt="[IMG]" /></div><span style="color: #333333"><span style="font-family: 'Arial'"><span style="font-family: 'lucida grande'">Bài đầu tiên Tùng viết Ưu/Nhược điểm và tính thuyết phục của NodeJS, và điều đó có thể hữu ích với những ai quan tâm tới NodeJS để phục vụ cho việc phát triển dự án, hệ thống của cá nhân, công ty !</span></span></span><br />
+ <br />
+<b><span style="font-family: 'Arial'"><span style="color: #333333"><span style="font-family: 'lucida grande'">[-] Nhược điểm NodeJS</span></span></span></b><br />
+<i><span style="font-family: 'Arial'"><span style="color: #333333"><span style="font-family: 'lucida grande'">1. Ứng dụng nặng tốn tài nguyên</span></span></span></i><br />
+<span style="color: #333333"><span style="font-family: 'Arial'"><span style="font-family: 'lucida grande'">Nếu bạn cần xử lý các ứng dụng tốn tài nguyên CPU như encoding video, convert file, decoding encryption... hoặc các ứng dụng tương tự như vậy thì không nên dùng NodeJS (Lý do: NodeJS được viết bằng C++ &amp; Javascript, nên phải th</span></span></span><span style="color: #333333"><span style="font-family: 'Arial'"><span style="font-family: 'lucida grande'"><span style="color: #333333">ông qua thêm 1 trình biên dịch của NodeJS sẽ lâu hơn 1 chút ). Trường hợp này bạn hãy viết 1 Addon C++ để tích hợp với NodeJS để tăng hiệu suất tối đa !(Việc tích hợp rất thân thiện và nhanh chóng)! </span></span></span></span><br />
+ <br />
+<span style="color: #333333"><span style="font-family: 'lucida grande'"><i><span style="color: #333333">2. NodeJS và ngôn ngữ khác</span></i></span></span><br />
+<span style="color: #333333"><span style="font-family: 'lucida grande'"><span style="color: #333333">NodeJS, PHP, Ruby, Python .NET ...thì việc cuối cùng là phát triển các App Web. NodeJS mới sơ khai như các ngôn ngữ lập trình khác. Vậy nên bạn đừng hi vọng NodeJS sẽ hơn PHP,Ruby,Python... ở thời điểm này. Nhưng với NodeJS bạn có thể có 1 ứng dụng như mong đợi, điều đó là chắc chắn (perfect)! </span></span></span><br />
+<span style="color: #333333"><span style="font-family: 'lucida grande'"><span style="color: #333333">Với những gì các ngôn ngữ tiền bối đang có(cộng đồng lâu năm, framework, cms, opensource...) Nếu bạn/doanh nghiệp chưa biết về NodeJS thì việc cần xây dựng dự án quan trọng, kinh doanh phát triển trên NodeJS sẽ không phải lựa chọn bây giờ.</span></span></span><br />
+ <br />
+<span style="color: #333333"><span style="font-family: 'lucida grande'"><i><span style="color: #333333">3. NoSQL + Nodejs + Noob !</span></i></span></span><br />
+<span style="color: #333333"><span style="font-family: 'lucida grande'"><span style="color: #333333">Với NodeJS, NoSQL thì là sự kết hợp hoàn hảo nhưng : </span></span></span><br />
+<span style="color: #333333"><span style="font-family: 'lucida grande'"><span style="color: #333333">Bạn là người có kinh nghiệm với các ngôn ngữ lập trình để phát triển các dự án. Bạn biết được NodeJS qua tin tức, báo chí, bạn bè... Bạn quyết định xây dựng dự án bằng NodeJS. Nhưng khi gặp sự cố rủi ro xây dựng dự án với NodeJS đồng thời quay lưng luôn. Hãy đừng đổ lỗi cho công nghệ bạn đang dùng mà hãy hiểu rằng &quot;BẠN CHƯA HIỂU ĐƯỢC NodeJS !&quot;</span></span></span><br />
+ <br />
+<span style="color: #333333"><span style="font-family: 'lucida grande'"><b><span style="color: #333333">[-] Ưu điểm NodeJS</span></b></span></span><br />
+<span style="color: #333333"><span style="font-family: 'lucida grande'"><i><span style="color: #333333">1. JSON APIs</span></i></span></span><br />
+<span style="color: #333333"><span style="font-family: 'lucida grande'"><span style="color: #333333">Bởi lẽ REST/JSON APIs gọn nhẹ là điều khiến NodeJS tỏa sáng. Với cơ chế event-driven, non-blocking I/O(Input/Output) và mô hình kết hợp với Javascript là sự lựa chọn tuyệt vời cho các dịch vụ Webs làm bằng JSON.</span></span></span><br />
+ <br />
+<span style="color: #333333"><span style="font-family: 'lucida grande'"><i><span style="color: #333333">2. Ứng dụng trên 1 trang</span></i></span></span><br />
+<span style="color: #333333"><span style="font-family: 'lucida grande'"><span style="color: #333333">Nếu bạn định viết 1 ứng dụng thể hiện trên 1 trang (Gmail?) NodeJS rất phù hợp để làm. Với khả năng xử lý nhiều Request/s đồng thời thời gian phản hồi nhanh. Các ứng dụng bạn định viết không muốn nó tải lại trang, gồm rất nhiều request từ người dùng cần sự hoạt động nhanh để thể hiện sự chuyên nghiệp thì NodeJS sẽ là sự lựa chọn của bạn.</span></span></span><br />
+ <br />
+<span style="color: #333333"><span style="font-family: 'lucida grande'"><i><span style="color: #333333">3. Shelling tools unix</span></i></span></span><br />
+<span style="color: #333333"><span style="font-family: 'lucida grande'"><span style="color: #333333">NodeJS sẽ tận dụng tối đa Unix để hoạt động. Tức là NodeJS có thể xử lý hàng nghìn Process và trả ra 1 luồng khiến cho hiệu xuất hoạt động đạt mức tối đa nhất và tuyệt vời nhất.</span></span></span><br />
+ <br />
+<span style="color: #333333"><span style="font-family: 'lucida grande'"><i><span style="color: #333333">4. Streamming Data (Luồng dữ liệu)</span></i></span></span><br />
+<span style="color: #333333"><span style="font-family: 'lucida grande'"><span style="color: #333333">Các web thông thường gửi HTTP request và nhận phản hồi lại (Luồng dữ liệu). Giả xử sẽ cần xử lý 1 luồng giữ liệu cực lớn, NodeJS sẽ xây dựng các Proxy phân vùng các luồng dữ liệu để đảm bảo tối đa hoạt động cho các luồng dữ liệu khácl</span></span></span><br />
+ <br />
+<span style="color: #333333"><span style="font-family: 'lucida grande'"><i><span style="color: #333333">5. Ứng dụng Web thực</span></i></span></span><br />
+<span style="color: #333333"><span style="font-family: 'lucida grande'"><span style="color: #333333">Giả sử bạn xây dựng 1 ứng dụng chat, feed ... Facebook, Twitter là điển hình cho Web thực. NodeJS làm khá tốt điều đó!</span></span></span><br />
+ <br />
+<span style="color: #333333"><span style="font-family: 'lucida grande'"><b><span style="color: #333333">[-] NodeJS sự chinh phục không ngừng.</span></b></span></span><br />
+<span style="color: #333333"><span style="font-family: 'lucida grande'"><i><span style="color: #333333">1. Xây dựng thử một NodeJS</span></i></span></span><br />
+<span style="color: #333333"><span style="font-family: 'lucida grande'"><span style="color: #333333">Đừng nói và viết ở đây quá nhiều đúng ko ! Mọi vấn đề cũng vậy, hãy bắt tay làm thử một App NodeJS để chính nó chứng minh cho bạn/doanh nghiệp thấy.</span></span></span><br />
+ <br />
+<span style="color: #333333"><span style="font-family: 'lucida grande'"><i><span style="color: #333333">2. Tìm kiếm lập trình viên</span></i></span></span><br />
+<span style="color: #333333"><span style="font-family: 'lucida grande'"><span style="color: #333333">Trong con đường lập trình ứng dụng web thì Javascript không xa lạ với bất kỳ một lập trình viên nào. để Dev App NodeJS thì hoàn toàn bằng Javascript vậy nên nguồn lập trình viên sẽ là ... cực lớn !</span></span></span><br />
+ <br />
+<span style="color: #333333"><span style="font-family: 'lucida grande'"><i><span style="color: #333333">3. Cộng đồng NodeJS</span></i></span></span><br />
+<span style="color: #333333"><span style="font-family: 'lucida grande'"><span style="color: #333333">Với sự sinh sôi nẩy nở chóng mặt trên các phương tiện truyền thông, forum, trong đó có NodeJS.VN ... năm 2012 NodeJS được chọn là &quot;Công nghệ của năm&quot;.</span></span></span><br />
+ <br />
+<span style="color: #333333"><span style="font-family: 'lucida grande'"><i><span style="color: #333333">4. Performance (Hiệu suất)</span></i></span></span><br />
+<span style="color: #333333"><span style="font-family: 'lucida grande'"><span style="color: #333333">Cái này rất quan trọng với tất cả các ngôn ngữ. NodeJS không ngoại lệ. Nền tảng Web với 5 nhà cung cấp trình duyệt chính : Mozilla, Google, Apple, Microsoft, Opera. Với sự chống lưng V8 JavaScript Engine của Google và Event-drivent non-blocking I/O có thể tải được hàng trăm nghìn kết nối cùng lúc. Nhưng cấu hình máy chủ cho NodeJS rất khiêm tốn (tiết kiệm được 4 lần so với đầu tư thông thường - hiệu suất tăng gấp đôi).</span></span></span><br />
+ <br />
+<span style="color: #333333"><span style="font-family: 'lucida grande'"><b><span style="color: #333333">[-] Vậy mất bao lâu để chúng ta có thể thành thạo.</span></b></span></span><br />
+<span style="color: #333333"><span style="font-family: 'lucida grande'"><span style="color: #333333">Thông thường sẽ từ 3 - 6 tháng cho một Teamwork (3 - 5 người). Cá nhân từ 4 - 8 tháng.</span></span></span><br />
+ <br />
+<span style="color: #333333"><span style="font-family: 'lucida grande'"><span style="color: #333333">Qua đó có thể giúp các bạn định hướng hơn về NodeJS và hãy giới thiệu NodeJS với bạn bè của bạn nhé !</span></span></span><br />
+ <br />
+<span style="color: #333333"><span style="font-family: 'lucida grande'"><span style="color: #333333">Tung Nguyen - </span></span></span><b><span style="font-family: 'lucida grande'"><span style="color: #333333">NodeJs.vn</span></span></b>
+				</blockquote>
+			</article>
+			
+			
+		</div>
+		
+
+
+		
+		
+		
+<div class="facebookLike" style="padding-top:10px">
+
+	<fb:like href="" show_faces="true" width="640" action="like" font="trebuchet ms" colorscheme="light"></fb:like>
+
+</div>
+
+
+
+		
+		
+				
+		<div class="messageMeta">
+			
+			<div class="privateControls">
+				
+				<span class="item muted">
+					
+					<a href="threads/tim-hieu-nodejs-ly-do-chon-nodejs.2095222/" title="Permalink" class="datePermalink"><span class="DateTime" title="9/5/13 at 03:22">9/5/13</span></a>
+				</span>
+				
+				
+				
+				
+				
+				
+				
+				
+					<a href="posts/37618867/report" class="OverlayTrigger item control report" data-cacheOverlay="false"><span></span>Báo xấu</a>
+				
+				
+				
+			</div>
+			
+			<div class="publicControls">
+				<a href="threads/tim-hieu-nodejs-ly-do-chon-nodejs.2095222/" title="Permalink" class="item muted postNumber hashPermalink OverlayTrigger" data-href="posts/37618867/permalink">#1</a>
+				
+				
+					<a href="posts/37618867/like" class="LikeLink item control like" data-container="#likes-post-37618867"><span></span><span class="LikeLabel">Thích</span></a>
+				
+				
+					<a href="threads/tim-hieu-nodejs-ly-do-chon-nodejs.2095222/reply?quote=37618867" data-postUrl="posts/37618867/quote" class="ReplyQuote item control reply" title="Reply, quoting this message"><span></span>Trả lời</a>
+				
+				
+			</div>
+		</div>
+	
+		
+		<div id="likes-post-37618867">
+	
+	<div class="likesSummary secondaryContent">
+		<span class="LikeText">
+			<a href="members/toanbk.614387/" class="username">toanbk</a> thích nội dung này.
+		</span>
+	</div>
+</div>
+	</div>
+
+	
+	
+	
+
+
+<!-- Tinhte_Desktop_Article_1 -->
+<div id='div-gpt-ad-1366693963763-0' style='width:336px; height:280px;padding-top:5px;float:left'>
+<script type='text/javascript'>
+googletag.cmd.push(function() { googletag.display('div-gpt-ad-1366693963763-0'); });
+</script>
+</div>
+  
+
+
+
+	<div id="similar_threads">
+	
+
+
+	
+	
+
+
+
+
+	
+	<div class="section sectionMain widget-container">
+		
+			<div class=" widget Tinhte_ExtendedThreadWidget_WidgetRenderer_ThreadWidget non-sidebar-widget" id="widget-51">
+				
+					<h3>
+						
+							Bài tương tự
+						
+					</h3>
+					<div class="etw news1">
+        <ul>
+            
+            	
+            	
+            	
+                
+                
+            	
+            	
+			<li>
+	<div>
+		<a class="thumbnail" href="threads/40-bang-thong-xem-video-youtube-la-tu-cac-thiet-bi-di-dong.2191691/">
+			<img style="width: 64px;height: 64px;" width="64" height="64" 
+				src="https://1anh.com/64/64/Z6RKdtZWuK5Ns7Ucjof7iqK-wvKbZvdhI-dbwzJMU_xvnADgekId8_BfeVESTCx9HIscHH6If5z3d4T_IE6fYg" 
+				border="0" />
+		</a>
+		
+
+<a href="threads/40-bang-thong-xem-video-youtube-la-tu-cac-thiet-bi-di-dong.2191691/"
+	title="40% băng thông xem video YouTube là từ các thiết bị di động" class="Tooltip">
+	40% băng thông xem video YouTube là từ các thiết bị di động
+</a>
+
+<div id="PreviewTooltip">
+	<span class="arrow"><span></span></span>
+	
+	<div class="section">
+		<div class="primaryContent previewContent">
+			<span class="PreviewContents">Đang tải...</span>
+		</div>
+	</div>
+</div>
+
+		
+		
+		
+	</div>
+</li>
+            	
+			<li>
+	<div>
+		<a class="thumbnail" href="threads/nexus-5-xuat-hien-tren-google-play-store-gia-349-usd-cho-ban-16gb.2191620/">
+			<img style="width: 64px;height: 64px;" width="64" height="64" 
+				src="https://1anh.com/64/64/Z6RKdtZWuK5Ns7Ucjof7iqK-wvKbZvdhI-dbwzJMU_ytMlSpyerYLbeGc3-4TVPhHLr-SQ-BEhMcYFqoitAgUg" 
+				border="0" />
+		</a>
+		
+
+<a href="threads/nexus-5-xuat-hien-tren-google-play-store-gia-349-usd-cho-ban-16gb.2191620/"
+	title="Nexus 5 xuất hiện trên Google Play Store, giá 349 USD cho bản 16GB" class="Tooltip">
+	Nexus 5 xuất hiện trên Google Play Store, giá 349 USD cho bản 16GB
+</a>
+
+<div id="PreviewTooltip">
+	<span class="arrow"><span></span></span>
+	
+	<div class="section">
+		<div class="primaryContent previewContent">
+			<span class="PreviewContents">Đang tải...</span>
+		</div>
+	</div>
+</div>
+
+		
+		
+		
+	</div>
+</li>
+            	
+			<li>
+	<div>
+		<a class="thumbnail" href="threads/google-q3-2013-doanh-thu-14-98-ti-usd-loi-nhuan-2-97-ti-usd-motorola-tiep-tuc-lo.2191581/">
+			<img style="width: 64px;height: 64px;" width="64" height="64" 
+				src="https://1anh.com/64/64/Z6RKdtZWuK5Ns7Ucjof7iqK-wvKbZvdhI-dbwzJMU_z4jW1UAK_5WumleEyUnnr5i8sc89P5JF20cXuI_TYyzA" 
+				border="0" />
+		</a>
+		
+
+<a href="threads/google-q3-2013-doanh-thu-14-98-ti-usd-loi-nhuan-2-97-ti-usd-motorola-tiep-tuc-lo.2191581/"
+	title="Google Q3/2013: doanh thu 14,98 tỉ USD, lợi nhuận 2,97 tỉ USD, Motorola tiếp tục lỗ" class="Tooltip">
+	Google Q3/2013: doanh thu 14,98 tỉ USD, lợi nhuận 2,97 tỉ USD,...
+</a>
+
+<div id="PreviewTooltip">
+	<span class="arrow"><span></span></span>
+	
+	<div class="section">
+		<div class="primaryContent previewContent">
+			<span class="PreviewContents">Đang tải...</span>
+		</div>
+	</div>
+</div>
+
+		
+		
+		
+	</div>
+</li>
+            	
+            
+        </ul>
+    </div>
+				
+			</div>
+		
+	</div>
+
+	</div>
+
+
+	
+</li>
+			
+		
+		
+	</ol>
+
+	
+
+	<input type="hidden" name="_xfToken" value="1038865,1382108058,ed879dca212d86cc314524a901601e555a47d30f" />
+
+</form>
+
+
+	<div class="pageNavLinkGroup">
+		
+			
+				
+			
+			<div class="linkGroup" style="display: none"><a href="javascript:" class="muted jsOnly DisplayIgnoredContent Tooltip" title="Show hidden content by ">Show Ignored Content</a></div>
+
+			
+		
+	</div>
+
+
+
+
+
+
+
+	
+
+
+<div class="quickReply message">
+	
+	
+
+<div class="messageUserInfo" itemscope="itemscope" itemtype="http://data-vocabulary.org/Person">	
+<div class="messageUserBlock">
+	
+		<div class="avatarHolder">
+			<span class="helper"></span>
+			<a href="members/ce09tik.1038865/" class="avatar Av1038865m" data-avatarHtml="true"><span class="img m" style="background-image: url('http://cdn.tinhte.vn/styles/flexile/xenforo/avatars/avatar_m.png')"></span></a>
+			<!-- slot: message_user_info_avatar -->
+		</div>
+	
+
+
+
+	<span class="arrow"><span></span></span>
+
+
+</div>
+</div>
+
+	<form action="threads/tim-hieu-nodejs-ly-do-chon-nodejs.2095222/add-reply" method="post" class="AutoValidator" data-optInOut="OptIn" id="QuickReply">
+
+		
+<div>
+	
+		<textarea name="message_html" id="ctrl_message_html" class="textCtrl MessageEditor" style="display:none; "></textarea>
+		<noscript><textarea name="message" id="ctrl_message" class="textCtrl MessageEditor" style=""></textarea></noscript>
+	
+	<input type="hidden" name="_xfRelativeResolver" value="http://www.tinhte.vn/threads/tim-hieu-nodejs-ly-do-chon-nodejs.2095222/" />
+	
+	
+		
+
+
+<script>
+
+
+
+!function($, window, document, _undefined)
+{
+	var $editor = $("#ctrl_message_html").hide();
+	console.info('XenForo editor %s, %o', 'ctrl_message', $editor);
+		
+	window.tinyMCE && tinyMCE.addI18n(
+	{
+		xenforo:
+		{
+			common:
+			{
+				apply: "Áp dụng",
+				insert: "Chèn",
+				update: "Cập nhật",
+				cancel: "Hủy",
+				close: "Đóng",
+				browse: "Browse",
+				class_name: "Class",
+				not_set: "-- Not set --",
+				more_colors: "More colors"
+			},
+	
+			xenforo: 
+			{
+				font_size: "Font Size",
+				fontdefault: "Font Family",
+				bold_desc: "Bold (Ctrl+B)",
+				italic_desc: "Italic (Ctrl+I)",
+				underline_desc: "Underline (Ctrl+U)",
+				strikethrough_desc: "Strike-through",
+				justifyleft_desc: "Align left",
+				justifycenter_desc: "Canh giữa",
+				justifyright_desc: "Align right",
+				bullist_desc: "Danh sách không sắp xếp",
+				numlist_desc: "Ordered list",
+				outdent_desc: "Outdent",
+				indent_desc: "Indent",
+				undo_desc: "Undo (Ctrl+Z)",
+				redo_desc: "Redo (Ctrl+Y)",
+				link_desc: "Insert/edit link",
+				unlink_desc: "Không liên kết",
+				image_desc: "Insert/edit image",
+				removeformat_desc: "Remove formatting",
+				forecolor_desc: "Text color",
+				backcolor_desc: "Select background color",
+				
+				smilies_desc: "Mặt cười",
+				media_desc: "Media",
+				quote: "Quote",
+				code: "Code"
+			}
+		}
+	});
+
+	$(function()
+	{
+		$editor.css('visibility', '').show();
+		
+		if (window.tinyMCE)
+		{
+			var plugins = 'tabfocus,-xenforo_inline_popups,-xenforo_custom_bbcode,-xenforo_smilies,-xenforo_media,-xenforo_code,-xenforo_bbcode_switch,-xenforo_elastic';
+
+			tinyMCE.dom.Event._pageInit(window); // for ajax loads
+			tinyMCE.init(
+			{
+			
+				mode: 'exact',
+				elements: $editor.attr('id'),
+				plugins: plugins + ',-xenforo_bdtagme',
+				cleanup: false,
+				theme: 'xenforo',
+				theme_xenforo_dialog_url: "http://www.tinhte.vn/editor/dialog?style=11",
+				theme_xenforo_contents_css_url: "css.php?style=11&css=editor_contents&d=1382103594",
+				language: '',
+				directionality: 'LTR',
+				document_base_url: "http://www.tinhte.vn/",	
+			
+				xenforo_smilies: {":)":["Smile",1],";)":["Wink",2],":(":["Frown",3],":mad:":["Mad",4],":confused:":["Confused",5],":cool:":["Cool",6],":p":["Stick Out Tongue",7],":D":["Big Grin",8],":eek:":["Eek!",9],":oops:":["Oops!",10],":rolleyes:":["Roll Eyes",11],"o_O":["Er... what?",12]},
+			
+				xenforo_bbcode_switch_text: ["Use BB Code Editor", "Use Rich Text Editor"]
+			
+			});
+
+			
+		}
+		else
+		{
+			$editor.after($('<input type="hidden" name="_xfRteFailed" value="1" />'));
+		}
+		
+		$editor.data('editorActivated', true);
+	});
+}
+(jQuery, this, document);
+
+
+
+</script>
+	
+</div>
+
+
+
+
+
+<script type="text/javascript">
+!function($, window, document, _undefined) {
+	XenForo.bdTagMe_enabledTemplates = [
+		'post_edit',
+		'post_edit_inline', // this one is not needed actually
+		'thread_create',
+		'thread_view',
+		'thread_reply',
+		
+	];
+} (jQuery, this, document);
+</script>
+
+		<div class="submitUnit">
+
+
+
+
+	
+		
+
+			
+				
+	
+		
+			
+				
+
+				<label>
+					<input type="checkbox" name="_bdSocialShare_enabled[facebook]" value="me" tabindex="-1" class="bdSocialShare_Input"/>
+					Facebook<span class="bdSocialShare_TargetContainer" style="display: none" data-keeptext="yes" data-me="Your Timeline"><a href="account/social-share/facebook-targets" class="OverlayTrigger" data-cacheoverlay="no" tabindex="-1">?</a></span>
+				</label>
+			
+
+			
+		
+
+		<input type="hidden" name="_bdSocialShare_enabled[_default]" value="1" />
+	
+
+			
+
+		
+	
+
+	<input type="hidden" name="_bdSocialShare_included" value="1" />
+
+			<input type="submit" class="button primary" value="Trả lời" accesskey="s" />
+			
+
+	
+	
+		
+		
+	
+
+	<span id="AttachmentUploader" class="buttonProxy AttachmentUploader"
+		style="display: none"
+		data-placeholder="#SWFUploadPlaceHolder"
+		data-trigger="#ctrl_uploader"
+		data-postname="upload"
+		data-maxfilesize="10485760"
+		data-maxuploads="100"
+		data-extensions="pdf,png,jpg,jpeg,jpe,gif"
+		data-action="http://www.tinhte.vn/attachments/do-upload.json?hash=bfe6076271ec13924f3d1467adb80a3d&amp;content_type=post"
+		data-uniquekey=""
+		data-err-110="Tập tin được tải lên quá lớn."
+		data-err-120="Tập tin được tải lên bị rỗng."
+		data-err-130="Tập tin được tải lên không có một phần mở rộng được cho phép."
+		data-err-unknown="Có vấn đề trong khi tải lên file.">
+		
+		<span id="SWFUploadPlaceHolder"></span>		
+			
+		<input type="button" value="Kèm ảnh"
+			id="ctrl_uploader" class="button OverlayTrigger DisableOnSubmit"
+			data-href="http://www.tinhte.vn/attachments/upload?hash=bfe6076271ec13924f3d1467adb80a3d&amp;content_type=post&amp;content_data[thread_id]=2095222"
+			data-hider="#AttachmentUploader" />
+		<span class="HiddenInput" data-name="_xfSessionId" data-value="baa9ad4137bb23952e85fc7d1196eae0"></span>
+		<span class="HiddenInput" data-name="content_data[thread_id]" data-value="2095222"></span>
+		
+	</span>
+
+	<noscript>
+		<a href="attachments/upload?hash=bfe6076271ec13924f3d1467adb80a3d&amp;content_type=post&amp;content_data[thread_id]=2095222" class="button" target="_blank">Kèm ảnh</a>
+	</noscript>
+
+
+			<input type="submit" class="button DisableOnSubmit" value="Khác..." name="more_options" />
+		</div>
+		
+		
+
+	
+	
+	
+	<div class="AttachmentEditor">
+	
+		
+		
+		<div class="NoAttachments"></div>
+		
+		<div class="secondaryContent AttachmentInsertAll JsOnly">
+			<span></span>
+			<div class="AttachmentText">
+				<div class="label">Chèn tất cả ảnh vào như...</div>
+				<div class="controls">
+					<!--<input type="button" value="Xóa tất cả" class="button _smallButton AttachmentDeleteAll" />-->
+					<input type="button" value="Thumbnail" class="button smallButton AttachmentInsertAll" name="thumb" />
+					<input type="button" value="Kích thước đầy đủ" class="button smallButton AttachmentInsertAll" name="image" />
+				</div>
+			</div>
+		</div>
+	
+		<ol class="AttachmentList New">
+			
+
+<li id="AttachedFileTemplate"
+	class="AttachedFile  secondaryContent">
+
+	<div class="Thumbnail">
+		
+			<span class="genericAttachment"></span>
+		
+	</div>
+
+	<div class="AttachmentText">
+		<div class="Filename"><a href="attachments/" target="_blank"></a></div>
+	
+		
+			<input type="button" value="Hủy" class="button smallButton AttachmentCanceller" />
+			
+			<span class="ProgressMeter"><span class="ProgressGraphic">&nbsp;</span><span class="ProgressCounter">0%</span></span>
+		
+
+	</div>
+	
+</li>
+		</ol>
+	
+		
+		
+		<input type="hidden" name="attachment_hash" value="bfe6076271ec13924f3d1467adb80a3d" />
+		
+		
+		
+	</div>
+	
+
+
+		<input type="hidden" name="last_date" value="1368044528" />
+		<input type="hidden" name="_xfToken" value="1038865,1382108058,ed879dca212d86cc314524a901601e555a47d30f" />
+
+	</form>
+
+</div>
+
+
+
+	
+    
+
+
+
+
+	
+
+
+
+	
+
+	<div class="sharePage">
+		<h3 class="textHeading larger">Chia sẻ trang này</h3>
+		
+			
+	<div class="shareControl" style="width:107px">
+<div class="addthis_toolbox addthis_default_style ">
+    <a class="addthis_counter addthis_pill_style" addthis:url="http://www.tinhte.vn/threads/tim-hieu-nodejs-ly-do-chon-nodejs.2095222/" addthis:title="Tìm hiểu Nodejs, lý do chọn Nodejs"></a>
+</div>
+</div>
+			
+			
+				<div class="plusone shareControl">
+					<div class="g-plusone" data-size="medium" data-count="true" data-href="http://www.tinhte.vn/threads/tim-hieu-nodejs-ly-do-chon-nodejs.2095222/"></div>
+				</div>
+			
+			
+				<div class="facebookLike">
+					
+					<fb:like href="http://www.tinhte.vn/threads/tim-hieu-nodejs-ly-do-chon-nodejs.2095222/" data-layout="button_count" data-width="90" action="like" font="trebuchet ms" colorscheme="light"></fb:like>
+				
+				</div>
+			
+			
+		
+	</div>
+
+
+                        
+                        
+                        
+                        
+                    </div>
+                </div>
+                
+                <!-- sidebar -->
+				
+					<div class="responsiveSidebarToggle" style="display: none;">
+						<a class="callToAction"><span>Sidebar</span></a>
+					</div>
+				
+
+                <aside>
+                    
+<div class="sidebar">
+                    	
+                    		
+                        
+
+
+
+                        <!-- Tinhte_Desktop_Forum_Right_1 -->
+<div id='div-gpt-ad-1349050946992-3' style='width:300px; height:250px;'>
+<script type='text/javascript'>
+googletag.cmd.push(function() { googletag.display('div-gpt-ad-1349050946992-3'); });
+</script>
+</div>
+
+<!-- Tinhte_Desktop_Forum_Right_2 -->
+<div id='div-gpt-ad-1349050946992-4' style='width:300px; height:250px; padding-top:2px'>
+<script type='text/javascript'>
+googletag.cmd.push(function() { googletag.display('div-gpt-ad-1349050946992-4'); });
+</script>
+</div>
+
+
+	
+	
+
+
+
+
+	
+	<div class="section widget-container">
+		
+			<div class="secondaryContent widget Tinhte_ExtendedThreadWidget_WidgetRenderer_ThreadWidget" id="widget-50">
+				
+					<h3>
+						
+							Có thể bạn quan tâm ...
+						
+					</h3>
+					<div class="etw news1">
+        <ul>
+            
+            	
+            	
+            	
+			<li>
+	<div>
+		<a class="thumbnail" href="threads/se-khong-con-bat-cu-smartphone-nao-mang-thuong-hieu-nokia-nua.2165914/">
+			<img style="width: 70px;height: 70px;" width="70" height="70" 
+				src="https://1anh.com/70/70/Z6RKdtZWuK5Ns7Ucjof7iqK-wvKbZvdhI-dbwzJMU_ygiWPBULNXDDoHCjJCkms79bh9fI52aboTkBsa3UlWLC0_mB7yYjtoCOQgIxs8yNxah-z7eWQTrQLgITpLY-nG" 
+				border="0" />
+		</a>
+		
+
+<a href="threads/se-khong-con-bat-cu-smartphone-nao-mang-thuong-hieu-nokia-nua.2165914/"
+	title="Sẽ không còn bất cứ smartphone nào mang thương hiệu Nokia nữa" class="Tooltip">
+	Sẽ không còn bất cứ smartphone nào mang thương hiệu Nokia nữa
+</a>
+
+<div id="PreviewTooltip">
+	<span class="arrow"><span></span></span>
+	
+	<div class="section">
+		<div class="primaryContent previewContent">
+			<span class="PreviewContents">Đang tải...</span>
+		</div>
+	</div>
+</div>
+
+		
+		
+		
+			<div class="userTitle">sonlazio, <span class="DateTime" title="3/9/13 at 14:37">3/9/13</span></div>
+		
+	</div>
+</li>
+            	
+			<li>
+	<div>
+		<a class="thumbnail" href="threads/opera-tang-ipad-mini-3g-cho-thanh-vien-tinhte-vn.2174483/">
+			<img style="width: 70px;height: 70px;" width="70" height="70" 
+				src="https://1anh.com/70/70/Z6RKdtZWuK5Ns7Ucjof7iqK-wvKbZvdhI-dbwzJMU_ys1UuAwTVLblp08I1QPBRgSizCM0-t1d6YQwXCuP7EmQ" 
+				border="0" />
+		</a>
+		
+
+<a href="threads/opera-tang-ipad-mini-3g-cho-thanh-vien-tinhte-vn.2174483/"
+	title="Opera tặng iPad mini 3G cho thành viên Tinhte.vn" class="Tooltip">
+	Opera tặng iPad mini 3G cho thành viên Tinhte.vn
+</a>
+
+<div id="PreviewTooltip">
+	<span class="arrow"><span></span></span>
+	
+	<div class="section">
+		<div class="primaryContent previewContent">
+			<span class="PreviewContents">Đang tải...</span>
+		</div>
+	</div>
+</div>
+
+		
+		
+		
+			<div class="userTitle">sonlazio, <span class="DateTime" title="18/9/13 at 10:35">18/9/13</span></div>
+		
+	</div>
+</li>
+            	
+			<li>
+	<div>
+		<a class="thumbnail" href="threads/cac-co-gai-tai-vcw-2013.2164973/">
+			<img style="width: 70px;height: 70px;" width="70" height="70" 
+				src="https://1anh.com/70/70/Z6RKdtZWuK5Ns7Ucjof7iqK-wvKbZvdhI-dbwzJMU_xfXJo1aZCs-3eKrQH-P7ExplZcd1R5oPYcfFELGe_d2JUTWYiGp540cnJS1pEP8TnVBXIv3npiJvpOPpvMB0Gj" 
+				border="0" />
+		</a>
+		
+
+<a href="threads/cac-co-gai-tai-vcw-2013.2164973/"
+	title="Các cô gái tại VCW 2013" class="Tooltip">
+	Các cô gái tại VCW 2013
+</a>
+
+<div id="PreviewTooltip">
+	<span class="arrow"><span></span></span>
+	
+	<div class="section">
+		<div class="primaryContent previewContent">
+			<span class="PreviewContents">Đang tải...</span>
+		</div>
+	</div>
+</div>
+
+		
+		
+		
+			<div class="userTitle">starnt, <span class="DateTime" title="31/8/13 at 23:07">31/8/13</span></div>
+		
+	</div>
+</li>
+            	
+			<li>
+	<div>
+		<a class="thumbnail" href="threads/cuu-nhan-vien-nokia-thanh-lap-newkia-y-dinh-hoi-sinh-thuong-hieu-bang-android.2167377/">
+			<img style="width: 70px;height: 70px;" width="70" height="70" 
+				src="https://1anh.com/70/70/Z6RKdtZWuK5Ns7Ucjof7iqK-wvKbZvdhI-dbwzJMU_wLClcSms54Dk6esnNDliEhqEh7DroB3fwcV9TbD9bkoQ" 
+				border="0" />
+		</a>
+		
+
+<a href="threads/cuu-nhan-vien-nokia-thanh-lap-newkia-y-dinh-hoi-sinh-thuong-hieu-bang-android.2167377/"
+	title="Cựu nhân viên Nokia thành lập Newkia, ý định hồi sinh thương hiệu bằng Android" class="Tooltip">
+	Cựu nhân viên Nokia thành lập Newkia, ý định hồi sinh thương hiệu...
+</a>
+
+<div id="PreviewTooltip">
+	<span class="arrow"><span></span></span>
+	
+	<div class="section">
+		<div class="primaryContent previewContent">
+			<span class="PreviewContents">Đang tải...</span>
+		</div>
+	</div>
+</div>
+
+		
+		
+		
+			<div class="userTitle">bk9sw, <span class="DateTime" title="5/9/13 at 22:06">5/9/13</span></div>
+		
+	</div>
+</li>
+            	
+			<li>
+	<div>
+		<a class="thumbnail" href="threads/microsoft-mua-lai-mang-thiet-bi-va-dich-vu-cua-nokia-voi-gia-5-ty-do-2-ty-cho-bang-mot-so-phat-minh.2165798/">
+			<img style="width: 70px;height: 70px;" width="70" height="70" 
+				src="https://1anh.com/70/70/Z6RKdtZWuK5Ns7Ucjof7iqK-wvKbZvdhI-dbwzJMU_wgjEGY7d0UYy9Bd5HRwgpM6ry6RLKRpyS0Bc3HciCgwJj24jtisqYmujYY5d6gFLsdbR405RiYxH1Juj_ju_4f" 
+				border="0" />
+		</a>
+		
+
+<a href="threads/microsoft-mua-lai-mang-thiet-bi-va-dich-vu-cua-nokia-voi-gia-5-ty-do-2-ty-cho-bang-mot-so-phat-minh.2165798/"
+	title="Microsoft mua lại mảng thiết bị và dịch vụ của Nokia với giá 5 tỷ đô, 2 tỷ cho bằng một số phát minh" class="Tooltip">
+	Microsoft mua lại mảng thiết bị và dịch vụ của Nokia với giá 5 tỷ đô,...
+</a>
+
+<div id="PreviewTooltip">
+	<span class="arrow"><span></span></span>
+	
+	<div class="section">
+		<div class="primaryContent previewContent">
+			<span class="PreviewContents">Đang tải...</span>
+		</div>
+	</div>
+</div>
+
+		
+		
+		
+			<div class="userTitle">sonlazio, <span class="DateTime" title="3/9/13 at 10:29">3/9/13</span></div>
+		
+	</div>
+</li>
+            	
+			<li>
+	<div>
+		<a class="thumbnail" href="threads/video-va-hinh-anh-su-kien-vietnam-motorbike-festival-2013-nhieu-man-trinh-dien-dep-da-co-video.2161449/">
+			<img style="width: 70px;height: 70px;" width="70" height="70" 
+				src="https://1anh.com/70/70/Z6RKdtZWuK5Ns7Ucjof7iqK-wvKbZvdhI-dbwzJMU_y_cYQr7hDgpsK4FFsT9Z0SK14ESRVEn-kDQpJ2_swdxDS14XOcen4EhmvBFE97ZJ4mQyac-_WrvzsNkXTiA5ch" 
+				border="0" />
+		</a>
+		
+
+<a href="threads/video-va-hinh-anh-su-kien-vietnam-motorbike-festival-2013-nhieu-man-trinh-dien-dep-da-co-video.2161449/"
+	title="Video và hình ảnh sự kiện Vietnam Motorbike Festival 2013, nhiều màn trình diễn đẹp (đã có video)" class="Tooltip">
+	Video và hình ảnh sự kiện Vietnam Motorbike Festival 2013, nhiều màn...
+</a>
+
+<div id="PreviewTooltip">
+	<span class="arrow"><span></span></span>
+	
+	<div class="section">
+		<div class="primaryContent previewContent">
+			<span class="PreviewContents">Đang tải...</span>
+		</div>
+	</div>
+</div>
+
+		
+		
+		
+			<div class="userTitle">levuongthinh, <span class="DateTime" title="25/8/13 at 15:45">25/8/13</span></div>
+		
+	</div>
+</li>
+            	
+			<li>
+	<div>
+		<a class="thumbnail" href="threads/bao-tang-lich-su-dien-thoai-nokia-tren-website.2167476/">
+			<img style="width: 70px;height: 70px;" width="70" height="70" 
+				src="https://1anh.com/70/70/Z6RKdtZWuK5Ns7Ucjof7iqK-wvKbZvdhI-dbwzJMU_z-IimAG1WxRm4-1iSufpuugjU2d-5kX9LvbSUluZiQ_g" 
+				border="0" />
+		</a>
+		
+
+<a href="threads/bao-tang-lich-su-dien-thoai-nokia-tren-website.2167476/"
+	title="Bảo tàng lịch sử điện thoại Nokia trên website" class="Tooltip">
+	Bảo tàng lịch sử điện thoại Nokia trên website
+</a>
+
+<div id="PreviewTooltip">
+	<span class="arrow"><span></span></span>
+	
+	<div class="section">
+		<div class="primaryContent previewContent">
+			<span class="PreviewContents">Đang tải...</span>
+		</div>
+	</div>
+</div>
+
+		
+		
+		
+			<div class="userTitle">TDNC, <span class="DateTime" title="6/9/13 at 07:36">6/9/13</span></div>
+		
+	</div>
+</li>
+            	
+                
+                
+            	
+            	
+            
+        </ul>
+    </div>
+				
+			</div>
+		
+	</div>
+<!-- Tinhte_Right_Banner_3 -->
+<div id='div-gpt-ad-1349050946992-9' style='width:300px; height:250px;'>
+<script type='text/javascript'>
+googletag.cmd.push(function() { googletag.display('div-gpt-ad-1349050946992-9'); });
+</script>
+</div><iframe src="//www.facebook.com/plugins/likebox.php?href=http%3A%2F%2Fwww.facebook.com%2Ftinhtefan&amp;width=300&amp;height=263&amp;colorscheme=light&amp;show_faces=true&amp;border_color&amp;stream=false&amp;header=true&amp;appId=145923738846814" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:300px; height:270px;" allowTransparency="true"></iframe><script type="text/javascript" language="javascript">
+var novanet_pubid=320;
+var novanet_zoneid=581;
+var novanet_width=300;
+var novanet_height=600;
+</script>
+<script type="text/javascript" src="http://static.novanet.vn/embed.js"></script>
+                        
+                        
+                    </div>
+                    
+                </aside>
+            
+            
+            <div class="breadBoxBottom">
+
+<nav>
+	
+
+	<fieldset class="breadcrumb" data-limit="2">
+		<a href="misc/quick-navigation-menu?selected=node-10" class="OverlayTrigger jumpMenuTrigger" data-cacheOverlay="true" title="Mở di chuyển nhanh"><!--Chuyển đến...--></a>
+			
+		<div class="boardTitle"><strong>Tinhte.vn - Cộng đồng Khoa học &amp; Công nghệ</strong></div>
+		
+		<span class="crumbs">
+			
+				<span class="crust">
+					<a href="http://www.tinhte.vn/" class="crumb"><span>Trang chủ</span></a>
+					<span class="arrow"><span></span></span>
+				</span>
+			
+			
+			
+				<span class="crust">
+					<a href="http://www.tinhte.vn/forum/" class="crumb"><span>Diễn đàn</span></a>
+					<span class="arrow"><span>&gt;</span></span>
+				</span>
+			
+			
+			
+				
+					<span class="crust">
+						<a href="http://www.tinhte.vn/tintuc/" class="crumb"><span>Tin tức - Sự kiện</span></a>
+						<span class="arrow"><span>&gt;</span></span>
+					</span>
+				
+					<span class="crust">
+						<a href="http://www.tinhte.vn/forums/tin-tuc-su-kien.10/" class="crumb"><span>Tin tức - Sự kiện</span></a>
+						<span class="arrow"><span>&gt;</span></span>
+					</span>
+				
+			
+		</span>
+	</fieldset>
+</nav></div>
+
+        </div>
+        
+		<br/><center>
+
+<!-- Tinhte_Desktop_Bottom -->
+<div id='div-gpt-ad-1351476699981-0' style='width:728px; height:90px;'>
+<script type='text/javascript'>
+googletag.cmd.push(function() { googletag.display('div-gpt-ad-1351476699981-0'); });
+</script>
+</div>
+     
+</center>
+
+    </div>
+</div>
+
+<header>
+    
+<div id="header">
+	
+	<div id="logoBlock">
+	<div class="pageWidth">
+		<div class="pageContent">
+			
+			
+			<div id="logo"><a href="http://www.tinhte.vn/">
+				<span></span>
+				
+					<img src="http://cdn.tinhte.vn/styles/flexile/xenforo/tinhte_logo.png" alt="Tinhte.vn - Cộng đồng Khoa học &amp; Công nghệ" />
+				
+			</a></div>
+			
+			
+<!-- Tinhte_Desktop_Forum_Top -->
+<div id='div-gpt-ad-1349050946992-5' style="float: right; margin-top: 15px; margin-right: 0px; margin-bottom: 15px; height:90px" class="responsiveHide">
+<script type='text/javascript'>
+googletag.cmd.push(function() { googletag.display('div-gpt-ad-1349050946992-5'); });
+</script>
+
+</div>
+  
+<span class="helper"></span>
+
+
+		</div>
+	</div>
+</div>
+	
+
+<div id="searchBar" class="pageWidth">
+	
+	<fieldset id="QuickSearch">
+		<form action="search/search" method="post" class="formPopup">
+			
+			<div class="primaryControls">
+				<!-- block: primaryControls -->
+				<input type="search" name="keywords" value="" class="textCtrl" placeholder="Tìm kiếm..." results="0" title="Enter your search and hit enter" id="QuickSearchQuery" />				
+				<!-- end block: primaryControls -->
+			</div>
+			
+			<div class="secondaryControls">
+				<div class="controlsWrapper">
+				
+					<!-- block: secondaryControls -->
+					<dl class="ctrlUnit">
+						<dt></dt>
+						<dd><ul>
+							<li><label><input type="checkbox" name="title_only" value="1"
+								id="search_bar_title_only" class="AutoChecker"
+								data-uncheck="#search_bar_thread" /> Chì tìm tiêu đề</label></li>
+						</ul></dd>
+					</dl>
+				
+					<dl class="ctrlUnit">
+						<dt><label for="searchBar_users">Viết bởi thành viên:</label></dt>
+						<dd>
+							<input type="text" name="users" value="" class="textCtrl AutoComplete" id="searchBar_users" />
+							<p class="explain">Các tên cách nhau bởi dấu phẩy(,)</p>
+						</dd>
+					</dl>
+				
+					<dl class="ctrlUnit">
+						<dt><label for="searchBar_date">Mới hơn:</label></dt>
+						<dd><input type="date" name="date" value="" class="textCtrl" id="searchBar_date" /></dd>
+					</dl>
+					
+					
+					<dl class="ctrlUnit">
+						<dt></dt>
+						<dd><ul>
+								
+									<li><label title="Search only Tìm hiểu Nodejs, lý do chọn Nodejs"><input type="checkbox" name="type[post][thread_id]" value="2095222"
+	id="search_bar_thread" class="AutoChecker"
+	data-uncheck="#search_bar_title_only, #search_bar_nodes" /> Chỉ tìm kiếm trong chủ đề này</label></li>
+								
+									<li><label title="Search only Tin tức - Sự kiện"><input type="checkbox" name="nodes[]" value="10"
+	id="search_bar_nodes" class="Disabler AutoChecker" 
+	data-uncheck="#search_bar_thread" /> Chỉ tìm trong khu vực này</label>
+	<ul id="search_bar_nodes_Disabler">
+		<li><label><input type="checkbox" name="type[post][group_discussion]" value="1"
+			id="search_bar_group_discussion" class="AutoChecker"
+			data-uncheck="#search_bar_thread" /> Hiển thị kết quả theo chủ đề</label></li>
+	</ul></li>
+								
+						</ul></dd>
+					</dl>
+					
+				</div>
+				<!-- end block: secondaryControls -->
+				
+				<dl class="ctrlUnit submitUnit">
+					<dt></dt>
+					<dd>
+						<input type="submit" value="Tìm kiếm" class="button primary Tooltip" title="Tìm ngay" />
+						<div class="Popup" id="commonSearches">
+							<a rel="Menu" class="button NoPopupGadget Tooltip" title="Mục tìm hữu ích" data-tipclass="flipped"><span class="arrowWidget"></span></a>
+							<div class="Menu">
+								<div class="primaryContent menuHeader">
+									<h3>Mục tìm hữu ích</h3>
+								</div>
+								<ul class="secondaryContent blockLinksList">
+									<!-- block: useful_searches -->
+									<li><a href="find-new/threads?recent=1" rel="nofollow">Các chủ đề mới</a></li>
+									
+									<li><a href="search/member?user_id=1038865&amp;content=thread">Các chủ đề của bạn</a></li>
+									<li><a href="search/member?user_id=1038865&amp;content=post">Bài viết của bạn</a></li>
+									<li><a href="search/member?user_id=1038865&amp;content=profile_post">Bài viết trên tường của bạn</a></li>
+									
+									<!-- end block: useful_searches -->
+								</ul>
+							</div>
+						</div>
+						<a href="search/" class="button moreOptions Tooltip" title="Tìm kiếm nâng cao">Thêm nữa...</a>
+					</dd>
+				</dl>
+				
+			</div>
+			
+			<input type="hidden" name="_xfToken" value="1038865,1382108058,ed879dca212d86cc314524a901601e555a47d30f" />
+		</form>		
+	</fieldset>
+	
+</div>
+	
+<div class="secondaryBar"></div>
+<div id="navigation" class="pageWidth">
+    <div class="pageContent">
+        <nav>
+        
+	<div id="responsiveNavigation" style="display: none;">
+		<a class="callToAction"><span data-lang-sidebar="Toggle Sidebar">Forum Menu</span></a>
+	</div>
+
+
+<div class="navTabs">
+    <ul class="publicTabs">
+    
+        <!-- home -->
+        
+        
+        
+        <!-- extra tabs: home -->
+        
+        
+            
+                <li class="navTab portal Popup PopupControl PopupClosed">
+            
+                <a href="http://www.tinhte.vn/" class="navLink">Trang chủ</a>
+                <a href="http://www.tinhte.vn/" class="SplitCtrl" rel="Menu"></a>
+                
+                <div class="Menu JsOnly tabMenu">
+                    <div class="primaryContent menuHeader">
+                        <h3>Trang chủ</h3>
+                        <div class="muted">Liên kết nhanh</div>
+                    </div>
+                    <ul class="secondaryContent blockLinksList">
+	<li><a href="watched/threads">Chủ đề theo dõi</a></li>
+	<li><a href="find-new/threads?t=dien-dan">Bài mới</a></li>
+<li><a href="find-new/threads?t=rao-vat">Rao vặt mới</a></li>
+	
+</ul>
+                </div>
+            </li>
+            
+        
+            
+                <li class="navTab nodetab70 PopupClosed">
+                    <a href="http://camera.tinhte.vn/" class="navLink">Camera</a>
+                    
+                </li>
+            
+        
+        
+        
+        
+        <!-- forums -->
+        
+            <li class="navTab forums selected">
+            
+                <a href="http://www.tinhte.vn/forum/" class="navLink">Diễn đàn</a>
+                <a href="http://www.tinhte.vn/forum/" class="SplitCtrl" rel="Menu"></a>
+                
+                <div class="tabLinks">
+                    <div class="primaryContent menuHeader">
+                        <h3>Diễn đàn</h3>
+                        <div class="muted">Liên kết nhanh</div>
+                    </div>
+                    <ul class="secondaryContent blockLinksList">
+                    
+                        <li><a href="forums/tin-tuc-su-kien.10/-/mark-read?date=1382108058" class="OverlayTrigger">Đánh dấu đã đọc</a></li>
+                        <li><a href="search/?type=post">Tìm kiếm</a></li>
+                        <li><a href="watched/threads">Chủ đề theo dõi</a></li>
+                        <li><a href="find-new/threads">Bài mới</a></li>
+                    
+                    </ul>
+                </div>
+            </li>
+        
+        
+        
+        <!-- extra tabs -->
+        
+        
+            
+                <li class="navTab EventRegistrationSystem PopupClosed">
+                    <a href="http://www.tinhte.vn/reserve/" class="navLink">Sự kiện</a>
+                    
+                </li>
+            
+        
+            
+                <li class="navTab resources Popup PopupControl PopupClosed">
+            
+                <a href="http://www.tinhte.vn/resources/" class="navLink">Thư viện</a>
+                <a href="http://www.tinhte.vn/resources/" class="SplitCtrl" rel="Menu"></a>
+                
+                <div class="Menu JsOnly tabMenu">
+                    <div class="primaryContent menuHeader">
+                        <h3>Thư viện</h3>
+                        <div class="muted">Liên kết nhanh</div>
+                    </div>
+                    <ul class="secondaryContent blockLinksList">
+	<li><a href="search/?type=resource_update">Tìm trong thư viện</a></li>
+	<li><a href="resources/authors">Thành viên năng động</a></li>
+	
+	<li><a href="resources/watched">Mục theo dõi</a></li>
+</ul>
+                </div>
+            </li>
+            
+        
+        
+        
+        
+        <!-- members -->
+        
+            <li class="navTab members Popup PopupControl PopupClosed">
+            
+                <a href="http://www.tinhte.vn/members/" class="navLink">Thành viên</a>
+                <a href="http://www.tinhte.vn/members/" class="SplitCtrl" rel="Menu"></a>
+                
+                <div class="Menu JsOnly tabMenu">
+                    <div class="primaryContent menuHeader">
+                        <h3>Thành viên</h3>
+                        <div class="muted">Liên kết nhanh</div>
+                    </div>
+                    <ul class="secondaryContent blockLinksList">
+                    
+                        <li><a href="members/">Thành Viên Đăng Ký</a></li>
+                        <li><a href="online/">Lượt truy cập hiện tại</a></li>
+                        <li><a href="recent-activity/">Hoạt động</a></li>
+                    
+                    </ul>
+                </div>
+            </li>
+               
+        
+        <!-- help -->
+        
+            <li class="navTab help Popup PopupControl PopupClosed">
+            
+                <a href="http://www.tinhte.vn/help/" class="navLink" rel="help">Giúp đỡ</a>
+                <a href="http://www.tinhte.vn/help/" class="SplitCtrl" rel="Menu"></a>
+                
+                <div class="Menu JsOnly tabMenu">
+                    <div class="primaryContent menuHeader">
+                        <h3>Giúp đỡ</h3>
+                        <div class="muted">Liên kết nhanh</div>
+                    </div>
+                    <ul class="secondaryContent blockLinksList">
+                    
+                        <li><a href="help/smilies">Mặt cười</a></li>
+                        <li><a href="help/bb-codes">BB Codes</a></li>
+                        <li><a href="help/trophies">Danh hiệu</a></li>
+                        <li><a href="help/cookies">Cookie Usage</a></li>
+                    
+                    </ul>
+                </div>
+            </li>
+        
+
+        
+        <!-- extra tabs: end -->
+        
+        
+            
+                <li class="navTab nodetab598 PopupClosed">
+                    <a href="http://www.tinhte.vn/link-forums/rao-vat-nhattao-com.598/" class="navLink">Rao vặt</a>
+                    
+                </li>
+            
+        
+        
+        
+
+        <!-- no selection -->
+        
+        
+    </ul>
+    <!-- navigation_visitor_tab include here -->
+    
+</div>
+            
+<span class="helper"></span>
+
+        </nav>  
+    </div>
+</div>
+</div>
+
+</header>
+
+</div>
+
+<footer>
+    
+
+
+<div class="footer">
+    <div class="pageWidth">
+        <div class="pageContent">
+            
+
+            <ul class="legal">
+                <li id="copyright">Copyright 2006 - 2012 ViMobi Co., Ltd • Giấy phép MXH số  59/GXN-TTĐT do Bộ TTTT cấp.</li>
+                
+            </ul>
+            
+            <ul class="footerLinks">
+            
+                
+                    <li><a href="http://www.tinhte.vn/threads/noi-quy-dien-dan.20/">Điều khoản & Quy định</a></li>
+                    
+                
+                
+                <li><a href="http://www.tinhte.vn/">Trang chủ</a></li>
+                <li><a href="/threads/tim-hieu-nodejs-ly-do-chon-nodejs.2095222/#navigation">Lên đầu</a></li>
+                <li><a href="http://feeds.feedburner.com/tinhte" rel="alternate" class="globalFeed" target="_blank"
+					title="RSS của Tinhte.vn - Cộng đồng Khoa học &amp; Công nghệ">RSS</a></li>
+            
+            </ul>
+
+            <span class="helper"></span>
+        </div>
+    </div>
+</div>
+
+<div class="footer_main_bot">
+	<div class="pageWidth">
+		<div class="pageContent">
+			
+			<ul class="menu">
+				<li class="menu_title"><h3>Tinhte.vn</h3></li>
+				<li><a href="http://www.tinhte.vn/">Trang nhất</a></li>
+				<li><a href="http://www.tinhte.vn/forum/">Diễn đàn</a></li>
+				<li><a href="http://www.tinhte.vn/forums/gioi-thieu-huong-dan.514/">Giới thiệu, hướng dẫn</a></li>
+				<li><a href="http://www.youtube.com/tinhtevideo/">Video công nghệ</a></li>
+				<li><a href="http://www.tinhte.vn/resource/">Thư viện</a></li>
+				<li><a href="http://www.nhattao.com/">Mua bán - Rao vặt</a></li>
+				<li><a href="http://www.tinhte.vn/pages/cafe/">Cafe Tinhte.vn</a></li>
+				<li><a href="http://www.tinhte.vn/forums/hoat-dong-tu-thien.355/">Hoạt động từ thiện</a></li>
+				<li><a href="http://www.tinhte.vn/pages/lien-he/">Liên hệ</a></li>
+			</ul>
+			<ul class="menu">
+				<li class="menu_title"><h3>Diễn đàn chính</h3></li>
+				<li><a href="http://www.tinhte.vn/tintuc/">Tin tức</a></li>
+				<li><a href="http://www.tinhte.vn/forums/quang-cao-khuyen-mai.230/">Khuyến mãi</a></li>
+				<li><a href="http://www.tinhte.vn/maytinh/">Máy tính</a></li>
+				<li><a href="http://www.tinhte.vn/dienthoai/">Điện thoại</a></li>
+				<li><a href="http://camera.tinhte.vn/">Camera</a></li>
+				<li><a href="http://www.tinhte.vn/xe/">Xe</a></li>
+				<li><a href="http://www.tinhte.vn/forums/thiet-bi-cong-nghe.591/">Thiết bị công nghệ</a></li>
+				<li><a href="http://www.tinhte.vn/khoahoc/">Khoa học</a></li>
+				<li><a href="http://www.tinhte.vn/forums/ca-phe-tinh-te.36/">Cà phê tinh tế</a></li>
+			</ul>
+			<ul class="menu">
+				<li class="menu_title"><h3>Diễn đàn con</h3></li>
+				<li><a href="http://www.tinhte.vn/forums/may-tinh-windows.6/">Máy tính Windows</a></li>
+				<li><a href="http://www.tinhte.vn/forums/may-tinh-apple-mac-os-x.195/">Máy tính Apple - Mac</a></li>
+				<li><a href="http://www.tinhte.vn/forums/may-tinh-linux-chrome-os.79/">Linux | Chrome OS</a></li>
+				<li><a href="http://www.tinhte.vn/forums/ios-ipad-iphone-ipod-touch.82/">iOS | iPhone | iPad</a></li>
+				<li><a href="http://www.tinhte.vn/forums/android.150/">Android</a></li>
+				<li><a href="http://www.tinhte.vn/forums/windows-phone.3/">Windows Phone</a></li>
+				<li><a href="http://www.tinhte.vn/forums/blackberry.98/">BlackBerry</a></li>
+				<li><a href="http://www.tinhte.vn/forums/dien-thoai-nhat-ban.459/">Điện thoại Nhật</a></li>
+				<li><a href="http://www.tinhte.vn/forums/dien-thoai-pho-thong.362/">Điện thoại phổ thông</a></li>
+			</ul>
+			<ul class="menu">
+				<li class="menu_title"><h3>Diễn đàn con</h3></li>
+				<li><a href="http://www.tinhte.vn/forums/lap-trinh-cho-di-dong.270/">Lập trình di động</a></li>
+				<li><a href="http://www.tinhte.vn/forums/mang-di-dong.510/">Mạng di động</a></li>
+				<li><a href="http://www.tinhte.vn/forums/gps.347/">GPS</a></li>
+				<li><a href="http://www.tinhte.vn/forums/thiet-bi-ngoai-vi.29/">Thiết bị ngoại vi</a></li>
+				<li><a href="http://www.tinhte.vn/forums/dien-tu-tieu-dung.293/">Điện tử, tiêu dùng</a></li>
+				<li><a href="http://www.tinhte.vn/forums/may-doc-sach-ebook.426/">Máy đọc sách</a></li>
+				<li><a href="http://www.tinhte.vn/forums/may-choi-game.77/">Máy chơi game</a></li>
+				<li><a href="http://www.tinhte.vn/forums/xe-may.544/">Xe máy</a></li>
+				<li><a href="http://www.tinhte.vn/forums/xe-o-to.545/">Ô tô</a></li>
+				
+			</ul>
+			<ul class="menu">
+				<li class="menu_title"><h3>Nhật tảo</h3></li>
+				<li><a href="http://www.nhattao.com/forums/dien-thoai.543/">Mua bán điện thoại</a></li>
+				<li><a href="http://www.nhattao.com/forums/may-tinh.553/">Mua bán máy tính</a></li>
+				<li><a href="http://www.nhattao.com/forums/may-tinh-bang.548/">Mua bán máy tính bảng</a></li>
+				<li><a href="http://www.nhattao.com/forums/camera.556/">Mua bán camera</a></li>
+				<li><a href="http://www.nhattao.com/forums/do-cong-nghe.562/">Mua bán đồ công nghệ</a></li>
+				<li><a href="http://www.nhattao.com/forums/xe.532/">Mua bán xe</a></li>
+				<li><a href="http://www.nhattao.com/forums/sim-dien-thoai.533/">Mua bán sim, sim 3g</a></li>
+				<li><a href="http://www.nhattao.com/forums/lac-xoong-cong-nghe.535/">Mua bán lạc xoong</a></li>
+				<li><a href="http://www.nhattao.com/forums/dich-vu-cong-nghe.224/">Dịch vụ công nghệ</a></li>
+				
+			</ul>
+			<ul class="menu">
+				<li class="menu_title"><h3>MXH & hợp tác</h3></li>
+				<li><a href="http://www.facebook.com/tinhtefan" title="Tinhte.vn trên Facebook" target="_blank">Tinhte.vn Facebook</a></li>
+				<li><a href="http://www.twitter.com/tinhtefan" title="Theo Tinhte.vn trên Twitter" target="_blank" title="" target="_blank">Tinhte.vn Twitter</a></li>
+				<li><a href="http://tinhtefan.tumblr.com/" title="Theo Tinhte.vn trên Tumblr" target="_blank" title="" target="_blank">Tinhte.vn trên Tumblr</a></li>
+				<li><a href="http://www.khacten.com/" title="Bao da, miếng dán da" target="_blank">Khacten.com</a></li>
+				<li><a href="http://www.1tudien.com" title="Từ điển trực tuyến" target="_blank">1TuDien.com</a></li>
+				<li><a href="http://www.nhaccuatui.com" title="Nghe nhạc mọi lúc mọi nơi" target="_blank">Nhaccuatui.com</a></li>
+				<li><a href="http://www.chodientu.vn" title="Mua hàng trực tuyến" target="_blank">Chodientu.vn</a></li>
+				<li><a href="http://www.webtretho.com/" title="Web trẻ thơ" target="_blank">Webtretho.com</a></li>
+				<li><a href="http://doigio.com" title="Xem, Lịch xem phim, kịch, sự kiện, ca nhạc" target="_blank">Đổi gió</a></li>
+			</ul>
+			<br/>
+		</div>
+	</div>	
+</div>
+<div class="footerLegal">
+    <div class="pageWidth">
+        <div class="pageContent">
+            
+
+            <span class="helper"></span>
+        </div>
+    </div>  
+</div>
+
+
+
+
+	
+ 
+
+<script type="text/javascript" src="https://cdn.tinhte.vn/js/sedo/gototop/xen.ui.totop.js"></script>
+
+<script type="text/javascript">
+	$(document).ready(function() {
+		$().UItoTop({ 
+			text: "Go to Top", 
+			easingType: "easeInOutQuad", 
+			containerID: "toTop",
+			containerHoverID: "toTopHover",
+			scrollSpeed: 800,
+			min: 200,
+			inDelay: 600,
+    			outDelay: 400
+		});
+	});
+</script>
+</footer>
+
+<script>
+
+
+jQuery.extend(true, XenForo,
+{
+	visitor: { user_id: 1038865 },
+	serverTimeInfo:
+	{
+		now: 1382108058,
+		today: 1382029200,
+		todayDow: 5
+	},
+	_lightBoxUniversal: "0",
+	_enableOverlays: "1",
+	_animationSpeedMultiplier: "1",
+	_overlayConfig:
+	{
+		top: "10%",
+		speed: 200,
+		closeSpeed: 100,
+		mask:
+		{
+			color: "rgb(255, 255, 255)",
+			opacity: "0.6",
+			loadSpeed: 200,
+			closeSpeed: 100
+		}
+	},
+	_ignoredUsers: [],
+	_loadedScripts: {"nat_css":true,"thread_view":true,"message":true,"bb_code":true,"message_user_info":true,"likes_summary":true,"TinhTe_ETW":true,"TinhTe_ETW_news1":true,"wf_default":true,"quick_reply":true,"editor_ui":true,"attachment_editor":true,"share_page":true,"user_bar":true,"Gritter":true,"GritterEXTRA":true,"GoToTop_mini":true,"https:\/\/cdn.tinhte.vn\/js\/Tinhte\/galleria\/galleria-1.2.9.min.js?_v=8b54f5de":true,"https:\/\/cdn.tinhte.vn\/js\/xenforo\/discussion.js?_v=8b54f5de":true,"https:\/\/cdn.tinhte.vn\/js\/tinymce\/tiny_mce.js?_v=8b54f5de":true,"https:\/\/cdn.tinhte.vn\/js\/bdTagMe\/tinymce_plugin.js?_v=8b54f5de":true,"https:\/\/cdn.tinhte.vn\/js\/bdSocialShare\/buttons.js?_v=8b54f5de":true,"https:\/\/cdn.tinhte.vn\/js\/xenforo\/attachment_editor.js?_v=8b54f5de":true,"https:\/\/cdn.tinhte.vn\/js\/swfupload\/swfupload.min.js?_v=8b54f5de":true,"https:\/\/www.google.com\/jsapi?_v=8b54f5de":true,"https:\/\/cdn.tinhte.vn\/js\/gritter\/jquery.gritter.js?_v=8b54f5de":true,"https:\/\/cdn.tinhte.vn\/js\/gritter\/notifications.js?_v=8b54f5de":true,"https:\/\/cdn.tinhte.vn\/js\/as.js?_v=8b54f5de":true,"https:\/\/cdn.tinhte.vn\/js\/bdTagMe\/frontend.js?_v=8b54f5de":true,"https:\/\/cdn.tinhte.vn\/js\/vim\/mudim.js?_v=8b54f5de":true},
+	_cookieConfig: { path: "/", domain: ".tinhte.vn", prefix: "tt_"},
+	_csrfToken: "1038865,1382108058,ed879dca212d86cc314524a901601e555a47d30f",
+	_csrfRefreshUrl: "login/csrf-token-refresh",
+	_jsVersion: "8b54f5de"
+});
+jQuery.extend(XenForo.phrases,
+{
+	cancel: "Hủy",
+
+	a_moment_ago:    "Mới đây",
+	one_minute_ago:  "1 phút trước",
+	x_minutes_ago:   "%minutes% phút trước",
+	today_at_x:      "Hôm nay lúc %time%",
+	yesterday_at_x:  "Hôm qua lúc %time%",
+	day_x_at_time_y: "%day% lúc %time%",
+
+	day0: "Chủ nhật",
+	day1: "Thứ hai",
+	day2: "Thứ ba",
+	day3: "Thứ tư",
+	day4: "Thứ năm",
+	day5: "thứ sáu",
+	day6: "Thứ bảy",
+
+	_months: "Tháng 1,Tháng 2,Tháng 3,Tháng 4,Tháng 5,Tháng 6,Tháng 7,Tháng 8,Tháng 9,Tháng 10,Tháng 11,Tháng 12",
+	_daysShort: "Sun,Mon,Tue,Wed,Thu,Fri,Sat",
+
+	following_error_occurred: "Có lỗi hoặc lưu ý",
+	server_did_not_respond_in_time_try_again: "The server did not respond in time. Please try again.",
+	logging_in: "Đang đăng nhập",
+	click_image_show_full_size_version: "Bấm vào để phóng to.",
+	show_hidden_content_by_x: "Show hidden content by {names}"
+});
+
+// Facebook Javascript SDK
+XenForo.Facebook.appId = "145923738846814";
+XenForo.Facebook.forceInit = true;
+google.load('search', '1');
+$(document).ready(function() {
+    $("#ctrl_title_thread_create").bind("blur", function(){
+	
+    var searchControl = new google.search.SearchControl();
+	var siteSearch = new google.search.WebSearch();
+    var options = new google.search.SearcherOptions();
+
+    options.setExpandMode(google.search.SearchControl.EXPAND_MODE_OPEN);
+    options.setRoot(document.getElementById("Tinhte_SimilarThreadCheck_div"));
+
+    // site restricted web search using a custom search engine
+    siteSearch.setUserDefinedLabel("Vui lòng xem qua các đề tài dưới đây trước khi gửi bài mới.");
+	siteSearch.setSiteRestriction("partner-pub-4328742155432872:fsd7ii-uvqt");
+	searchControl.addSearcher(siteSearch, options);
+	searchControl.setNoResultsString("Không tìm thấy chủ đề tương tự, bạn có thể gửi chủ đề mới.");
+
+
+    // Tell the searcher to draw itself and tell it where to attach
+    searchControl.draw(document.getElementById("ctrl_title_thread_create"));
+    searchControl.execute(document.getElementById("ctrl_title_thread_create").value);
+    });
+});
+
+jQuery.extend(XenForo.phrases,
+				{
+				dismiss_notification: "Dismiss Notification"
+				});
+
+</script>
+
+
+	
+
+
+
+
+
+
+
+
+<script type="text/javascript">
+!function($, window, document, _undefined) {
+	XenForo.bdTagMe_suggestionMaxLength = 100;
+} (jQuery, this, document);
+</script>
+
+
+
+<script type="text/javascript">
+Mudim.BeforeInit = function() {
+    Mudim.LANG=[
+		'Tắt',
+		'VNI',
+		'Telex',
+		'VIQR',
+		'Đủ kiểu',
+		'Tự động',
+		'Sửa lỗi chính tả',
+		'Dùng kiểu bỏ dấu mới',
+		'Toggle',
+		'Toggle Panel',
+	];
+	Mudim.IGNORE_ID = ['email','url'];
+	Mudim.COOKIE_KEY_NAME = 'xf_vim|mudim-settings';
+	
+	Mudim.method = parseInt('2');
+	CHIM.Speller.enabled = parseInt('1') ? true : false;
+	Mudim.newAccentRule = parseInt('1') ? true : false;
+};
+
+Mudim.AfterInit = function() {
+	
+	Mudim.HidePanel();
+	
+
+	Mudim.SetPreference();
+};
+</script></body>
+</html>
